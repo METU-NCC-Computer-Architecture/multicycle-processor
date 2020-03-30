@@ -1,0 +1,22 @@
+module DFF8(Reset, Enable, D, CLK, Q);
+
+input D [7:0]; 
+input Enable, Reset;
+input CLK; 
+
+output Q; 
+
+always @(posedge CLK)
+begin
+	if Reset
+		Q <= 8b'0;
+	else
+		if Enable 
+			Q <= D; 
+		else
+			Q <= Q
+		end
+	end
+		
+end
+endmodule 

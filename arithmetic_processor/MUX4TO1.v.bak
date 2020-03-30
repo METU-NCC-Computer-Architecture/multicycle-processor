@@ -1,0 +1,14 @@
+module MUX4TO1 (IN0, IN1, IN2, IN3, Select, Output); 
+  input [7:0] IN0, IN2, IN3, IN4; 
+  input  [1:0] Select; 
+  output reg [7:0] Out;  
+ 
+  always @*  
+    case (Select) 
+      2'b00   : Out = IN0; 
+      2'b01   : Out = IN1; 
+      2'b10   : Out = In2; 
+      2'b11   : Out = In3; 
+    endcase 
+
+endmodule

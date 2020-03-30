@@ -1,0 +1,17 @@
+module ControlUnit (LDM, LDA, LDQ, ASEL, BSEL, AOP, SRSEL, SR, SL, RST, uOP); 
+
+output LDM, LDA, LDQ, SRSEL, SR, SL, RST;
+output [1:0] ASEL, BSEL;
+output [2:0] AOP;
+ 
+input [4:0] uOP;  
+
+always @ *  
+	case (Select) 
+		2'b00   : Output = IN0; 
+		2'b01   : Output = IN1; 
+		2'b10   : Output = IN2; 
+		2'b11   : Output = IN3; 
+	endcase 
+
+endmodule
