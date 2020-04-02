@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arithmetic_processor
-Mon Mar 30 09:58:11 2020
+Thu Apr 02 12:44:57 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,13 +16,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Subtractor"
- 14. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Adder"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Subtractor"
+ 13. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Adder"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,16 +47,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 30 09:58:11 2020           ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 02 12:44:57 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; arithmetic_processor                            ;
 ; Top-level Entity Name              ; Datapath                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 281                                             ;
-;     Total combinational functions  ; 273                                             ;
-;     Dedicated logic registers      ; 66                                              ;
-; Total registers                    ; 66                                              ;
-; Total pins                         ; 94                                              ;
+; Total logic elements               ; 422                                             ;
+;     Total combinational functions  ; 414                                             ;
+;     Dedicated logic registers      ; 105                                             ;
+; Total registers                    ; 105                                             ;
+; Total pins                         ; 113                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -161,23 +160,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
-; Multiplier.v                     ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/Multiplier.v   ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/ALU.v          ;         ;
-; ap_function.v                    ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/ap_function.v  ;         ;
-; DFF8.v                           ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/DFF8.v         ;         ;
-; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/MUX4TO1.v      ;         ;
-; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/Datapath.bdf   ;         ;
-; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/SHIFTREG8.v    ;         ;
-; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/MUX2TO1.v      ;         ;
-; DFF1.v                           ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/DFF1.v         ;         ;
-; ControlUnit.v                    ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/ControlUnit.v  ;         ;
-; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File              ; F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/MUX2TO1_8BIT.v ;         ;
-+----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; Multiplier.v                     ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Multiplier.v      ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ALU.v             ;         ;
+; ap_function.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ap_function.v     ;         ;
+; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v         ;         ;
+; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Datapath.bdf      ;         ;
+; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v       ;         ;
+; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1.v         ;         ;
+; DFF1.v                           ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DFF1.v            ;         ;
+; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v    ;         ;
+; RegisterFile8x8.v                ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/RegisterFile8x8.v ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -185,50 +183,50 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 281   ;
+; Estimated Total logic elements              ; 422   ;
 ;                                             ;       ;
-; Total combinational functions               ; 273   ;
+; Total combinational functions               ; 414   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 140   ;
-;     -- 3 input functions                    ; 109   ;
-;     -- <=2 input functions                  ; 24    ;
+;     -- 4 input functions                    ; 225   ;
+;     -- 3 input functions                    ; 103   ;
+;     -- <=2 input functions                  ; 86    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 245   ;
+;     -- normal mode                          ; 386   ;
 ;     -- arithmetic mode                      ; 28    ;
 ;                                             ;       ;
-; Total registers                             ; 66    ;
-;     -- Dedicated logic registers            ; 66    ;
+; Total registers                             ; 105   ;
+;     -- Dedicated logic registers            ; 105   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 94    ;
+; I/O pins                                    ; 113   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 66    ;
-; Total fan-out                               ; 1184  ;
-; Average fan-out                             ; 2.73  ;
+; Maximum fan-out                             ; 105   ;
+; Total fan-out                               ; 1749  ;
+; Average fan-out                             ; 2.77  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |Datapath                  ; 273 (1)           ; 66 (0)       ; 0           ; 0            ; 0       ; 0         ; 94   ; 0            ; |Datapath                                      ; work         ;
-;    |ControlUnit:inst1|     ; 36 (36)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ControlUnit:inst1                    ; work         ;
-;    |DFF1:REG_Qm1|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DFF1:REG_Qm1                         ; work         ;
-;    |DFF8:REG_M|            ; 9 (9)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DFF8:REG_M                           ; work         ;
-;    |MUX2TO1_8BIT:MULSEL_A| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX2TO1_8BIT:MULSEL_A                ; work         ;
-;    |MUX4TO1:MUX_A|         ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_A                        ; work         ;
-;    |MUX4TO1:MUX_B|         ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_B                        ; work         ;
-;    |Multiplier:Multiplier| ; 40 (8)            ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier                ; work         ;
-;       |ALU:Adder|          ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Adder      ; work         ;
-;       |ALU:Subtractor|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Subtractor ; work         ;
-;    |SHIFTREG8:REG_A|       ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_A                      ; work         ;
-;    |SHIFTREG8:REG_Q|       ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_Q                      ; work         ;
-;    |ap_function:ALU|       ; 110 (110)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ap_function:ALU                      ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; |Datapath                    ; 414 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 113  ; 0            ; |Datapath                                      ; work         ;
+;    |DFF1:REG_Qm1|            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DFF1:REG_Qm1                         ; work         ;
+;    |MUX2TO1_8BIT:MULT_SEL_A| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX2TO1_8BIT:MULT_SEL_A              ; work         ;
+;    |MUX4TO1:MUX_A|           ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_A                        ; work         ;
+;    |MUX4TO1:MUX_B|           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_B                        ; work         ;
+;    |MUX4TO1:MUX_D|           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_D                        ; work         ;
+;    |Multiplier:Multiplier|   ; 40 (8)            ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier                ; work         ;
+;       |ALU:Adder|            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Adder      ; work         ;
+;       |ALU:Subtractor|       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Subtractor ; work         ;
+;    |RegisterFile8x8:RF|      ; 120 (120)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|RegisterFile8x8:RF                   ; work         ;
+;    |SHIFTREG8:REG_A|         ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_A                      ; work         ;
+;    |SHIFTREG8:REG_Q|         ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_Q                      ; work         ;
+;    |ap_function:ALU|         ; 113 (113)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ap_function:ALU                      ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -264,43 +262,39 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 26    ;
-; Number of registers using Synchronous Load   ; 5     ;
+; Total registers                              ; 105   ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 1     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 40    ;
+; Number of registers using Clock Enable       ; 87    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; ControlUnit:inst1|RST                  ; 29      ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|DFF8:REG_M|Q[4]            ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |Datapath|ControlUnit:inst1|BSEL[1]  ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Datapath|Multiplier:Multiplier|A[5] ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Datapath|SHIFTREG8:REG_A|Q[6]       ;
-; 32:1               ; 2 bits    ; 42 LEs        ; 8 LEs                ; 34 LEs                 ; Yes        ; |Datapath|ControlUnit:inst1|SL       ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |Datapath|SHIFTREG8:REG_Q|Q[1]       ;
-; 34:1               ; 2 bits    ; 44 LEs        ; 8 LEs                ; 36 LEs                 ; Yes        ; |Datapath|ControlUnit:inst1|LDA      ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_B|Mux6         ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_A|Mux5         ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux7       ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux8       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg7[1]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg6[3]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg5[7]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg4[7]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg3[1]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg2[5]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg1[1]       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg0[2]       ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Datapath|Multiplier:Multiplier|A[4]       ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Datapath|SHIFTREG8:REG_A|Q[3]             ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |Datapath|SHIFTREG8:REG_Q|Q[5]             ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_B|Mux2               ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_D|Mux0               ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|RegisterFile8x8:RF|Read_DataB[1] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux4             ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux8             ;
+; 11:1               ; 8 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_A|Mux1               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------+
@@ -336,7 +330,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 30 09:58:08 2020
+    Info: Processing started: Thu Apr 02 12:44:54 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
@@ -363,13 +357,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: ControlUnit
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1_8bit.v
     Info (12023): Found entity 1: MUX2TO1_8BIT
+Info (12021): Found 1 design units, including 1 entities, in source file registerfile8x8.v
+    Info (12023): Found entity 1: RegisterFile8x8
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "DFF1" for hierarchy "DFF1:REG_Qm1"
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst1"
-Warning (10230): Verilog HDL assignment warning at ControlUnit.v(285): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "SHIFTREG8" for hierarchy "SHIFTREG8:REG_Q"
-Info (12128): Elaborating entity "MUX2TO1" for hierarchy "MUX2TO1:inst4"
-Info (12128): Elaborating entity "MUX2TO1_8BIT" for hierarchy "MUX2TO1_8BIT:MULSEL_A"
+Info (12128): Elaborating entity "MUX2TO1" for hierarchy "MUX2TO1:MUX_S"
+Info (12128): Elaborating entity "MUX2TO1_8BIT" for hierarchy "MUX2TO1_8BIT:MULT_SEL_A"
 Info (12128): Elaborating entity "ap_function" for hierarchy "ap_function:ALU"
 Warning (10230): Verilog HDL assignment warning at ap_function.v(11): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at ap_function.v(12): truncated value with size 32 to match size of target (8)
@@ -382,7 +376,9 @@ Info (10041): Inferred latch for "carry[4]" at ap_function.v(11)
 Info (10041): Inferred latch for "carry[5]" at ap_function.v(11)
 Info (10041): Inferred latch for "carry[6]" at ap_function.v(11)
 Info (12128): Elaborating entity "MUX4TO1" for hierarchy "MUX4TO1:MUX_A"
-Info (12128): Elaborating entity "DFF8" for hierarchy "DFF8:REG_M"
+Info (12128): Elaborating entity "RegisterFile8x8" for hierarchy "RegisterFile8x8:RF"
+Warning (10230): Verilog HDL assignment warning at RegisterFile8x8.v(14): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at RegisterFile8x8.v(23): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "Multiplier" for hierarchy "Multiplier:Multiplier"
 Info (10264): Verilog HDL Case Statement information at Multiplier.v(30): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "ALU" for hierarchy "Multiplier:Multiplier|ALU:Adder"
@@ -398,16 +394,16 @@ Warning (13012): Latch ap_function:ALU|carry[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
 Warning (13012): Latch ap_function:ALU|carry[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Info (144001): Generated suppressed messages file F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/output_files/arithmetic_processor.map.smsg
+Info (144001): Generated suppressed messages file D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 376 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 49 input pins
+Info (21057): Implemented 535 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 68 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 282 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4610 megabytes
-    Info: Processing ended: Mon Mar 30 09:58:11 2020
+    Info (21061): Implemented 422 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4614 megabytes
+    Info: Processing ended: Thu Apr 02 12:44:57 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
@@ -415,6 +411,6 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnin
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in F:/Arithmetic_processor-20200321T200406Z-001/Arithmetic_processor/output_files/arithmetic_processor.map.smsg.
+The suppressed messages can be found in D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
 
 
