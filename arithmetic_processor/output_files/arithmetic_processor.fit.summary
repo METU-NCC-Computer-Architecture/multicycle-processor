@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Apr 02 12:45:11 2020
+Fitter Status : Successful - Fri Apr 03 21:16:42 2020
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : arithmetic_processor
 Top-level Entity Name : Datapath
 Family : Cyclone II
 Device : EP2C70F896C6
 Timing Models : Final
-Total logic elements : 415 / 68,416 ( < 1 % )
-    Total combinational functions : 414 / 68,416 ( < 1 % )
+Total logic elements : 411 / 68,416 ( < 1 % )
+    Total combinational functions : 409 / 68,416 ( < 1 % )
     Dedicated logic registers : 105 / 68,416 ( < 1 % )
 Total registers : 105
-Total pins : 113 / 622 ( 18 % )
+Total pins : 114 / 622 ( 18 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,152,000 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 300 ( 0 % )

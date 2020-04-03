@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arithmetic_processor
-Thu Apr 02 12:44:57 2020
+Fri Apr 03 21:16:18 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -47,16 +47,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 02 12:44:57 2020           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 03 21:16:18 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; arithmetic_processor                            ;
 ; Top-level Entity Name              ; Datapath                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 422                                             ;
-;     Total combinational functions  ; 414                                             ;
+; Total logic elements               ; 417                                             ;
+;     Total combinational functions  ; 409                                             ;
 ;     Dedicated logic registers      ; 105                                             ;
 ; Total registers                    ; 105                                             ;
-; Total pins                         ; 113                                             ;
+; Total pins                         ; 114                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -160,22 +160,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
-; Multiplier.v                     ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Multiplier.v      ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ALU.v             ;         ;
-; ap_function.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ap_function.v     ;         ;
-; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v         ;         ;
-; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Datapath.bdf      ;         ;
-; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v       ;         ;
-; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1.v         ;         ;
-; DFF1.v                           ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DFF1.v            ;         ;
-; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v    ;         ;
-; RegisterFile8x8.v                ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/RegisterFile8x8.v ;         ;
-+----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
+; Multiplier.v                     ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Multiplier.v      ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ALU.v             ;         ;
+; ap_function.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ap_function.v     ;         ;
+; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX4TO1.v         ;         ;
+; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Datapath.bdf      ;         ;
+; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SHIFTREG8.v       ;         ;
+; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1.v         ;         ;
+; DFF1.v                           ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DFF1.v            ;         ;
+; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v    ;         ;
+; RegisterFile8x8.v                ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/RegisterFile8x8.v ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -183,28 +183,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 422   ;
+; Estimated Total logic elements              ; 417   ;
 ;                                             ;       ;
-; Total combinational functions               ; 414   ;
+; Total combinational functions               ; 409   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 225   ;
-;     -- 3 input functions                    ; 103   ;
-;     -- <=2 input functions                  ; 86    ;
+;     -- 4 input functions                    ; 222   ;
+;     -- 3 input functions                    ; 106   ;
+;     -- <=2 input functions                  ; 81    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 386   ;
+;     -- normal mode                          ; 381   ;
 ;     -- arithmetic mode                      ; 28    ;
 ;                                             ;       ;
 ; Total registers                             ; 105   ;
 ;     -- Dedicated logic registers            ; 105   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 113   ;
+; I/O pins                                    ; 114   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 105   ;
-; Total fan-out                               ; 1749  ;
-; Average fan-out                             ; 2.77  ;
+; Total fan-out                               ; 1736  ;
+; Average fan-out                             ; 2.76  ;
 +---------------------------------------------+-------+
 
 
@@ -213,11 +213,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |Datapath                    ; 414 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 113  ; 0            ; |Datapath                                      ; work         ;
+; |Datapath                    ; 409 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 114  ; 0            ; |Datapath                                      ; work         ;
 ;    |DFF1:REG_Qm1|            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DFF1:REG_Qm1                         ; work         ;
-;    |MUX2TO1_8BIT:MULT_SEL_A| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX2TO1_8BIT:MULT_SEL_A              ; work         ;
-;    |MUX4TO1:MUX_A|           ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_A                        ; work         ;
-;    |MUX4TO1:MUX_B|           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_B                        ; work         ;
+;    |MUX2TO1_8BIT:MULT_SEL_A| ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX2TO1_8BIT:MULT_SEL_A              ; work         ;
+;    |MUX4TO1:MUX_A|           ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_A                        ; work         ;
+;    |MUX4TO1:MUX_B|           ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_B                        ; work         ;
 ;    |MUX4TO1:MUX_D|           ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_D                        ; work         ;
 ;    |Multiplier:Multiplier|   ; 40 (8)            ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier                ; work         ;
 ;       |ALU:Adder|            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Adder      ; work         ;
@@ -292,7 +292,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_D|Mux0               ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|RegisterFile8x8:RF|Read_DataB[1] ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux4             ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux8             ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux15            ;
 ; 11:1               ; 8 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_A|Mux1               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
@@ -320,7 +320,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -330,7 +330,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Apr 02 12:44:54 2020
+    Info: Processing started: Fri Apr 03 21:16:09 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
@@ -394,23 +394,25 @@ Warning (13012): Latch ap_function:ALU|carry[2] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
 Warning (13012): Latch ap_function:ALU|carry[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Info (144001): Generated suppressed messages file D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
+Warning (13012): Latch ap_function:ALU|carry[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
+Info (144001): Generated suppressed messages file C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 535 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 68 input pins
+Info (21057): Implemented 531 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 69 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 422 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4614 megabytes
-    Info: Processing ended: Thu Apr 02 12:44:57 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21061): Implemented 417 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4606 megabytes
+    Info: Processing ended: Fri Apr 03 21:16:18 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
+The suppressed messages can be found in C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
 
 

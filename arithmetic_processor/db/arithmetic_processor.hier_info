@@ -23,6 +23,7 @@ A[7] <= SHIFTREG8:REG_A.Q[7]
 SR_SEL => MUX2TO1:MUX_S.Select
 MULT_SEL => MUX2TO1_8BIT:MULT_SEL_A.Select
 MULT_SEL => MUX2TO1_8BIT:MULT_SEL_Q.Select
+Cin => ap_function:ALU.cin
 RF_EN => RegisterFile8x8:RF.WriteEN
 Read_AddressA[0] => RegisterFile8x8:RF.Read_AddressA[0]
 Read_AddressA[1] => RegisterFile8x8:RF.Read_AddressA[1]
