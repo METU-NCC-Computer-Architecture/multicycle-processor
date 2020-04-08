@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arithmetic_processor
-Wed Apr 08 16:41:27 2020
+Wed Apr 08 18:55:53 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,18 +10,15 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Subtractor"
- 13. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Adder"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis IP Cores Summary
+  6. Source assignments for INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|altsyncram_7u92:altsyncram1
+  7. Source assignments for DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|altsyncram_2aa2:altsyncram1
+  8. Parameter Settings for User Entity Instance: INSTMEM:inst_mem|altsyncram:altsyncram_component
+  9. Parameter Settings for User Entity Instance: DATAMEM:inst4|altsyncram:altsyncram_component
+ 10. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Subtractor"
+ 11. Port Connectivity Checks: "Multiplier:Multiplier|ALU:Adder"
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,20 +44,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 08 16:41:27 2020           ;
+; Analysis & Synthesis Status        ; Failed - Wed Apr 08 18:55:53 2020               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; arithmetic_processor                            ;
 ; Top-level Entity Name              ; Datapath                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 402                                             ;
-;     Total combinational functions  ; 394                                             ;
-;     Dedicated logic registers      ; 105                                             ;
-; Total registers                    ; 105                                             ;
-; Total pins                         ; 96                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -160,143 +157,154 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; Multiplier.v                     ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Multiplier.v      ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ALU.v             ;         ;
-; ap_function.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ap_function.v     ;         ;
-; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX4TO1.v         ;         ;
-; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Datapath.bdf      ;         ;
-; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SHIFTREG8.v       ;         ;
-; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1.v         ;         ;
-; DFF1.v                           ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DFF1.v            ;         ;
-; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v    ;         ;
-; RegisterFile8x8.v                ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/RegisterFile8x8.v ;         ;
-; data_memory.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/data_memory.v     ;         ;
-; sign_extend.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/sign_extend.v     ;         ;
-+----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                     ;
++--------+--------------+---------+--------------+--------------+----------------------------+----------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance            ; IP Include File                                                                              ;
++--------+--------------+---------+--------------+--------------+----------------------------+----------------------------------------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Datapath|DATAMEM:inst4    ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v ;
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Datapath|INSTMEM:inst_mem ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v ;
++--------+--------------+---------+--------------+--------------+----------------------------+----------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 402   ;
-;                                             ;       ;
-; Total combinational functions               ; 394   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 276   ;
-;     -- 3 input functions                    ; 105   ;
-;     -- <=2 input functions                  ; 13    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 366   ;
-;     -- arithmetic mode                      ; 28    ;
-;                                             ;       ;
-; Total registers                             ; 105   ;
-;     -- Dedicated logic registers            ; 105   ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 96    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 105   ;
-; Total fan-out                               ; 1813  ;
-; Average fan-out                             ; 3.05  ;
-+---------------------------------------------+-------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|altsyncram_7u92:altsyncram1 ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                   ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                    ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-; |Datapath                    ; 394 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 96   ; 0            ; |Datapath                                      ; work         ;
-;    |DFF1:REG_Qm1|            ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DFF1:REG_Qm1                         ; work         ;
-;    |MUX2TO1_8BIT:MULT_SEL_A| ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX2TO1_8BIT:MULT_SEL_A              ; work         ;
-;    |MUX4TO1:MUX_A|           ; 57 (57)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_A                        ; work         ;
-;    |MUX4TO1:MUX_B|           ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|MUX4TO1:MUX_B                        ; work         ;
-;    |Multiplier:Multiplier|   ; 40 (8)            ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier                ; work         ;
-;       |ALU:Adder|            ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Adder      ; work         ;
-;       |ALU:Subtractor|       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|Multiplier:Multiplier|ALU:Subtractor ; work         ;
-;    |RegisterFile8x8:RF|      ; 122 (122)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|RegisterFile8x8:RF                   ; work         ;
-;    |SHIFTREG8:REG_A|         ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_A                      ; work         ;
-;    |SHIFTREG8:REG_Q|         ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_Q                      ; work         ;
-;    |ap_function:ALU|         ; 114 (114)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ap_function:ALU                      ; work         ;
-+------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|altsyncram_2aa2:altsyncram1 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+----------------------------------------------------+----------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal  ; Free of Timing Hazards ;
-+----------------------------------------------------+----------------------+------------------------+
-; ap_function:ALU|carry[6]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; ap_function:ALU|carry[5]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; ap_function:ALU|carry[4]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; ap_function:ALU|carry[3]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; ap_function:ALU|carry[2]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; ap_function:ALU|carry[1]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; ap_function:ALU|carry[0]                           ; ap_function:ALU|Mux1 ; yes                    ;
-; Number of user-specified and inferred latches = 7  ;                      ;                        ;
-+----------------------------------------------------+----------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: INSTMEM:inst_mem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------+
+; Parameter Name                     ; Value                ; Type                              ;
++------------------------------------+----------------------+-----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                           ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                           ;
+; WIDTH_A                            ; 16                   ; Signed Integer                    ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                    ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                           ;
+; WIDTH_B                            ; 1                    ; Untyped                           ;
+; WIDTHAD_B                          ; 1                    ; Untyped                           ;
+; NUMWORDS_B                         ; 1                    ; Untyped                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                           ;
+; INIT_FILE                          ; instructions.hex     ; Untyped                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                           ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                           ;
+; CBXI_PARAMETER                     ; altsyncram_kja1      ; Untyped                           ;
++------------------------------------+----------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; sign_extend:inst7|extended[0..7]       ; Stuck at GND due to stuck port clock   ;
-; data_memory:inst4|addr_reg[0..9]       ; Stuck at GND due to stuck port clock   ;
-; Multiplier:Multiplier|A[7]             ; Merged with Multiplier:Multiplier|A[6] ;
-; Total Number of Removed Registers = 19 ;                                        ;
-+----------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 105   ;
-; Number of registers using Synchronous Clear  ; 24    ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 87    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg7[3]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg6[3]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg5[7]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg4[7]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg3[5]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg2[7]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg1[5]       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Datapath|RegisterFile8x8:RF|reg0[1]       ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Datapath|Multiplier:Multiplier|A[3]       ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Datapath|SHIFTREG8:REG_A|Q[6]             ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |Datapath|SHIFTREG8:REG_Q|Q[7]             ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_D|Mux5               ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|RegisterFile8x8:RF|Read_DataB[7] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux7             ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Datapath|ap_function:ALU|Mux15            ;
-; 11:1               ; 8 bits    ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |Datapath|MUX4TO1:MUX_A|Mux7               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAMEM:inst4|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                        ;
+; WIDTH_A                            ; 16                   ; Signed Integer                 ;
+; WIDTHAD_A                          ; 10                   ; Signed Integer                 ;
+; NUMWORDS_A                         ; 1024                 ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 1                    ; Untyped                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; data.hex             ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_epe1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------+
@@ -318,21 +326,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
-
-
-+-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 08 16:41:24 2020
+    Info: Processing started: Wed Apr 08 18:55:50 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
@@ -361,13 +360,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux2to1
     Info (12023): Found entity 1: MUX2TO1_8BIT
 Info (12021): Found 1 design units, including 1 entities, in source file registerfile8x8.v
     Info (12023): Found entity 1: RegisterFile8x8
-Info (12021): Found 1 design units, including 1 entities, in source file data_memory.v
-    Info (12023): Found entity 1: data_memory
-Info (12021): Found 1 design units, including 1 entities, in source file sign_extend.v
-    Info (12023): Found entity 1: sign_extend
+Info (12021): Found 1 design units, including 1 entities, in source file instmem.v
+    Info (12023): Found entity 1: INSTMEM
+Info (12021): Found 1 design units, including 1 entities, in source file datamem.v
+    Info (12023): Found entity 1: DATAMEM
+Info (12021): Found 1 design units, including 1 entities, in source file signext6t08.v
+    Info (12023): Found entity 1: SIGNEXT6T08
+Info (12021): Found 1 design units, including 1 entities, in source file signext8t016.v
+    Info (12023): Found entity 1: SIGNEXT8T016
+Info (12021): Found 1 design units, including 1 entities, in source file plus1_adder.v
+    Info (12023): Found entity 1: PLUS1_ADDER
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1_3bit.v
+    Info (12023): Found entity 1: MUX2TO1_3BIT
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1_16bit.v
+    Info (12023): Found entity 1: MUX2TO1_16BIT
+Info (12021): Found 1 design units, including 1 entities, in source file router.v
+    Info (12023): Found entity 1: ROUTER
+Info (12021): Found 1 design units, including 1 entities, in source file pcreg.v
+    Info (12023): Found entity 1: PCREG
+Info (12021): Found 1 design units, including 1 entities, in source file mux2to1_10bit.v
+    Info (12023): Found entity 1: MUX2TO1_10BIT
+Info (12021): Found 1 design units, including 1 entities, in source file signext8t010.v
+    Info (12023): Found entity 1: SIGNEXT8T010
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Warning (275013): Port "clk" of type data_memory and instance "inst4" is missing source signal
-Warning (275013): Port "clk" of type sign_extend and instance "inst7" is missing source signal
+Warning (275013): Port "CLK" of type PCREG and instance "inst13" is missing source signal
 Info (12128): Elaborating entity "DFF1" for hierarchy "DFF1:REG_Qm1"
 Info (12128): Elaborating entity "SHIFTREG8" for hierarchy "SHIFTREG8:REG_Q"
 Info (12128): Elaborating entity "MUX2TO1" for hierarchy "MUX2TO1:MUX_S"
@@ -387,49 +403,159 @@ Info (12128): Elaborating entity "MUX4TO1" for hierarchy "MUX4TO1:MUX_A"
 Info (12128): Elaborating entity "RegisterFile8x8" for hierarchy "RegisterFile8x8:RF"
 Warning (10230): Verilog HDL assignment warning at RegisterFile8x8.v(14): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at RegisterFile8x8.v(23): truncated value with size 32 to match size of target (8)
-Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:inst4"
-Info (12128): Elaborating entity "sign_extend" for hierarchy "sign_extend:inst7"
+Info (12128): Elaborating entity "INSTMEM" for hierarchy "INSTMEM:inst_mem"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "INSTMEM:inst_mem|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "INSTMEM:inst_mem|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "INSTMEM:inst_mem|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "instructions.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=ROM1"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kja1.tdf
+    Info (12023): Found entity 1: altsyncram_kja1
+Info (12128): Elaborating entity "altsyncram_kja1" for hierarchy "INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7u92.tdf
+    Info (12023): Found entity 1: altsyncram_7u92
+Info (12128): Elaborating entity "altsyncram_7u92" for hierarchy "INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|altsyncram_7u92:altsyncram1"
+Critical Warning (127002): Can't read Memory Initialization File or Hexadecimal (Intel-Format) File instructions.hex -- setting all initial values to 0
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12130): Elaborated megafunction instantiation "INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12133): Instantiated megafunction "INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info (12134): Parameter "CVALUE" = "0000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1380928817"
+    Info (12134): Parameter "NUMWORDS" = "1024"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
+    Info (12134): Parameter "WIDTH_WORD" = "16"
+    Info (12134): Parameter "WIDTHAD" = "10"
+Info (12128): Elaborating entity "sld_rom_sr" for hierarchy "INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr"
+Info (12128): Elaborating entity "PCREG" for hierarchy "PCREG:inst13"
+Warning (10230): Verilog HDL assignment warning at PCREG.v(14): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "MUX2TO1_10BIT" for hierarchy "MUX2TO1_10BIT:inst15"
+Info (12128): Elaborating entity "DATAMEM" for hierarchy "DATAMEM:inst4"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "DATAMEM:inst4|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "DATAMEM:inst4|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "DATAMEM:inst4|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "data.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=RAM1"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_epe1.tdf
+    Info (12023): Found entity 1: altsyncram_epe1
+Info (12128): Elaborating entity "altsyncram_epe1" for hierarchy "DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2aa2.tdf
+    Info (12023): Found entity 1: altsyncram_2aa2
+Info (12128): Elaborating entity "altsyncram_2aa2" for hierarchy "DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|altsyncram_2aa2:altsyncram1"
+Critical Warning (127002): Can't read Memory Initialization File or Hexadecimal (Intel-Format) File data.hex -- setting all initial values to 0
+Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12130): Elaborated megafunction instantiation "DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2"
+Info (12133): Instantiated megafunction "DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter:
+    Info (12134): Parameter "CVALUE" = "0000000000000000"
+    Info (12134): Parameter "IS_DATA_IN_RAM" = "1"
+    Info (12134): Parameter "IS_READABLE" = "1"
+    Info (12134): Parameter "NODE_NAME" = "1380011313"
+    Info (12134): Parameter "NUMWORDS" = "1024"
+    Info (12134): Parameter "SHIFT_COUNT_BITS" = "5"
+    Info (12134): Parameter "WIDTH_WORD" = "16"
+    Info (12134): Parameter "WIDTHAD" = "10"
+Info (12128): Elaborating entity "SIGNEXT8T010" for hierarchy "SIGNEXT8T010:inst16"
+Info (12128): Elaborating entity "MUX2TO1_16BIT" for hierarchy "MUX2TO1_16BIT:inst11"
+Info (12128): Elaborating entity "SIGNEXT8T016" for hierarchy "SIGNEXT8T016:inst6"
+Info (12128): Elaborating entity "ROUTER" for hierarchy "ROUTER:ROUTER_LOGIC"
+Info (12128): Elaborating entity "MUX2TO1_3BIT" for hierarchy "MUX2TO1_3BIT:inst8"
+Info (12128): Elaborating entity "PLUS1_ADDER" for hierarchy "PLUS1_ADDER:inst7"
+Warning (10230): Verilog HDL assignment warning at PLUS1_ADDER.v(12): truncated value with size 32 to match size of target (3)
+Info (12128): Elaborating entity "SIGNEXT6T08" for hierarchy "SIGNEXT6T08:inst5"
 Info (12128): Elaborating entity "Multiplier" for hierarchy "Multiplier:Multiplier"
 Info (10264): Verilog HDL Case Statement information at Multiplier.v(30): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "ALU" for hierarchy "Multiplier:Multiplier|ALU:Adder"
-Warning (13012): Latch ap_function:ALU|carry[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Warning (13012): Latch ap_function:ALU|carry[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Warning (13012): Latch ap_function:ALU|carry[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Warning (13012): Latch ap_function:ALU|carry[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Warning (13012): Latch ap_function:ALU|carry[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Warning (13012): Latch ap_function:ALU|carry[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Warning (13012): Latch ap_function:ALU|carry[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal AOP[1]
-Info (144001): Generated suppressed messages file C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "DAT1[5]"
-    Warning (15610): No output dependent on input pin "DAT1[4]"
-    Warning (15610): No output dependent on input pin "DAT1[3]"
-    Warning (15610): No output dependent on input pin "DAT1[2]"
-    Warning (15610): No output dependent on input pin "DAT1[1]"
-    Warning (15610): No output dependent on input pin "DAT1[0]"
-Info (21057): Implemented 498 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 51 input pins
-    Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 402 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4614 megabytes
-    Info: Processing ended: Wed Apr 08 16:41:27 2020
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Error (12014): Net "q8", which fans out to "MUX4TO1:MUX_D|IN2[0]", cannot be assigned more than one value File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v Line: 3
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[8]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[8]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[7]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[7]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[7]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[7]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[6]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[6]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[6]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[6]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[5]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[5]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[5]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[5]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[4]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[4]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[4]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[4]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[3]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[3]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[3]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[3]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[2]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[2]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[2]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[2]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[1]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[1]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[1]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[1]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "Q", which fans out to "Q[0]", cannot be assigned more than one value
+    Error (12015): Net is fed by "SHIFTREG8:REG_Q|Q[0]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v Line: 15
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[0]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[0]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q11", which fans out to "MUX4TO1:MUX_D|IN2[3]", cannot be assigned more than one value File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v Line: 3
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[11]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[11]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q10", which fans out to "MUX4TO1:MUX_D|IN2[2]", cannot be assigned more than one value File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v Line: 3
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[10]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[10]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q9", which fans out to "MUX4TO1:MUX_D|IN2[1]", cannot be assigned more than one value File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v Line: 3
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[9]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[9]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q15", which fans out to "OPCODE[3]", cannot be assigned more than one value
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[15]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[15]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q14", which fans out to "OPCODE[2]", cannot be assigned more than one value
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[14]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[14]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q13", which fans out to "OPCODE[1]", cannot be assigned more than one value
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[13]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[13]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Error (12014): Net "q12", which fans out to "OPCODE[0]", cannot be assigned more than one value
+    Error (12015): Net is fed by "INSTMEM:inst_mem|q[12]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v Line: 46
+    Error (12015): Net is fed by "DATAMEM:inst4|q[12]" File: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v Line: 50
+Info (144001): Generated suppressed messages file D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 56 errors, 11 warnings
+    Error: Peak virtual memory: 4648 megabytes
+    Error: Processing ended: Wed Apr 08 18:55:54 2020
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
+The suppressed messages can be found in D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
 
 

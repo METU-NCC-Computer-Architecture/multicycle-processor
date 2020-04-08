@@ -3,7 +3,7 @@ $comment
 		vcd file arithmetic_processor.msim.vcd -direction
 $end
 $date
-	Thu Apr 02 10:33:52 2020
+	Wed Apr 08 18:13:30 2020
 $end
 $version
 	ModelSim Version 10.1d
@@ -11,981 +11,238 @@ $end
 $timescale
 	1ps
 $end
-$scope module RegisterFile8x8_vlg_vec_tst $end
-$var reg 1 ! CLK $end
-$var reg 3 " Read_AddressA [2:0] $end
-$var reg 3 # Read_AddressB [2:0] $end
-$var reg 1 $ WriteEN $end
-$var reg 3 % Write_Address [2:0] $end
-$var reg 8 & Write_Data [7:0] $end
-$var wire 1 ' Read_DataA [7] $end
-$var wire 1 ( Read_DataA [6] $end
-$var wire 1 ) Read_DataA [5] $end
-$var wire 1 * Read_DataA [4] $end
-$var wire 1 + Read_DataA [3] $end
-$var wire 1 , Read_DataA [2] $end
-$var wire 1 - Read_DataA [1] $end
-$var wire 1 . Read_DataA [0] $end
-$var wire 1 / Read_DataB [7] $end
-$var wire 1 0 Read_DataB [6] $end
-$var wire 1 1 Read_DataB [5] $end
-$var wire 1 2 Read_DataB [4] $end
-$var wire 1 3 Read_DataB [3] $end
-$var wire 1 4 Read_DataB [2] $end
-$var wire 1 5 Read_DataB [1] $end
-$var wire 1 6 Read_DataB [0] $end
-$var wire 1 7 sampler $end
+$scope module ROUTER_vlg_vec_tst $end
+$var reg 8 ! IN_8Bit [7:0] $end
+$var reg 16 " IN_16Bit [15:0] $end
+$var reg 1 # Select $end
+$var wire 1 $ Output [15] $end
+$var wire 1 % Output [14] $end
+$var wire 1 & Output [13] $end
+$var wire 1 ' Output [12] $end
+$var wire 1 ( Output [11] $end
+$var wire 1 ) Output [10] $end
+$var wire 1 * Output [9] $end
+$var wire 1 + Output [8] $end
+$var wire 1 , Output [7] $end
+$var wire 1 - Output [6] $end
+$var wire 1 . Output [5] $end
+$var wire 1 / Output [4] $end
+$var wire 1 0 Output [3] $end
+$var wire 1 1 Output [2] $end
+$var wire 1 2 Output [1] $end
+$var wire 1 3 Output [0] $end
+$var wire 1 4 sampler $end
 $scope module i1 $end
-$var wire 1 8 gnd $end
-$var wire 1 9 vcc $end
-$var wire 1 : unknown $end
-$var tri1 1 ; devclrn $end
-$var tri1 1 < devpor $end
-$var tri1 1 = devoe $end
-$var wire 1 > Read_DataA~12_combout $end
-$var wire 1 ? Read_DataA~20_combout $end
-$var wire 1 @ Read_DataA~22_combout $end
-$var wire 1 A Read_DataA~37_combout $end
-$var wire 1 B Read_DataB~5_combout $end
-$var wire 1 C Read_DataB~7_combout $end
-$var wire 1 D Read_DataB~10_combout $end
-$var wire 1 E Read_DataB~12_combout $end
-$var wire 1 F Read_DataB~17_combout $end
-$var wire 1 G Read_DataB~25_combout $end
-$var wire 1 H CLK~combout $end
-$var wire 1 I CLK~clkctrl_outclk $end
-$var wire 1 J WriteEN~combout $end
-$var wire 1 K Decoder0~1_combout $end
-$var wire 1 L Decoder0~2_combout $end
-$var wire 1 M Read_DataA~0_combout $end
-$var wire 1 N Decoder0~0_combout $end
-$var wire 1 O Decoder0~3_combout $end
-$var wire 1 P Read_DataA~1_combout $end
-$var wire 1 Q Decoder0~5_combout $end
-$var wire 1 R Decoder0~6_combout $end
-$var wire 1 S Read_DataA~2_combout $end
-$var wire 1 T Decoder0~4_combout $end
-$var wire 1 U Decoder0~7_combout $end
-$var wire 1 V Read_DataA~3_combout $end
-$var wire 1 W Read_DataA~4_combout $end
-$var wire 1 X Read_DataA~5_combout $end
-$var wire 1 Y Read_DataA~6_combout $end
-$var wire 1 Z Read_DataA~7_combout $end
-$var wire 1 [ Read_DataA~8_combout $end
-$var wire 1 \ Read_DataA~9_combout $end
-$var wire 1 ] Read_DataA~10_combout $end
-$var wire 1 ^ Read_DataA~11_combout $end
-$var wire 1 _ Read_DataA~13_combout $end
-$var wire 1 ` Read_DataA~14_combout $end
-$var wire 1 a Read_DataA~17_combout $end
-$var wire 1 b Read_DataA~18_combout $end
-$var wire 1 c Read_DataA~15_combout $end
-$var wire 1 d Read_DataA~16_combout $end
-$var wire 1 e Read_DataA~19_combout $end
-$var wire 1 f Read_DataA~21_combout $end
-$var wire 1 g Read_DataA~23_combout $end
-$var wire 1 h Read_DataA~24_combout $end
-$var wire 1 i Read_DataA~27_combout $end
-$var wire 1 j Read_DataA~28_combout $end
-$var wire 1 k Read_DataA~25_combout $end
-$var wire 1 l Read_DataA~26_combout $end
-$var wire 1 m Read_DataA~29_combout $end
-$var wire 1 n Read_DataA~32_combout $end
-$var wire 1 o Read_DataA~33_combout $end
-$var wire 1 p Read_DataA~30_combout $end
-$var wire 1 q Read_DataA~31_combout $end
-$var wire 1 r Read_DataA~34_combout $end
-$var wire 1 s Read_DataA~35_combout $end
-$var wire 1 t Read_DataA~36_combout $end
-$var wire 1 u Read_DataA~38_combout $end
-$var wire 1 v Read_DataA~39_combout $end
-$var wire 1 w Read_DataB~2_combout $end
-$var wire 1 x Read_DataB~3_combout $end
-$var wire 1 y Read_DataB~0_combout $end
-$var wire 1 z Read_DataB~1_combout $end
-$var wire 1 { Read_DataB~4_combout $end
-$var wire 1 | Read_DataB~6_combout $end
-$var wire 1 } Read_DataB~8_combout $end
-$var wire 1 ~ Read_DataB~9_combout $end
-$var wire 1 !! Read_DataB~11_combout $end
-$var wire 1 "! Read_DataB~13_combout $end
-$var wire 1 #! Read_DataB~14_combout $end
-$var wire 1 $! Read_DataB~15_combout $end
-$var wire 1 %! Read_DataB~16_combout $end
-$var wire 1 &! Read_DataB~18_combout $end
-$var wire 1 '! Read_DataB~19_combout $end
-$var wire 1 (! Read_DataB~20_combout $end
-$var wire 1 )! Read_DataB~21_combout $end
-$var wire 1 *! Read_DataB~22_combout $end
-$var wire 1 +! Read_DataB~23_combout $end
-$var wire 1 ,! Read_DataB~24_combout $end
-$var wire 1 -! Read_DataB~26_combout $end
-$var wire 1 .! Read_DataB~27_combout $end
-$var wire 1 /! Read_DataB~28_combout $end
-$var wire 1 0! Read_DataB~29_combout $end
-$var wire 1 1! Read_DataB~30_combout $end
-$var wire 1 2! Read_DataB~31_combout $end
-$var wire 1 3! Read_DataB~32_combout $end
-$var wire 1 4! Read_DataB~33_combout $end
-$var wire 1 5! Read_DataB~34_combout $end
-$var wire 1 6! Read_DataB~35_combout $end
-$var wire 1 7! Read_DataB~36_combout $end
-$var wire 1 8! Read_DataB~37_combout $end
-$var wire 1 9! Read_DataB~38_combout $end
-$var wire 1 :! Read_DataB~39_combout $end
-$var wire 1 ;! reg4 [7] $end
-$var wire 1 <! reg4 [6] $end
-$var wire 1 =! reg4 [5] $end
-$var wire 1 >! reg4 [4] $end
-$var wire 1 ?! reg4 [3] $end
-$var wire 1 @! reg4 [2] $end
-$var wire 1 A! reg4 [1] $end
-$var wire 1 B! reg4 [0] $end
-$var wire 1 C! reg3 [7] $end
-$var wire 1 D! reg3 [6] $end
-$var wire 1 E! reg3 [5] $end
-$var wire 1 F! reg3 [4] $end
-$var wire 1 G! reg3 [3] $end
-$var wire 1 H! reg3 [2] $end
-$var wire 1 I! reg3 [1] $end
-$var wire 1 J! reg3 [0] $end
-$var wire 1 K! reg7 [7] $end
-$var wire 1 L! reg7 [6] $end
-$var wire 1 M! reg7 [5] $end
-$var wire 1 N! reg7 [4] $end
-$var wire 1 O! reg7 [3] $end
-$var wire 1 P! reg7 [2] $end
-$var wire 1 Q! reg7 [1] $end
-$var wire 1 R! reg7 [0] $end
-$var wire 1 S! Write_Data~combout [7] $end
-$var wire 1 T! Write_Data~combout [6] $end
-$var wire 1 U! Write_Data~combout [5] $end
-$var wire 1 V! Write_Data~combout [4] $end
-$var wire 1 W! Write_Data~combout [3] $end
-$var wire 1 X! Write_Data~combout [2] $end
-$var wire 1 Y! Write_Data~combout [1] $end
-$var wire 1 Z! Write_Data~combout [0] $end
-$var wire 1 [! reg5 [7] $end
-$var wire 1 \! reg5 [6] $end
-$var wire 1 ]! reg5 [5] $end
-$var wire 1 ^! reg5 [4] $end
-$var wire 1 _! reg5 [3] $end
-$var wire 1 `! reg5 [2] $end
-$var wire 1 a! reg5 [1] $end
-$var wire 1 b! reg5 [0] $end
-$var wire 1 c! reg0 [7] $end
-$var wire 1 d! reg0 [6] $end
-$var wire 1 e! reg0 [5] $end
-$var wire 1 f! reg0 [4] $end
-$var wire 1 g! reg0 [3] $end
-$var wire 1 h! reg0 [2] $end
-$var wire 1 i! reg0 [1] $end
-$var wire 1 j! reg0 [0] $end
-$var wire 1 k! reg6 [7] $end
-$var wire 1 l! reg6 [6] $end
-$var wire 1 m! reg6 [5] $end
-$var wire 1 n! reg6 [4] $end
-$var wire 1 o! reg6 [3] $end
-$var wire 1 p! reg6 [2] $end
-$var wire 1 q! reg6 [1] $end
-$var wire 1 r! reg6 [0] $end
-$var wire 1 s! reg1 [7] $end
-$var wire 1 t! reg1 [6] $end
-$var wire 1 u! reg1 [5] $end
-$var wire 1 v! reg1 [4] $end
-$var wire 1 w! reg1 [3] $end
-$var wire 1 x! reg1 [2] $end
-$var wire 1 y! reg1 [1] $end
-$var wire 1 z! reg1 [0] $end
-$var wire 1 {! Write_Address~combout [2] $end
-$var wire 1 |! Write_Address~combout [1] $end
-$var wire 1 }! Write_Address~combout [0] $end
-$var wire 1 ~! reg2 [7] $end
-$var wire 1 !" reg2 [6] $end
-$var wire 1 "" reg2 [5] $end
-$var wire 1 #" reg2 [4] $end
-$var wire 1 $" reg2 [3] $end
-$var wire 1 %" reg2 [2] $end
-$var wire 1 &" reg2 [1] $end
-$var wire 1 '" reg2 [0] $end
-$var wire 1 (" Read_AddressB~combout [2] $end
-$var wire 1 )" Read_AddressB~combout [1] $end
-$var wire 1 *" Read_AddressB~combout [0] $end
-$var wire 1 +" Read_AddressA~combout [2] $end
-$var wire 1 ," Read_AddressA~combout [1] $end
-$var wire 1 -" Read_AddressA~combout [0] $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var tri1 1 8 devclrn $end
+$var tri1 1 9 devpor $end
+$var tri1 1 : devoe $end
+$var wire 1 ; Select~combout $end
+$var wire 1 < Output~0_combout $end
+$var wire 1 = Output~1_combout $end
+$var wire 1 > Output~2_combout $end
+$var wire 1 ? Output~3_combout $end
+$var wire 1 @ Output~4_combout $end
+$var wire 1 A Output~5_combout $end
+$var wire 1 B Output~6_combout $end
+$var wire 1 C Output~7_combout $end
+$var wire 1 D Output~8_combout $end
+$var wire 1 E Output~9_combout $end
+$var wire 1 F Output~10_combout $end
+$var wire 1 G Output~11_combout $end
+$var wire 1 H Output~12_combout $end
+$var wire 1 I Output~13_combout $end
+$var wire 1 J Output~14_combout $end
+$var wire 1 K Output~15_combout $end
+$var wire 1 L IN_8Bit~combout [7] $end
+$var wire 1 M IN_8Bit~combout [6] $end
+$var wire 1 N IN_8Bit~combout [5] $end
+$var wire 1 O IN_8Bit~combout [4] $end
+$var wire 1 P IN_8Bit~combout [3] $end
+$var wire 1 Q IN_8Bit~combout [2] $end
+$var wire 1 R IN_8Bit~combout [1] $end
+$var wire 1 S IN_8Bit~combout [0] $end
+$var wire 1 T IN_16Bit~combout [15] $end
+$var wire 1 U IN_16Bit~combout [14] $end
+$var wire 1 V IN_16Bit~combout [13] $end
+$var wire 1 W IN_16Bit~combout [12] $end
+$var wire 1 X IN_16Bit~combout [11] $end
+$var wire 1 Y IN_16Bit~combout [10] $end
+$var wire 1 Z IN_16Bit~combout [9] $end
+$var wire 1 [ IN_16Bit~combout [8] $end
+$var wire 1 \ IN_16Bit~combout [7] $end
+$var wire 1 ] IN_16Bit~combout [6] $end
+$var wire 1 ^ IN_16Bit~combout [5] $end
+$var wire 1 _ IN_16Bit~combout [4] $end
+$var wire 1 ` IN_16Bit~combout [3] $end
+$var wire 1 a IN_16Bit~combout [2] $end
+$var wire 1 b IN_16Bit~combout [1] $end
+$var wire 1 c IN_16Bit~combout [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-0!
-b0 "
-b0 #
-0$
-b101 %
-b0 &
+b10010 !
+b1010101111001101 "
+1#
+13
+02
+11
+10
+0/
 0.
-0-
-0,
+1-
+1,
 0+
-0*
+1*
 0)
 0(
-0'
-06
+1'
+0&
+0%
+0$
+x4
 05
-04
-03
-02
-01
-00
-0/
+16
 x7
-08
+18
 19
-x:
+1:
 1;
 1<
-1=
-0>
-0?
+0=
+1>
+1?
 0@
 0A
-0B
-0C
+1B
+1C
 0D
-0E
+1E
 0F
 0G
-0H
+1H
 0I
 0J
 0K
-0L
-0M
-0N
-0O
-0P
-0Q
-0R
 0S
-0T
-0U
-0V
-0W
-0X
-0Y
-0Z
-0[
-0\
-0]
-0^
-0_
-0`
-0a
-0b
-0c
-0d
-0e
-0f
-0g
-0h
-0i
-0j
-0k
-0l
-0m
-0n
-0o
-0p
-0q
-0r
-0s
-0t
-0u
-0v
-0w
-0x
-0y
-0z
-0{
-0|
-0}
-0~
-0!!
-0"!
-0#!
-0$!
-0%!
-0&!
-0'!
-0(!
-0)!
-0*!
-0+!
-0,!
-0-!
-0.!
-0/!
-00!
-01!
-02!
-03!
-04!
-05!
-06!
-07!
-08!
-09!
-0:!
-0B!
-0A!
-0@!
-0?!
-0>!
-0=!
-0<!
-0;!
-0J!
-0I!
-0H!
-0G!
-0F!
-0E!
-0D!
-0C!
-0R!
-0Q!
-0P!
-0O!
-0N!
-0M!
-0L!
-0K!
-0Z!
-0Y!
-0X!
-0W!
-0V!
-0U!
-0T!
-0S!
-0b!
-0a!
-0`!
-0_!
-0^!
-0]!
-0\!
-0[!
-0j!
-0i!
-0h!
-0g!
-0f!
-0e!
-0d!
-0c!
-0r!
-0q!
-0p!
-0o!
-0n!
-0m!
-0l!
-0k!
-0z!
-0y!
-0x!
-0w!
-0v!
-0u!
-0t!
-0s!
-1}!
-0|!
-1{!
-0'"
-0&"
-0%"
-0$"
-0#"
-0""
-0!"
-0~!
-0*"
-0)"
-0("
-0-"
-0,"
-0+"
-$end
-#10000
-1!
-b100 &
-b110 &
-1H
-1Y!
-1X!
-1I
-07
-#20000
-0!
-0H
-0I
-17
-#30000
-1!
-1H
-1I
-07
-#40000
-1$
-0!
-1J
-0H
-0I
-17
-1N
-#50000
-1!
-1H
-1I
-07
-1`!
-1a!
-#60000
-0$
-0!
-0J
-0H
-0I
-17
+1R
+0Q
+0P
+1O
 0N
-#70000
-1!
-1H
-1I
-07
-#80000
-b100 "
-b101 "
-0!
-1-"
-1+"
-0H
-0I
-17
-1^
-1Y
+0M
+0L
+1c
+0b
+1a
 1`
-1\
-1,
-1-
-#90000
-1!
-1H
-1I
-07
-#100000
-0!
-0H
-0I
-17
-#110000
-1!
-1H
-1I
-07
-#120000
-0!
-0H
-0I
-17
-#130000
-1!
-1H
-1I
-07
-#140000
-0!
-0H
-0I
-17
-#150000
-1!
-1H
-1I
-07
-#160000
-0!
-0H
-0I
-17
-#170000
-1!
-1H
-1I
-07
-#180000
-b100 #
-b101 #
-b1 "
-b0 "
-0!
-0-"
-0+"
-1*"
-1("
-0H
-0I
-17
-0`
-0\
+0_
 0^
+1]
+1\
+1[
+1Z
 0Y
-1!!
-1|
-1#!
-1~
+1X
+0W
+1V
+0U
+1T
+$end
+#230000
+0#
+0;
+04
+1K
+1I
+0H
+1G
+1D
+0C
+0B
+1@
+0?
+0>
+1=
+0<
+1$
+1&
+0'
+1(
+1+
 0,
 0-
+1/
+00
+01
+12
+03
+#490000
+b110010 !
+b110110 !
+b110100 !
+1#
+0R
+1Q
+1N
+1;
 14
-15
-#190000
-1!
-1H
-1I
-07
-#200000
-0!
-0H
-0I
-17
-#210000
-1!
-1H
-1I
-07
-#220000
-0!
-0H
-0I
-17
-#230000
-1!
-1H
-1I
-07
-#240000
-0!
-0H
-0I
-17
-#250000
-1!
-1H
-1I
-07
-#260000
-0!
-0H
-0I
-17
-#270000
-1!
-1H
-1I
-07
-#280000
-0!
-0H
-0I
-17
-#290000
-1!
-1H
-1I
-07
-#300000
-0!
-0H
-0I
-17
-#310000
-1!
-1H
-1I
-07
-#320000
-b111 #
-b110 #
-0!
-0*"
-1)"
-0H
-0I
-17
-0#!
-0~
-18!
-16!
-13!
-11!
-1.!
-1*!
-1(!
-1$!
-1y
-1w
-1G
+0E
+0=
 1F
-1E
-1D
+1>
+0K
+1H
+0G
+0D
 1C
 1B
-0!!
-0|
-04
-05
-#330000
-1!
-1H
-1I
-07
-#340000
-b10 &
-b0 &
-0!
-0Y!
-0X!
-0H
-0I
-17
-#350000
-1!
-1H
-1I
-07
-#360000
-0!
-0H
-0I
-17
-#370000
-1!
-1H
-1I
-07
-#380000
-0!
-0H
-0I
-17
-#390000
-1!
-1H
-1I
-07
-#400000
-0!
-0H
-0I
-17
-#410000
-1!
-1H
-1I
-07
-#420000
-0!
-0H
-0I
-17
-#430000
-1!
-1H
-1I
-07
-#440000
-0!
-0H
-0I
-17
-#450000
-1!
-1H
-1I
-07
-#460000
-0!
-0H
-0I
-17
-#470000
-1!
-1H
-1I
-07
-#480000
-0!
-0H
-0I
-17
-#490000
-1!
-1H
-1I
-07
-#500000
-0!
-0H
-0I
-17
-#510000
-1!
-1H
-1I
-07
-#520000
-0!
-0H
-0I
-17
-#530000
-1!
-1H
-1I
-07
-#540000
-0!
-0H
-0I
-17
-#550000
-1!
-1H
-1I
-07
-#560000
-0!
-0H
-0I
-17
-#570000
-1!
-1H
-1I
-07
-#580000
-0!
-0H
-0I
-17
-#590000
-1!
-1H
-1I
-07
-#600000
-0!
-0H
-0I
-17
-#610000
-1!
-1H
-1I
-07
-#620000
-0!
-0H
-0I
-17
-#630000
-1!
-1H
-1I
-07
-#640000
-0!
-0H
-0I
-17
-#650000
-1!
-1H
-1I
-07
-#660000
-0!
-0H
-0I
-17
-#670000
-1!
-1H
-1I
-07
-#680000
-0!
-0H
-0I
-17
-#690000
-1!
-1H
-1I
-07
-#700000
-0!
-0H
-0I
-17
+0@
+1?
+1<
+0*
+02
+1)
+11
+0$
+1'
+0(
+0+
+1,
+1-
+0/
+10
+13
 #710000
-1!
-1H
-1I
-07
-#720000
-0!
+0#
+0;
+04
+1K
 0H
-0I
-17
-#730000
-1!
-1H
-1I
-07
-#740000
-0!
-0H
-0I
-17
-#750000
-1!
-1H
-1I
-07
-#760000
-0!
-0H
-0I
-17
-#770000
-1!
-1H
-1I
-07
-#780000
-0!
-0H
-0I
-17
-#790000
-1!
-1H
-1I
-07
-#800000
-0!
-0H
-0I
-17
-#810000
-1!
-1H
-1I
-07
-#820000
-0!
-0H
-0I
-17
-#830000
-1!
-1H
-1I
-07
-#840000
-0!
-0H
-0I
-17
-#850000
-1!
-1H
-1I
-07
-#860000
-0!
-0H
-0I
-17
-#870000
-1!
-1H
-1I
-07
-#880000
-0!
-0H
-0I
-17
-#890000
-1!
-1H
-1I
-07
-#900000
-0!
-0H
-0I
-17
-#910000
-1!
-1H
-1I
-07
-#920000
-0!
-0H
-0I
-17
-#930000
-1!
-1H
-1I
-07
-#940000
-0!
-0H
-0I
-17
-#950000
-1!
-1H
-1I
-07
-#960000
-0!
-0H
-0I
-17
-#970000
-1!
-1H
-1I
-07
-#980000
-0!
-0H
-0I
-17
-#990000
-1!
-1H
-1I
-07
+1G
+0F
+1E
+1D
+0C
+0B
+1A
+1@
+0?
+0<
+1$
+0'
+1(
+0)
+1*
+1+
+0,
+0-
+1.
+1/
+00
+03
 #1000000
