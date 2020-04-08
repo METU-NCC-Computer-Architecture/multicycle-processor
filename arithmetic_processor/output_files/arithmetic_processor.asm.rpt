@@ -1,5 +1,5 @@
 Assembler report for arithmetic_processor
-Fri Apr 03 21:16:51 2020
+Wed Apr 08 16:41:50 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Apr 03 21:16:51 2020 ;
+; Assembler Status      ; Successful - Wed Apr 08 16:41:50 2020 ;
 ; Revision Name         ; arithmetic_processor                  ;
 ; Top-level Entity Name ; Datapath                              ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                                                        ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------------+
 ; Device         ; EP2C70F896C6                                                                                                                   ;
-; JTAG usercode  ; 0x00655603                                                                                                                     ;
-; Checksum       ; 0x00655603                                                                                                                     ;
+; JTAG usercode  ; 0x00655DDE                                                                                                                     ;
+; Checksum       ; 0x00655DDE                                                                                                                     ;
 +----------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------------------------------------------------------------------------------+
 ; Device             ; EPCS16                                                                                                                     ;
 ; JTAG usercode      ; 0x00000000                                                                                                                 ;
-; Checksum           ; 0x187C7964                                                                                                                 ;
+; Checksum           ; 0x1875C7DE                                                                                                                 ;
 ; Compression Ratio  ; 3                                                                                                                          ;
 +--------------------+----------------------------------------------------------------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Apr 03 21:16:45 2020
+    Info: Processing started: Wed Apr 08 16:41:46 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4571 megabytes
-    Info: Processing ended: Fri Apr 03 21:16:51 2020
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4567 megabytes
+    Info: Processing ended: Wed Apr 08 16:41:50 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

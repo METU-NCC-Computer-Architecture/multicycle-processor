@@ -1,0 +1,11 @@
+module sign_extend(
+  input [5:0] unextended,//the msb bit is the sign bit
+  input clk,
+  output reg [15:0] extended 
+);
+
+always@(posedge clk)
+  begin 
+     extended[15:0] <= { {10{extend[5]}}, extend[5:0] };
+  end
+endmodule
