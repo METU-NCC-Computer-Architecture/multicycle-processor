@@ -38,20 +38,20 @@
 // synopsys translate_on
 module DATAMEM (
 	address,
-	clock,
 	data,
+	inclock,
 	wren,
 	q);
 
 	input	[9:0]  address;
-	input	  clock;
 	input	[15:0]  data;
+	input	  inclock;
 	input	  wren;
 	output	[15:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
-	tri1	  clock;
+	tri1	  inclock;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
 `endif
@@ -61,7 +61,7 @@ module DATAMEM (
 
 	altsyncram	altsyncram_component (
 				.address_a (address),
-				.clock0 (clock),
+				.clock0 (inclock),
 				.data_a (data),
 				.wren_a (wren),
 				.q_a (sub_wire0),
@@ -137,7 +137,7 @@ endmodule
 // Retrieval info: PRIVATE: RegData NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: SingleClock NUMERIC "1"
+// Retrieval info: PRIVATE: SingleClock NUMERIC "0"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "1"
 // Retrieval info: PRIVATE: WRCONTROL_ACLR_A NUMERIC "0"
 // Retrieval info: PRIVATE: WidthAddr NUMERIC "10"
@@ -159,19 +159,19 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 // Retrieval info: USED_PORT: address 0 0 10 0 INPUT NODEFVAL "address[9..0]"
-// Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: data 0 0 16 0 INPUT NODEFVAL "data[15..0]"
+// Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT VCC "inclock"
 // Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
 // Retrieval info: USED_PORT: wren 0 0 0 0 INPUT NODEFVAL "wren"
 // Retrieval info: CONNECT: @address_a 0 0 10 0 address 0 0 10 0
-// Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
+// Retrieval info: CONNECT: @clock0 0 0 0 0 inclock 0 0 0 0
 // Retrieval info: CONNECT: @data_a 0 0 16 0 data 0 0 16 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 16 0 @q_a 0 0 16 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.bsf TRUE FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf
