@@ -117,7 +117,7 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.inc FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.bsf TRUE FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.bsf TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_inst.v FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

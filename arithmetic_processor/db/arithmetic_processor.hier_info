@@ -3,11 +3,13 @@ Qm1 <= DFF1:REG_Qm1.Q
 RST => DFF1:REG_Qm1.Reset
 RST => SHIFTREG8:REG_Q.Reset
 RST => SHIFTREG8:REG_A.Reset
+RST => PCREG:REG_PC.RST
 RST => RegisterFile8x8:RF.RST
 LDQ => DFF1:REG_Qm1.Enable
 LDQ => SHIFTREG8:REG_Q.Enable
 CLK => SHIFTREG8:REG_Q.CLK
 CLK => SHIFTREG8:REG_A.CLK
+CLK => PCREG:REG_PC.CLK
 CLK => RegisterFile8x8:RF.CLK
 CLK => Multiplier:Multiplier.CLK
 CLK => DFF1:REG_Qm1.CLK
@@ -24,46 +26,22 @@ SR_SEL => MUX2TO1:MUX_S.Select
 MULT_SEL => MUX2TO1_8BIT:MULT_SEL_A.Select
 MULT_SEL => MUX2TO1_8BIT:MULT_SEL_Q.Select
 Cin => ap_function:ALU.cin
+PC_EN => PCREG:REG_PC.EN
+PC_MUX_SEL[0] => MUX4TO1_10BIT:MUX_PC.Select[0]
+PC_MUX_SEL[1] => MUX4TO1_10BIT:MUX_PC.Select[1]
 RF_EN => RegisterFile8x8:RF.WriteEN
+INS_TYPE_MUX_SEL => MUX2TO1_3BIT:MUX_TYPE_SEL.Select
+PLUS1_SEL => PLUS1_ADDER:PLUS1_ADDER.PLUS1_CTL
+DATA_MEM_EN => DATAMEM:inst4.wren
+WB_SEL => MUX2TO1_16BIT:inst11.Select
+UL_SEL => ROUTER:ROUTER_LOGIC.Select
 D_SEL[0] => MUX4TO1:MUX_D.Select[0]
 D_SEL[1] => MUX4TO1:MUX_D.Select[1]
-ASEL[0] => MUX4TO1:MUX_A.Select[0]
-ASEL[1] => MUX4TO1:MUX_A.Select[1]
-BSEL[0] => MUX4TO1:MUX_B.Select[0]
-BSEL[1] => MUX4TO1:MUX_B.Select[1]
-Product[0] <= Multiplier:Multiplier.Product[0]
-Product[1] <= Multiplier:Multiplier.Product[1]
-Product[2] <= Multiplier:Multiplier.Product[2]
-Product[3] <= Multiplier:Multiplier.Product[3]
-Product[4] <= Multiplier:Multiplier.Product[4]
-Product[5] <= Multiplier:Multiplier.Product[5]
-Product[6] <= Multiplier:Multiplier.Product[6]
-Product[7] <= Multiplier:Multiplier.Product[7]
-Product[8] <= Multiplier:Multiplier.Product[8]
-Product[9] <= Multiplier:Multiplier.Product[9]
-Product[10] <= Multiplier:Multiplier.Product[10]
-Product[11] <= Multiplier:Multiplier.Product[11]
-Product[12] <= Multiplier:Multiplier.Product[12]
-Product[13] <= Multiplier:Multiplier.Product[13]
-Product[14] <= Multiplier:Multiplier.Product[14]
-Product[15] <= Multiplier:Multiplier.Product[15]
-MULT_START => Multiplier:Multiplier.Start
-Multiplicand[0] => Multiplier:Multiplier.Multiplicand[0]
-Multiplicand[1] => Multiplier:Multiplier.Multiplicand[1]
-Multiplicand[2] => Multiplier:Multiplier.Multiplicand[2]
-Multiplicand[3] => Multiplier:Multiplier.Multiplicand[3]
-Multiplicand[4] => Multiplier:Multiplier.Multiplicand[4]
-Multiplicand[5] => Multiplier:Multiplier.Multiplicand[5]
-Multiplicand[6] => Multiplier:Multiplier.Multiplicand[6]
-Multiplicand[7] => Multiplier:Multiplier.Multiplicand[7]
-Multplier[0] => Multiplier:Multiplier.Multiplier[0]
-Multplier[1] => Multiplier:Multiplier.Multiplier[1]
-Multplier[2] => Multiplier:Multiplier.Multiplier[2]
-Multplier[3] => Multiplier:Multiplier.Multiplier[3]
-Multplier[4] => Multiplier:Multiplier.Multiplier[4]
-Multplier[5] => Multiplier:Multiplier.Multiplier[5]
-Multplier[6] => Multiplier:Multiplier.Multiplier[6]
-Multplier[7] => Multiplier:Multiplier.Multiplier[7]
+A_SEL[0] => MUX4TO1:MUX_A.Select[0]
+A_SEL[1] => MUX4TO1:MUX_A.Select[1]
+B_SEL[0] => MUX4TO1:MUX_B.Select[0]
+B_SEL[1] => MUX4TO1:MUX_B.Select[1]
+MULT_EN => Multiplier:Multiplier.Start
 SR => SHIFTREG8:REG_A.ShiftRL[1]
 SR => SHIFTREG8:REG_Q.ShiftRL[1]
 SL => SHIFTREG8:REG_A.ShiftRL[0]
@@ -498,7 +476,7 @@ Output[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|PCREG:inst13
+|Datapath|PCREG:REG_PC
 CLK => Address[0]~reg0.CLK
 CLK => Address[1]~reg0.CLK
 CLK => Address[2]~reg0.CLK
@@ -551,7 +529,7 @@ Address[8] <= Address[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Address[9] <= Address[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX4TO1_10BIT:inst14
+|Datapath|MUX4TO1_10BIT:MUX_PC
 IN0[0] => Mux9.IN0
 IN0[1] => Mux8.IN0
 IN0[2] => Mux7.IN0
@@ -1425,6 +1403,29 @@ TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Datapath|CONCANITATING:inst1
+IN_2Bit[0] => Output[8].DATAIN
+IN_2Bit[1] => Output[9].DATAIN
+IN_8Bit[0] => Output[0].DATAIN
+IN_8Bit[1] => Output[1].DATAIN
+IN_8Bit[2] => Output[2].DATAIN
+IN_8Bit[3] => Output[3].DATAIN
+IN_8Bit[4] => Output[4].DATAIN
+IN_8Bit[5] => Output[5].DATAIN
+IN_8Bit[6] => Output[6].DATAIN
+IN_8Bit[7] => Output[7].DATAIN
+Output[0] <= IN_8Bit[0].DB_MAX_OUTPUT_PORT_TYPE
+Output[1] <= IN_8Bit[1].DB_MAX_OUTPUT_PORT_TYPE
+Output[2] <= IN_8Bit[2].DB_MAX_OUTPUT_PORT_TYPE
+Output[3] <= IN_8Bit[3].DB_MAX_OUTPUT_PORT_TYPE
+Output[4] <= IN_8Bit[4].DB_MAX_OUTPUT_PORT_TYPE
+Output[5] <= IN_8Bit[5].DB_MAX_OUTPUT_PORT_TYPE
+Output[6] <= IN_8Bit[6].DB_MAX_OUTPUT_PORT_TYPE
+Output[7] <= IN_8Bit[7].DB_MAX_OUTPUT_PORT_TYPE
+Output[8] <= IN_2Bit[0].DB_MAX_OUTPUT_PORT_TYPE
+Output[9] <= IN_2Bit[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Datapath|RegisterFile8x8:RF
 CLK => reg7[0].CLK
 CLK => reg7[1].CLK
@@ -1751,7 +1752,7 @@ Read_DataB[6] <= Read_DataB.DB_MAX_OUTPUT_PORT_TYPE
 Read_DataB[7] <= Read_DataB.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX2TO1_3BIT:inst8
+|Datapath|MUX2TO1_3BIT:MUX_TYPE_SEL
 IN0[0] => Output.DATAA
 IN0[1] => Output.DATAA
 IN0[2] => Output.DATAA
@@ -1764,7 +1765,7 @@ Output[1] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[2] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|PLUS1_ADDER:inst7
+|Datapath|PLUS1_ADDER:PLUS1_ADDER
 Plus1[0] => Add0.IN6
 Plus1[1] => Add0.IN5
 Plus1[2] => Add0.IN4
@@ -2924,7 +2925,7 @@ Output[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|SIGNEXT6T08:inst5
+|Datapath|SIGNEXT6T08:SIGN_EXT_I_TYPE
 Unextended[0] => Extended[0].DATAIN
 Unextended[1] => Extended[1].DATAIN
 Unextended[2] => Extended[2].DATAIN
