@@ -24,6 +24,7 @@ entity Datapath is
         DATA_MEM_OUT    : in     vl_logic_vector(15 downto 0);
         D_SEL           : in     vl_logic_vector(1 downto 0);
         A_SEL           : in     vl_logic_vector(1 downto 0);
+        OAP             : in     vl_logic_vector(2 downto 0);
         B_SEL           : in     vl_logic_vector(1 downto 0);
         MULT_EN         : in     vl_logic;
         SR              : in     vl_logic;
@@ -35,6 +36,8 @@ entity Datapath is
         ALUOUT          : out    vl_logic_vector(7 downto 0);
         OPCODE          : out    vl_logic_vector(3 downto 0);
         OUT_Q           : out    vl_logic_vector(7 downto 0);
+        READ_DATA_A     : out    vl_logic_vector(7 downto 0);
+        READ_DATA_B     : out    vl_logic_vector(7 downto 0);
         RF_OUT_A        : out    vl_logic_vector(7 downto 0);
         RF_OUT_B        : out    vl_logic_vector(7 downto 0);
         RF_R_ADDR_B     : out    vl_logic_vector(2 downto 0);

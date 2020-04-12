@@ -14,6 +14,7 @@ entity Datapath_vlg_sample_tst is
         LDQ             : in     vl_logic;
         MULT_EN         : in     vl_logic;
         MULT_SEL        : in     vl_logic;
+        OAP             : in     vl_logic_vector(2 downto 0);
         PC_EN           : in     vl_logic;
         PC_MUX_SEL      : in     vl_logic_vector(1 downto 0);
         PLUS1_SEL       : in     vl_logic;
