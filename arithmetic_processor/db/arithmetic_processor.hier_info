@@ -10,7 +10,9 @@ LDQ => SHIFTREG8:REG_Q.Enable
 CLK => SHIFTREG8:REG_Q.CLK
 CLK => SHIFTREG8:REG_A.CLK
 CLK => PCREG:REG_PC.CLK
+CLK => INSTMEM:inst4.inclock
 CLK => RegisterFile8x8:RF.CLK
+CLK => DATAMEM:inst3.inclock
 CLK => Multiplier:Multiplier.CLK
 CLK => DFF1:REG_Qm1.CLK
 LDA => SHIFTREG8:REG_A.Enable
@@ -601,7 +603,7 @@ Output[8] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[9] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|INSTMEM:inst_mem
+|Datapath|INSTMEM:inst4
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -631,7 +633,7 @@ q[14] <= altsyncram:altsyncram_component.q_a
 q[15] <= altsyncram:altsyncram_component.q_a
 
 
-|Datapath|INSTMEM:inst_mem|altsyncram:altsyncram_component
+|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -698,7 +700,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Datapath|INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated
+|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated
 address_a[0] => altsyncram_7u92:altsyncram1.address_a[0]
 address_a[1] => altsyncram_7u92:altsyncram1.address_a[1]
 address_a[2] => altsyncram_7u92:altsyncram1.address_a[2]
@@ -728,7 +730,7 @@ q_a[14] <= altsyncram_7u92:altsyncram1.q_a[14]
 q_a[15] <= altsyncram_7u92:altsyncram1.q_a[15]
 
 
-|Datapath|INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|altsyncram_7u92:altsyncram1
+|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|altsyncram_7u92:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -1147,7 +1149,7 @@ wren_b => ram_block3a14.PORTBRE
 wren_b => ram_block3a15.PORTBRE
 
 
-|Datapath|INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -1288,7 +1290,7 @@ ir_out[4] <= ir_loaded_address_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|INSTMEM:inst_mem|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
@@ -1836,7 +1838,7 @@ Output[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|DATAMEM:inst4
+|Datapath|DATAMEM:inst3
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -1883,7 +1885,7 @@ q[14] <= altsyncram:altsyncram_component.q_a
 q[15] <= altsyncram:altsyncram_component.q_a
 
 
-|Datapath|DATAMEM:inst4|altsyncram:altsyncram_component
+|Datapath|DATAMEM:inst3|altsyncram:altsyncram_component
 wren_a => altsyncram_epe1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1950,7 +1952,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Datapath|DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated
+|Datapath|DATAMEM:inst3|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated
 address_a[0] => altsyncram_2aa2:altsyncram1.address_a[0]
 address_a[1] => altsyncram_2aa2:altsyncram1.address_a[1]
 address_a[2] => altsyncram_2aa2:altsyncram1.address_a[2]
@@ -1997,7 +1999,7 @@ q_a[15] <= altsyncram_2aa2:altsyncram1.q_a[15]
 wren_a => altsyncram_2aa2:altsyncram1.wren_a
 
 
-|Datapath|DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|altsyncram_2aa2:altsyncram1
+|Datapath|DATAMEM:inst3|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|altsyncram_2aa2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -2448,7 +2450,7 @@ wren_b => ram_block3a14.PORTBRE
 wren_b => ram_block3a15.PORTBRE
 
 
-|Datapath|DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|Datapath|DATAMEM:inst3|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -2589,7 +2591,7 @@ ir_out[4] <= ir_loaded_address_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|DATAMEM:inst4|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|Datapath|DATAMEM:inst3|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
