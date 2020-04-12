@@ -37,6 +37,9 @@ entity Datapath is
         OUT_Q           : out    vl_logic_vector(7 downto 0);
         RF_OUT_A        : out    vl_logic_vector(7 downto 0);
         RF_OUT_B        : out    vl_logic_vector(7 downto 0);
+        RF_R_ADDR_B     : out    vl_logic_vector(2 downto 0);
+        RF_W_ADDR       : out    vl_logic_vector(2 downto 0);
+        RF_W_DATA       : out    vl_logic_vector(7 downto 0);
         WB_SEL          : in     vl_logic;
         UL_SEL          : in     vl_logic
     );

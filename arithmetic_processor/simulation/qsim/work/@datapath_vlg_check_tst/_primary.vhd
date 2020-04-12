@@ -12,6 +12,9 @@ entity Datapath_vlg_check_tst is
         Qm1             : in     vl_logic;
         RF_OUT_A        : in     vl_logic_vector(7 downto 0);
         RF_OUT_B        : in     vl_logic_vector(7 downto 0);
+        RF_R_ADDR_B     : in     vl_logic_vector(2 downto 0);
+        RF_W_ADDR       : in     vl_logic_vector(2 downto 0);
+        RF_W_DATA       : in     vl_logic_vector(7 downto 0);
         Z               : in     vl_logic;
         sampler_rx      : in     vl_logic
     );

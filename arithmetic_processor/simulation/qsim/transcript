@@ -31,18 +31,18 @@
 # Loading cycloneii_ver.cycloneii_ena_reg
 # Loading work.Datapath_vlg_sample_tst
 # Loading work.Datapath_vlg_check_tst
-# ** Warning: (vsim-3017) arithmetic_processor.vt(1130): [TFMPC] - Too few port connections. Expected 37, found 33.
+# ** Warning: (vsim-3017) arithmetic_processor.vt(1500): [TFMPC] - Too few port connections. Expected 40, found 36.
 # 
 #         Region: /Datapath_vlg_vec_tst/i1
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1130): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1500): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1130): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1500): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1130): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1500): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1130): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1500): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # 
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : arithmetic_processor.vt(1050)
+# ** Note: $finish    : arithmetic_processor.vt(1414)
 #    Time: 1 us  Iteration: 0  Instance: /Datapath_vlg_vec_tst/tb_out
