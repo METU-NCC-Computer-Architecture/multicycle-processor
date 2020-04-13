@@ -26,6 +26,7 @@ entity Datapath is
         A_SEL           : in     vl_logic_vector(1 downto 0);
         OAP             : in     vl_logic_vector(2 downto 0);
         B_SEL           : in     vl_logic_vector(1 downto 0);
+        Product         : out    vl_logic_vector(15 downto 0);
         MULT_EN         : in     vl_logic;
         SR              : in     vl_logic;
         SL              : in     vl_logic;

@@ -9,6 +9,7 @@ entity Datapath_vlg_check_tst is
         OPCODE          : in     vl_logic_vector(3 downto 0);
         OUT_Q           : in     vl_logic_vector(7 downto 0);
         OVF             : in     vl_logic;
+        Product         : in     vl_logic_vector(15 downto 0);
         Qm1             : in     vl_logic;
         READ_DATA_A     : in     vl_logic_vector(7 downto 0);
         READ_DATA_B     : in     vl_logic_vector(7 downto 0);
