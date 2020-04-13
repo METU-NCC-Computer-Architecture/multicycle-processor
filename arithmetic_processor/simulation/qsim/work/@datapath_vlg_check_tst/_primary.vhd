@@ -5,6 +5,8 @@ entity Datapath_vlg_check_tst is
         A               : in     vl_logic_vector(7 downto 0);
         ALUOUT          : in     vl_logic_vector(7 downto 0);
         CO              : in     vl_logic;
+        DATA_MEM_ADDR_IN: in     vl_logic_vector(9 downto 0);
+        DATA_MEM_DATA_IN: in     vl_logic_vector(15 downto 0);
         N               : in     vl_logic;
         OPCODE          : in     vl_logic_vector(3 downto 0);
         OUT_Q           : in     vl_logic_vector(7 downto 0);

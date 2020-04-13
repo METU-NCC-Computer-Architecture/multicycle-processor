@@ -141,6 +141,34 @@ ALUOUT[4] <= MUX2TO1_8BIT:MULT_SEL_A.Output[4]
 ALUOUT[5] <= MUX2TO1_8BIT:MULT_SEL_A.Output[5]
 ALUOUT[6] <= MUX2TO1_8BIT:MULT_SEL_A.Output[6]
 ALUOUT[7] <= MUX2TO1_8BIT:MULT_SEL_A.Output[7]
+DATA_MEM_ADDR_IN[0] <= SIGNEXT8T010:inst16.Extended[0]
+DATA_MEM_ADDR_IN[1] <= SIGNEXT8T010:inst16.Extended[1]
+DATA_MEM_ADDR_IN[2] <= SIGNEXT8T010:inst16.Extended[2]
+DATA_MEM_ADDR_IN[3] <= SIGNEXT8T010:inst16.Extended[3]
+DATA_MEM_ADDR_IN[4] <= SIGNEXT8T010:inst16.Extended[4]
+DATA_MEM_ADDR_IN[5] <= SIGNEXT8T010:inst16.Extended[5]
+DATA_MEM_ADDR_IN[6] <= SIGNEXT8T010:inst16.Extended[6]
+DATA_MEM_ADDR_IN[7] <= SIGNEXT8T010:inst16.Extended[7]
+DATA_MEM_ADDR_IN[8] <= SIGNEXT8T010:inst16.Extended[8]
+DATA_MEM_ADDR_IN[9] <= SIGNEXT8T010:inst16.Extended[9]
+DATA_MEM_DATA_IN[0] <= MUX2TO1_16BIT:inst11.Output[0]
+DATA_MEM_DATA_IN[1] <= MUX2TO1_16BIT:inst11.Output[1]
+DATA_MEM_DATA_IN[2] <= MUX2TO1_16BIT:inst11.Output[2]
+DATA_MEM_DATA_IN[3] <= MUX2TO1_16BIT:inst11.Output[3]
+DATA_MEM_DATA_IN[4] <= MUX2TO1_16BIT:inst11.Output[4]
+DATA_MEM_DATA_IN[5] <= MUX2TO1_16BIT:inst11.Output[5]
+DATA_MEM_DATA_IN[6] <= MUX2TO1_16BIT:inst11.Output[6]
+DATA_MEM_DATA_IN[7] <= MUX2TO1_16BIT:inst11.Output[7]
+DATA_MEM_DATA_IN[8] <= MUX2TO1_16BIT:inst11.Output[8]
+DATA_MEM_DATA_IN[9] <= MUX2TO1_16BIT:inst11.Output[9]
+DATA_MEM_DATA_IN[10] <= MUX2TO1_16BIT:inst11.Output[10]
+DATA_MEM_DATA_IN[11] <= MUX2TO1_16BIT:inst11.Output[11]
+DATA_MEM_DATA_IN[12] <= MUX2TO1_16BIT:inst11.Output[12]
+DATA_MEM_DATA_IN[13] <= MUX2TO1_16BIT:inst11.Output[13]
+DATA_MEM_DATA_IN[14] <= MUX2TO1_16BIT:inst11.Output[14]
+DATA_MEM_DATA_IN[15] <= MUX2TO1_16BIT:inst11.Output[15]
+WB_SEL => MUX2TO1_16BIT:inst11.Select
+UL_SEL => ROUTER:ROUTER_LOGIC.Select
 OPCODE[0] <= INST_MEM_OUT[12].DB_MAX_OUTPUT_PORT_TYPE
 OPCODE[1] <= INST_MEM_OUT[13].DB_MAX_OUTPUT_PORT_TYPE
 OPCODE[2] <= INST_MEM_OUT[14].DB_MAX_OUTPUT_PORT_TYPE
@@ -199,8 +227,6 @@ RF_W_DATA[4] <= MUX4TO1:MUX_D.Output[4]
 RF_W_DATA[5] <= MUX4TO1:MUX_D.Output[5]
 RF_W_DATA[6] <= MUX4TO1:MUX_D.Output[6]
 RF_W_DATA[7] <= MUX4TO1:MUX_D.Output[7]
-WB_SEL => MUX2TO1_16BIT:inst11.Select
-UL_SEL => ROUTER:ROUTER_LOGIC.Select
 
 
 |Datapath|DFF1:REG_Qm1
@@ -1424,6 +1450,29 @@ Output[6] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|Datapath|SIGNEXT8T010:inst16
+Unextended[0] => Extended[0].DATAIN
+Unextended[1] => Extended[1].DATAIN
+Unextended[2] => Extended[2].DATAIN
+Unextended[3] => Extended[3].DATAIN
+Unextended[4] => Extended[4].DATAIN
+Unextended[5] => Extended[5].DATAIN
+Unextended[6] => Extended[6].DATAIN
+Unextended[7] => Extended[7].DATAIN
+Unextended[7] => Extended[9].DATAIN
+Unextended[7] => Extended[8].DATAIN
+Extended[0] <= Unextended[0].DB_MAX_OUTPUT_PORT_TYPE
+Extended[1] <= Unextended[1].DB_MAX_OUTPUT_PORT_TYPE
+Extended[2] <= Unextended[2].DB_MAX_OUTPUT_PORT_TYPE
+Extended[3] <= Unextended[3].DB_MAX_OUTPUT_PORT_TYPE
+Extended[4] <= Unextended[4].DB_MAX_OUTPUT_PORT_TYPE
+Extended[5] <= Unextended[5].DB_MAX_OUTPUT_PORT_TYPE
+Extended[6] <= Unextended[6].DB_MAX_OUTPUT_PORT_TYPE
+Extended[7] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
+Extended[8] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
+Extended[9] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
 |Datapath|MUX2TO1_16BIT:inst11
 IN0[0] => Output.DATAA
 IN0[1] => Output.DATAA
@@ -1561,29 +1610,6 @@ Output[12] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[13] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[14] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[15] <= Output.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Datapath|SIGNEXT8T010:inst16
-Unextended[0] => Extended[0].DATAIN
-Unextended[1] => Extended[1].DATAIN
-Unextended[2] => Extended[2].DATAIN
-Unextended[3] => Extended[3].DATAIN
-Unextended[4] => Extended[4].DATAIN
-Unextended[5] => Extended[5].DATAIN
-Unextended[6] => Extended[6].DATAIN
-Unextended[7] => Extended[7].DATAIN
-Unextended[7] => Extended[9].DATAIN
-Unextended[7] => Extended[8].DATAIN
-Extended[0] <= Unextended[0].DB_MAX_OUTPUT_PORT_TYPE
-Extended[1] <= Unextended[1].DB_MAX_OUTPUT_PORT_TYPE
-Extended[2] <= Unextended[2].DB_MAX_OUTPUT_PORT_TYPE
-Extended[3] <= Unextended[3].DB_MAX_OUTPUT_PORT_TYPE
-Extended[4] <= Unextended[4].DB_MAX_OUTPUT_PORT_TYPE
-Extended[5] <= Unextended[5].DB_MAX_OUTPUT_PORT_TYPE
-Extended[6] <= Unextended[6].DB_MAX_OUTPUT_PORT_TYPE
-Extended[7] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
-Extended[8] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
-Extended[9] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Datapath|DATAMEM:inst4
