@@ -37,7 +37,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -2088 -440 -1912 -424)
+	(rect -2336 -432 -2160 -416)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "CLK" (rect 9 0 30 12)(font "Arial" ))
 	(pt 176 8)
@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -2088 -464 -1912 -448)
+	(rect -2336 -464 -2160 -448)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "RST" (rect 9 0 30 12)(font "Arial" ))
 	(pt 176 8)
@@ -386,6 +386,23 @@ applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -648 352 -445 368)
+	(text "INPUT" (rect 15 0 43 10)(font "Arial" (font_size 6)))
+	(text "DATA_MEM_SEL" (rect 114 0 197 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 84 12)(pt 59 12))
+		(line (pt 84 4)(pt 59 4))
+		(line (pt 55 8)(pt 0 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 59 4)(pt 55 8))
+		(line (pt 59 12)(pt 55 8))
+	)
+	(flipy)
+	(text "VCC" (rect 20 7 40 17)(font "Arial" (font_size 6)))
 )
 (pin
 	(output)
@@ -1641,29 +1658,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -1184 392 -960 472)
-	(text "SIGNEXT8T010" (rect 144 0 219 12)(font "Arial" ))
-	(text "inst16" (rect 187 64 216 76)(font "Arial" ))
-	(port
-		(pt 224 32)
-		(input)
-		(text "Unextended[7..0]" (rect 0 0 84 12)(font "Arial" ))
-		(text "Unextended[7..0]" (rect 119 27 203 39)(font "Arial" ))
-		(line (pt 224 32)(pt 208 32)(line_width 3))
-	)
-	(port
-		(pt 0 32)
-		(output)
-		(text "Extended[9..0]" (rect 0 0 71 12)(font "Arial" ))
-		(text "Extended[9..0]" (rect 21 27 92 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 208 64))
-	)
-	(flipy)
-)
-(symbol
 	(rect -1216 -360 -1016 -280)
 	(text "CONCANITATING" (rect 105 0 195 12)(font "Arial" ))
 	(text "inst1" (rect 169 64 192 76)(font "Arial" ))
@@ -1824,7 +1818,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -664 48 -440 128)
+	(rect -672 48 -448 128)
 	(text "SIGNEXT6T08" (rect 5 0 74 12)(font "Arial" ))
 	(text "SIGN_EXT_I_TYPE" (rect 8 64 103 76)(font "Arial" ))
 	(port
@@ -1880,6 +1874,80 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 168 96))
 	)
+)
+(symbol
+	(rect -1184 392 -984 472)
+	(text "CONCANITATING" (rect 105 0 195 12)(font "Arial" ))
+	(text "inst2" (rect 169 64 192 76)(font "Arial" ))
+	(port
+		(pt 200 32)
+		(input)
+		(text "IN_2Bit[1..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "IN_2Bit[1..0]" (rect 117 27 179 39)(font "Arial" ))
+		(line (pt 200 32)(pt 184 32)(line_width 3))
+	)
+	(port
+		(pt 200 48)
+		(input)
+		(text "IN_8Bit[7..0]" (rect 0 0 62 12)(font "Arial" ))
+		(text "IN_8Bit[7..0]" (rect 117 43 179 55)(font "Arial" ))
+		(line (pt 200 48)(pt 184 48)(line_width 3))
+	)
+	(port
+		(pt 0 32)
+		(output)
+		(text "Output[9..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "Output[9..0]" (rect 11 27 70 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 64))
+	)
+	(flipy)
+)
+(symbol
+	(rect -888 312 -736 424)
+	(text "DFF2" (rect 119 0 147 12)(font "Arial" ))
+	(text "inst3" (rect 121 96 144 108)(font "Arial" ))
+	(port
+		(pt 152 32)
+		(input)
+		(text "Reset" (rect 0 0 29 12)(font "Arial" ))
+		(text "Reset" (rect 102 27 131 39)(font "Arial" ))
+		(line (pt 152 32)(pt 136 32))
+	)
+	(port
+		(pt 152 48)
+		(input)
+		(text "Enable" (rect 0 0 33 12)(font "Arial" ))
+		(text "Enable" (rect 98 43 131 55)(font "Arial" ))
+		(line (pt 152 48)(pt 136 48))
+	)
+	(port
+		(pt 152 64)
+		(input)
+		(text "D[1..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "D[1..0]" (rect 97 59 131 71)(font "Arial" ))
+		(line (pt 152 64)(pt 136 64)(line_width 3))
+	)
+	(port
+		(pt 152 80)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 110 75 131 87)(font "Arial" ))
+		(line (pt 152 80)(pt 136 80))
+	)
+	(port
+		(pt 0 32)
+		(output)
+		(text "Q[1..0]" (rect 0 0 34 12)(font "Arial" ))
+		(text "Q[1..0]" (rect 15 27 49 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 96))
+	)
+	(flipy)
 )
 (connector
 	(pt 648 48)
@@ -1967,11 +2035,6 @@ applicable agreement for further details.
 (connector
 	(pt -384 176)
 	(pt -360 176)
-	(bus)
-)
-(connector
-	(pt -376 424)
-	(pt -376 192)
 	(bus)
 )
 (connector
@@ -2429,16 +2492,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 648 200)
-	(pt 648 80)
-	(bus)
-)
-(connector
-	(pt -440 80)
-	(pt 648 80)
-	(bus)
-)
-(connector
 	(pt 632 552)
 	(pt 496 552)
 	(bus)
@@ -2471,11 +2524,6 @@ applicable agreement for further details.
 (connector
 	(pt -872 -104)
 	(pt -872 -64)
-	(bus)
-)
-(connector
-	(pt -872 -64)
-	(pt -872 -16)
 	(bus)
 )
 (connector
@@ -2628,12 +2676,6 @@ applicable agreement for further details.
 	(text "data[7..0]" (rect -686 208 -639 220)(font "Arial" ))
 	(pt -360 224)
 	(pt -736 224)
-	(bus)
-)
-(connector
-	(text "instr[5..0]" (rect -774 64 -727 76)(font "Arial" ))
-	(pt -872 80)
-	(pt -664 80)
 	(bus)
 )
 (connector
@@ -2907,28 +2949,12 @@ applicable agreement for further details.
 	(pt -1600 -152)
 )
 (connector
-	(pt -1600 -152)
-	(pt -1600 -432)
-)
-(connector
-	(pt -1912 -432)
-	(pt -1600 -432)
-)
-(connector
 	(pt -1584 -136)
 	(pt -1624 -136)
 )
 (connector
 	(pt -1624 -136)
 	(pt -1624 -456)
-)
-(connector
-	(pt -1912 -456)
-	(pt -1624 -456)
-)
-(connector
-	(pt -1624 -456)
-	(pt -64 -456)
 )
 (connector
 	(pt -1184 240)
@@ -3263,11 +3289,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -872 -16)
-	(pt -872 80)
-	(bus)
-)
-(connector
 	(pt 680 -552)
 	(pt 680 -584)
 	(bus)
@@ -3291,11 +3312,6 @@ applicable agreement for further details.
 (connector
 	(pt -1200 424)
 	(pt -1184 424)
-	(bus)
-)
-(connector
-	(pt -960 424)
-	(pt -376 424)
 	(bus)
 )
 (connector
@@ -3368,6 +3384,147 @@ applicable agreement for further details.
 	(pt 304 552)
 	(bus)
 )
+(connector
+	(pt -376 192)
+	(pt -376 424)
+	(bus)
+)
+(connector
+	(pt -376 424)
+	(pt -376 440)
+	(bus)
+)
+(connector
+	(pt -984 440)
+	(pt -376 440)
+	(bus)
+)
+(connector
+	(pt -984 424)
+	(pt -944 424)
+	(bus)
+)
+(connector
+	(pt -944 424)
+	(pt -944 344)
+	(bus)
+)
+(connector
+	(pt -944 344)
+	(pt -888 344)
+	(bus)
+)
+(connector
+	(pt -1624 -456)
+	(pt -64 -456)
+)
+(connector
+	(pt -1600 -432)
+	(pt -1600 -424)
+)
+(connector
+	(pt -1600 -424)
+	(pt -1600 -152)
+)
+(connector
+	(pt -1600 -424)
+	(pt -2056 -424)
+)
+(connector
+	(pt -2056 -424)
+	(pt -2160 -424)
+)
+(connector
+	(pt -2056 608)
+	(pt -720 608)
+)
+(connector
+	(pt -720 608)
+	(pt -720 392)
+)
+(connector
+	(pt -720 392)
+	(pt -736 392)
+)
+(connector
+	(pt -2056 -424)
+	(pt -2056 608)
+)
+(connector
+	(pt -648 360)
+	(pt -736 360)
+)
+(connector
+	(pt -2032 -456)
+	(pt -2032 592)
+)
+(connector
+	(pt -2160 -456)
+	(pt -2032 -456)
+)
+(connector
+	(pt -2032 -456)
+	(pt -1624 -456)
+)
+(connector
+	(pt -2032 592)
+	(pt -696 592)
+)
+(connector
+	(pt -696 344)
+	(pt -736 344)
+)
+(connector
+	(pt -696 344)
+	(pt -696 592)
+)
+(connector
+	(pt 648 200)
+	(pt 648 80)
+	(bus)
+)
+(connector
+	(pt 648 80)
+	(pt -448 80)
+	(bus)
+)
+(connector
+	(pt -872 -64)
+	(pt -872 -16)
+	(bus)
+)
+(connector
+	(text "instr[5..0]" (rect -782 64 -735 76)(font "Arial" ))
+	(pt -872 80)
+	(pt -672 80)
+	(bus)
+)
+(connector
+	(pt -872 -16)
+	(pt -872 80)
+	(bus)
+)
+(connector
+	(pt -872 80)
+	(pt -872 304)
+	(bus)
+)
+(connector
+	(pt -680 304)
+	(pt -680 376)
+	(bus)
+)
+(connector
+	(pt -680 376)
+	(pt -736 376)
+	(bus)
+)
+(connector
+	(text "instr[1..0]" (rect -800 288 -753 300)(font "Arial" ))
+	(pt -872 304)
+	(pt -680 304)
+	(bus)
+)
 (junction (pt 528 152))
 (junction (pt 880 -584))
 (junction (pt 624 424))
@@ -3404,7 +3561,6 @@ applicable agreement for further details.
 (junction (pt -48 -432))
 (junction (pt 424 -432))
 (junction (pt -1264 -392))
-(junction (pt -1600 -432))
 (junction (pt -1624 -456))
 (junction (pt -1264 -344))
 (junction (pt -1680 -120))
@@ -3424,3 +3580,7 @@ applicable agreement for further details.
 (junction (pt 904 416))
 (junction (pt 224 416))
 (junction (pt -1200 552))
+(junction (pt -1600 -424))
+(junction (pt -2056 -424))
+(junction (pt -2032 -456))
+(junction (pt -872 80))
