@@ -8,6 +8,7 @@ entity Datapath_vlg_sample_tst is
         CLK             : in     vl_logic;
         D_SEL           : in     vl_logic_vector(1 downto 0);
         DATA_MEM_OUT    : in     vl_logic_vector(15 downto 0);
+        DATA_MEM_SEL    : in     vl_logic;
         INS_TYPE_MUX_SEL: in     vl_logic;
         INST_MEM_OUT    : in     vl_logic_vector(15 downto 0);
         LDA             : in     vl_logic;

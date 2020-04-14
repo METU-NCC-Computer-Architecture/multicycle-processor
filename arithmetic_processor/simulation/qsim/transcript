@@ -17,10 +17,10 @@
 # Loading work.Datapath_vlg_vec_tst
 # Loading work.Datapath
 # Loading cycloneii_ver.cycloneii_lcell_comb
-# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_ram_block
 # Loading cycloneii_ver.cycloneii_ram_register
 # Loading cycloneii_ver.cycloneii_ram_pulse_generator
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
@@ -31,18 +31,18 @@
 # Loading cycloneii_ver.cycloneii_jtag
 # Loading work.Datapath_vlg_sample_tst
 # Loading work.Datapath_vlg_check_tst
-# ** Warning: (vsim-3017) arithmetic_processor.vt(1991): [TFMPC] - Too few port connections. Expected 46, found 42.
+# ** Warning: (vsim-3017) arithmetic_processor.vt(1995): [TFMPC] - Too few port connections. Expected 47, found 43.
 # 
 #         Region: /Datapath_vlg_vec_tst/i1
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1991): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1991): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1991): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1991): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # 
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : arithmetic_processor.vt(1893)
+# ** Note: $finish    : arithmetic_processor.vt(1895)
 #    Time: 240 ns  Iteration: 0  Instance: /Datapath_vlg_vec_tst/tb_out

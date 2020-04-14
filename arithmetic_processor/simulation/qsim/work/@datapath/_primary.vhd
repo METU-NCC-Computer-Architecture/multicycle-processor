@@ -36,6 +36,7 @@ entity Datapath is
         N               : out    vl_logic;
         ALUOUT          : out    vl_logic_vector(7 downto 0);
         DATA_MEM_ADDR_IN: out    vl_logic_vector(9 downto 0);
+        DATA_MEM_SEL    : in     vl_logic;
         DATA_MEM_DATA_IN: out    vl_logic_vector(15 downto 0);
         WB_SEL          : in     vl_logic;
         UL_SEL          : in     vl_logic;

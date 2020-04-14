@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/13/2020 22:11:50"
+// Generated on "04/14/2020 15:53:52"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Datapath
 // 
@@ -33,6 +33,7 @@ module Datapath_vlg_sample_tst(
 	CLK,
 	D_SEL,
 	DATA_MEM_OUT,
+	DATA_MEM_SEL,
 	INS_TYPE_MUX_SEL,
 	INST_MEM_OUT,
 	LDA,
@@ -58,6 +59,7 @@ input  Cin;
 input  CLK;
 input [1:0] D_SEL;
 input [15:0] DATA_MEM_OUT;
+input  DATA_MEM_SEL;
 input  INS_TYPE_MUX_SEL;
 input [15:0] INST_MEM_OUT;
 input  LDA;
@@ -79,7 +81,7 @@ output sampler_tx;
 
 reg sample;
 time current_time;
-always @(A_SEL or B_SEL or Cin or CLK or D_SEL or DATA_MEM_OUT or INS_TYPE_MUX_SEL or INST_MEM_OUT or LDA or LDQ or MULT_EN or MULT_SEL or OAP or PC_EN or PC_MUX_SEL or PLUS1_SEL or RF_EN or RST or SL or SR or SR_SEL or UL_SEL or WB_SEL)
+always @(A_SEL or B_SEL or Cin or CLK or D_SEL or DATA_MEM_OUT or DATA_MEM_SEL or INS_TYPE_MUX_SEL or INST_MEM_OUT or LDA or LDQ or MULT_EN or MULT_SEL or OAP or PC_EN or PC_MUX_SEL or PLUS1_SEL or RF_EN or RST or SL or SR or SR_SEL or UL_SEL or WB_SEL)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -1903,6 +1905,7 @@ reg Cin;
 reg CLK;
 reg [1:0] D_SEL;
 reg [15:0] DATA_MEM_OUT;
+reg DATA_MEM_SEL;
 reg INS_TYPE_MUX_SEL;
 reg [15:0] INST_MEM_OUT;
 reg LDA;
@@ -1957,6 +1960,7 @@ Datapath i1 (
 	.DATA_MEM_ADDR_IN(DATA_MEM_ADDR_IN),
 	.DATA_MEM_DATA_IN(DATA_MEM_DATA_IN),
 	.DATA_MEM_OUT(DATA_MEM_OUT),
+	.DATA_MEM_SEL(DATA_MEM_SEL),
 	.INS_TYPE_MUX_SEL(INS_TYPE_MUX_SEL),
 	.INST_MEM_OUT(INST_MEM_OUT),
 	.LDA(LDA),
@@ -2017,48 +2021,52 @@ end
 initial
 begin
 	INST_MEM_OUT[13] = 1'b0;
+	INST_MEM_OUT[13] = #160000 1'b1;
+	INST_MEM_OUT[13] = #40000 1'b0;
 end 
 // INST_MEM_OUT[ 12 ]
 initial
 begin
 	INST_MEM_OUT[12] = 1'b1;
 	INST_MEM_OUT[12] = #100000 1'b0;
+	INST_MEM_OUT[12] = #60000 1'b1;
+	INST_MEM_OUT[12] = #40000 1'b0;
 end 
 // INST_MEM_OUT[ 11 ]
 initial
 begin
 	INST_MEM_OUT[11] = 1'b1;
-	INST_MEM_OUT[11] = #200000 1'b0;
+	INST_MEM_OUT[11] = #160000 1'b0;
 end 
 // INST_MEM_OUT[ 10 ]
 initial
 begin
 	INST_MEM_OUT[10] = 1'b1;
-	INST_MEM_OUT[10] = #200000 1'b0;
+	INST_MEM_OUT[10] = #160000 1'b0;
 end 
 // INST_MEM_OUT[ 9 ]
 initial
 begin
 	INST_MEM_OUT[9] = 1'b1;
-	INST_MEM_OUT[9] = #200000 1'b0;
+	INST_MEM_OUT[9] = #160000 1'b0;
 end 
 // INST_MEM_OUT[ 8 ]
 initial
 begin
 	INST_MEM_OUT[8] = 1'b1;
-	INST_MEM_OUT[8] = #200000 1'b0;
+	INST_MEM_OUT[8] = #160000 1'b0;
 end 
 // INST_MEM_OUT[ 7 ]
 initial
 begin
 	INST_MEM_OUT[7] = 1'b1;
-	INST_MEM_OUT[7] = #200000 1'b0;
+	INST_MEM_OUT[7] = #160000 1'b0;
 end 
 // INST_MEM_OUT[ 6 ]
 initial
 begin
 	INST_MEM_OUT[6] = 1'b1;
-	INST_MEM_OUT[6] = #200000 1'b0;
+	INST_MEM_OUT[6] = #160000 1'b0;
 end 
 // INST_MEM_OUT[ 5 ]
 initial
@@ -2089,6 +2097,8 @@ initial
 begin
 	INST_MEM_OUT[1] = 1'b1;
 	INST_MEM_OUT[1] = #100000 1'b0;
+	INST_MEM_OUT[1] = #60000 1'b1;
+	INST_MEM_OUT[1] = #40000 1'b0;
 end 
 // INST_MEM_OUT[ 0 ]
 initial
@@ -2353,6 +2363,14 @@ begin
 	RF_EN = #20000 1'b0;
 end 
 
+// DATA_MEM_SEL
+initial
+begin
+	DATA_MEM_SEL = 1'b0;
+	DATA_MEM_SEL = #160000 1'b1;
+	DATA_MEM_SEL = #20000 1'b0;
+end 
+
 // Cin
 initial
 begin
@@ -2366,6 +2384,7 @@ Datapath_vlg_sample_tst tb_sample (
 	.CLK(CLK),
 	.D_SEL(D_SEL),
 	.DATA_MEM_OUT(DATA_MEM_OUT),
+	.DATA_MEM_SEL(DATA_MEM_SEL),
 	.INS_TYPE_MUX_SEL(INS_TYPE_MUX_SEL),
 	.INST_MEM_OUT(INST_MEM_OUT),
 	.LDA(LDA),
