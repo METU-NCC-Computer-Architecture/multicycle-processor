@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arithmetic_processor
-Tue Apr 14 15:59:20 2020
+Wed Apr 15 10:10:43 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -56,13 +56,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 14 15:59:20 2020           ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 15 10:10:43 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; arithmetic_processor                            ;
 ; Top-level Entity Name              ; Datapath                                        ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 810                                             ;
-;     Total combinational functions  ; 786                                             ;
+; Total logic elements               ; 806                                             ;
+;     Total combinational functions  ; 782                                             ;
 ;     Dedicated logic registers      ; 306                                             ;
 ; Total registers                    ; 306                                             ;
 ; Total pins                         ; 181                                             ;
@@ -169,53 +169,53 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; Multiplier.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Multiplier.v           ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ALU.v                  ;         ;
-; ap_function.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ap_function.v          ;         ;
-; MUX4TO1.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX4TO1.v              ;         ;
-; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Datapath.bdf           ;         ;
-; SHIFTREG8.v                      ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SHIFTREG8.v            ;         ;
-; MUX2TO1.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1.v              ;         ;
-; DFF1.v                           ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DFF1.v                 ;         ;
-; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v         ;         ;
-; RegisterFile8x8.v                ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/RegisterFile8x8.v      ;         ;
-; INSTMEM.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/INSTMEM.v              ;         ;
-; DATAMEM.v                        ; yes             ; User Wizard-Generated File             ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DATAMEM.v              ;         ;
-; SIGNEXT6T08.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SIGNEXT6T08.v          ;         ;
-; SIGNEXT8T016.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SIGNEXT8T016.v         ;         ;
-; PLUS1_ADDER.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/PLUS1_ADDER.v          ;         ;
-; MUX2TO1_3BIT.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_3BIT.v         ;         ;
-; MUX2TO1_16BIT.v                  ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_16BIT.v        ;         ;
-; ROUTER.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ROUTER.v               ;         ;
-; PCREG.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/PCREG.v                ;         ;
-; MUX4TO1_10BIT.v                  ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX4TO1_10BIT.v        ;         ;
-; CONCANITATING.v                  ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/CONCANITATING.v        ;         ;
-; DFF2.v                           ; yes             ; User Verilog HDL File                  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DFF2.v                 ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                       ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                       ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
-; db/altsyncram_kja1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_kja1.tdf ;         ;
-; db/altsyncram_7u92.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_7u92.tdf ;         ;
-; instructions.hex                 ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/instructions.hex       ;         ;
-; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                  ;         ;
-; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                       ;         ;
-; db/altsyncram_epe1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_epe1.tdf ;         ;
-; db/altsyncram_2aa2.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_2aa2.tdf ;         ;
-; data.hex                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/data.hex               ;         ;
-; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_hub.vhd                                          ;         ;
-; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                     ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                            ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                              ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; Multiplier.v                     ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Multiplier.v           ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ALU.v                  ;         ;
+; ap_function.v                    ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ap_function.v          ;         ;
+; MUX4TO1.v                        ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v              ;         ;
+; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File      ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Datapath.bdf           ;         ;
+; SHIFTREG8.v                      ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v            ;         ;
+; MUX2TO1.v                        ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1.v              ;         ;
+; DFF1.v                           ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DFF1.v                 ;         ;
+; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v         ;         ;
+; RegisterFile8x8.v                ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/RegisterFile8x8.v      ;         ;
+; INSTMEM.v                        ; yes             ; User Wizard-Generated File             ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v              ;         ;
+; DATAMEM.v                        ; yes             ; User Wizard-Generated File             ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v              ;         ;
+; SIGNEXT6T08.v                    ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SIGNEXT6T08.v          ;         ;
+; SIGNEXT8T016.v                   ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SIGNEXT8T016.v         ;         ;
+; PLUS1_ADDER.v                    ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/PLUS1_ADDER.v          ;         ;
+; MUX2TO1_3BIT.v                   ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_3BIT.v         ;         ;
+; MUX2TO1_16BIT.v                  ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_16BIT.v        ;         ;
+; ROUTER.v                         ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ROUTER.v               ;         ;
+; PCREG.v                          ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/PCREG.v                ;         ;
+; MUX4TO1_10BIT.v                  ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1_10BIT.v        ;         ;
+; CONCANITATING.v                  ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/CONCANITATING.v        ;         ;
+; DFF2.v                           ; yes             ; User Verilog HDL File                  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DFF2.v                 ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                          ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                            ;         ;
+; db/altsyncram_kja1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_kja1.tdf ;         ;
+; db/altsyncram_7u92.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_7u92.tdf ;         ;
+; instructions.hex                 ; yes             ; Auto-Found Memory Initialization File  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/instructions.hex       ;         ;
+; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                     ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                          ;         ;
+; db/altsyncram_epe1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_epe1.tdf ;         ;
+; db/altsyncram_2aa2.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_2aa2.tdf ;         ;
+; data.hex                         ; yes             ; Auto-Found Memory Initialization File  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/data.hex               ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_hub.vhd                                             ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                        ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -223,16 +223,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 810                      ;
+; Estimated Total logic elements              ; 806                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 786                      ;
+; Total combinational functions               ; 782                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 376                      ;
-;     -- 3 input functions                    ; 211                      ;
-;     -- <=2 input functions                  ; 199                      ;
+;     -- 4 input functions                    ; 375                      ;
+;     -- 3 input functions                    ; 210                      ;
+;     -- <=2 input functions                  ; 197                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 707                      ;
+;     -- normal mode                          ; 703                      ;
 ;     -- arithmetic mode                      ; 79                       ;
 ;                                             ;                          ;
 ; Total registers                             ; 306                      ;
@@ -244,7 +244,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0                        ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 249                      ;
-; Total fan-out                               ; 4491                     ;
+; Total fan-out                               ; 4480                     ;
 ; Average fan-out                             ; 3.43                     ;
 +---------------------------------------------+--------------------------+
 
@@ -254,7 +254,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                 ; Library Name ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Datapath                                                           ; 786 (1)           ; 306 (0)      ; 32768       ; 0            ; 0       ; 0         ; 181  ; 0            ; |Datapath                                                                                                                                                           ; work         ;
+; |Datapath                                                           ; 782 (1)           ; 306 (0)      ; 32768       ; 0            ; 0       ; 0         ; 181  ; 0            ; |Datapath                                                                                                                                                           ; work         ;
 ;    |DATAMEM:inst5|                                                  ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DATAMEM:inst5                                                                                                                                             ; work         ;
 ;       |altsyncram:altsyncram_component|                             ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DATAMEM:inst5|altsyncram:altsyncram_component                                                                                                             ; work         ;
 ;          |altsyncram_epe1:auto_generated|                           ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated                                                                              ; work         ;
@@ -285,8 +285,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |SHIFTREG8:REG_A|                                                ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_A                                                                                                                                           ; work         ;
 ;    |SHIFTREG8:REG_Q|                                                ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|SHIFTREG8:REG_Q                                                                                                                                           ; work         ;
 ;    |ap_function:ALU|                                                ; 114 (114)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|ap_function:ALU                                                                                                                                           ; work         ;
-;    |sld_hub:auto_hub|                                               ; 161 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|sld_hub:auto_hub                                                                                                                                          ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                ; 160 (122)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                             ; work         ;
+;    |sld_hub:auto_hub|                                               ; 157 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|sld_hub:auto_hub                                                                                                                                          ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                ; 156 (118)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                             ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                  ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                     ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                   ; work         ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -303,14 +303,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                               ;
-+--------+--------------+---------+--------------+--------------+-------------------------+-------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance         ; IP Include File                                                                           ;
-+--------+--------------+---------+--------------+--------------+-------------------------+-------------------------------------------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Datapath|INSTMEM:inst4 ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/INSTMEM.v ;
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Datapath|DATAMEM:inst5 ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DATAMEM.v ;
-+--------+--------------+---------+--------------+--------------+-------------------------+-------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                  ;
++--------+--------------+---------+--------------+--------------+-------------------------+----------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance         ; IP Include File                                                                              ;
++--------+--------------+---------+--------------+--------------+-------------------------+----------------------------------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Datapath|INSTMEM:inst4 ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |Datapath|DATAMEM:inst5 ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v ;
++--------+--------------+---------+--------------+--------------+-------------------------+----------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -414,7 +414,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[2][1]                                                                                        ;
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                                                                                        ;
 ; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                                 ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                          ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                          ;
 ; 28:1               ; 4 bits    ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |Datapath|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -634,7 +634,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Apr 14 15:59:14 2020
+    Info: Processing started: Wed Apr 15 10:10:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
@@ -817,24 +817,24 @@ Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (144001): Generated suppressed messages file C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
+Info (144001): Generated suppressed messages file D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1047 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1043 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 63 input pins
     Info (21059): Implemented 122 output pins
-    Info (21061): Implemented 829 logic cells
+    Info (21061): Implemented 825 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4671 megabytes
-    Info: Processing ended: Tue Apr 14 15:59:20 2020
+    Info: Peak virtual memory: 4660 megabytes
+    Info: Processing ended: Wed Apr 15 10:10:43 2020
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
+The suppressed messages can be found in D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
 
 
