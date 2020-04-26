@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/14/2020 15:53:52"
+// Generated on "04/20/2020 08:44:05"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    Datapath
 // 
@@ -2021,52 +2021,48 @@ end
 initial
 begin
 	INST_MEM_OUT[13] = 1'b0;
-	INST_MEM_OUT[13] = #160000 1'b1;
-	INST_MEM_OUT[13] = #40000 1'b0;
 end 
 // INST_MEM_OUT[ 12 ]
 initial
 begin
 	INST_MEM_OUT[12] = 1'b1;
 	INST_MEM_OUT[12] = #100000 1'b0;
-	INST_MEM_OUT[12] = #60000 1'b1;
-	INST_MEM_OUT[12] = #40000 1'b0;
 end 
 // INST_MEM_OUT[ 11 ]
 initial
 begin
 	INST_MEM_OUT[11] = 1'b1;
-	INST_MEM_OUT[11] = #160000 1'b0;
+	INST_MEM_OUT[11] = #200000 1'b0;
 end 
 // INST_MEM_OUT[ 10 ]
 initial
 begin
 	INST_MEM_OUT[10] = 1'b1;
-	INST_MEM_OUT[10] = #160000 1'b0;
+	INST_MEM_OUT[10] = #200000 1'b0;
 end 
 // INST_MEM_OUT[ 9 ]
 initial
 begin
 	INST_MEM_OUT[9] = 1'b1;
-	INST_MEM_OUT[9] = #160000 1'b0;
+	INST_MEM_OUT[9] = #200000 1'b0;
 end 
 // INST_MEM_OUT[ 8 ]
 initial
 begin
 	INST_MEM_OUT[8] = 1'b1;
-	INST_MEM_OUT[8] = #160000 1'b0;
+	INST_MEM_OUT[8] = #200000 1'b0;
 end 
 // INST_MEM_OUT[ 7 ]
 initial
 begin
 	INST_MEM_OUT[7] = 1'b1;
-	INST_MEM_OUT[7] = #160000 1'b0;
+	INST_MEM_OUT[7] = #200000 1'b0;
 end 
 // INST_MEM_OUT[ 6 ]
 initial
 begin
 	INST_MEM_OUT[6] = 1'b1;
-	INST_MEM_OUT[6] = #160000 1'b0;
+	INST_MEM_OUT[6] = #200000 1'b0;
 end 
 // INST_MEM_OUT[ 5 ]
 initial
@@ -2097,8 +2093,6 @@ initial
 begin
 	INST_MEM_OUT[1] = 1'b1;
 	INST_MEM_OUT[1] = #100000 1'b0;
-	INST_MEM_OUT[1] = #60000 1'b1;
-	INST_MEM_OUT[1] = #40000 1'b0;
 end 
 // INST_MEM_OUT[ 0 ]
 initial
@@ -2363,18 +2357,16 @@ begin
 	RF_EN = #20000 1'b0;
 end 
 
-// DATA_MEM_SEL
-initial
-begin
-	DATA_MEM_SEL = 1'b0;
-	DATA_MEM_SEL = #160000 1'b1;
-	DATA_MEM_SEL = #20000 1'b0;
-end 
-
 // Cin
 initial
 begin
 	Cin = 1'b0;
+end 
+
+// DATA_MEM_SEL
+initial
+begin
+	DATA_MEM_SEL = 1'b0;
 end 
 
 Datapath_vlg_sample_tst tb_sample (

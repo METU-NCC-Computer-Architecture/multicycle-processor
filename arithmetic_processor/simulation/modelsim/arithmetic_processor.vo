@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "04/15/2020 10:11:04"
+// DATE "04/20/2020 08:44:06"
 
 // 
 // Device: Altera EP2C70F896C6 Package FBGA896
@@ -1261,25 +1261,6 @@ wire \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~7_combout ;
 wire \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~regout ;
 wire \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|tdo~_wirecell_combout ;
 wire \altera_internal_jtag~TDO ;
-wire [15:0] \DATA_MEM_OUT~combout ;
-wire [2:0] \OAP~combout ;
-wire [1:0] \A_SEL~combout ;
-wire [1:0] \B_SEL~combout ;
-wire [1:0] \PC_MUX_SEL~combout ;
-wire [15:0] \INST_MEM_OUT~combout ;
-wire [1:0] \D_SEL~combout ;
-wire [4:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg ;
-wire [9:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg ;
-wire [6:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg ;
-wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg ;
-wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg ;
-wire [2:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg ;
-wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg ;
-wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg ;
-wire [2:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt ;
-wire [15:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state ;
-wire [4:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter ;
-wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR ;
 wire [7:0] \REG_A|Q ;
 wire [3:0] \inst5|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR ;
 wire [4:0] \inst5|altsyncram_component|auto_generated|mgl_prim2|ram_rom_logic_gen:name_gen:info_rom_sr|word_counter ;
@@ -1312,6 +1293,25 @@ wire [4:0] \inst5|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_shi
 wire [15:0] \inst5|altsyncram_component|auto_generated|mgl_prim2|ram_rom_data_reg ;
 wire [9:0] \inst5|altsyncram_component|auto_generated|mgl_prim2|ram_rom_addr_reg ;
 wire [3:0] \inst5|altsyncram_component|auto_generated|mgl_prim2|ir_loaded_address_reg ;
+wire [1:0] \PC_MUX_SEL~combout ;
+wire [2:0] \OAP~combout ;
+wire [15:0] \INST_MEM_OUT~combout ;
+wire [1:0] \D_SEL~combout ;
+wire [15:0] \DATA_MEM_OUT~combout ;
+wire [1:0] \B_SEL~combout ;
+wire [1:0] \A_SEL~combout ;
+wire [4:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg ;
+wire [9:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg ;
+wire [6:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg ;
+wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_update_reg ;
+wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg ;
+wire [2:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg ;
+wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg ;
+wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg ;
+wire [2:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|tms_cnt ;
+wire [15:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state ;
+wire [4:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|word_counter ;
+wire [3:0] \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_info_reg|WORD_SR ;
 
 wire [3:0] \inst4|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTADATAOUT_bus ;
 wire [3:0] \inst4|altsyncram_component|auto_generated|altsyncram1|ram_block3a0_PORTBDATAOUT_bus ;
