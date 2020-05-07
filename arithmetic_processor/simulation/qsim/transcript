@@ -2,22 +2,22 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Datapath
+# -- Compiling module CPU
 # 
 # Top level modules:
-# 	Datapath
+# 	CPU
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Datapath_vlg_sample_tst
-# -- Compiling module Datapath_vlg_check_tst
-# -- Compiling module Datapath_vlg_vec_tst
+# -- Compiling module CPU_vlg_sample_tst
+# -- Compiling module CPU_vlg_check_tst
+# -- Compiling module CPU_vlg_vec_tst
 # 
 # Top level modules:
-# 	Datapath_vlg_vec_tst
-# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Datapath_vlg_vec_tst 
-# Loading work.Datapath_vlg_vec_tst
-# Loading work.Datapath
-# Loading cycloneii_ver.cycloneii_lcell_ff
+# 	CPU_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.CPU_vlg_vec_tst 
+# Loading work.CPU_vlg_vec_tst
+# Loading work.CPU
 # Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_ram_block
 # Loading cycloneii_ver.cycloneii_ram_register
 # Loading cycloneii_ver.cycloneii_ram_pulse_generator
@@ -29,20 +29,20 @@
 # Loading cycloneii_ver.cycloneii_clkctrl
 # Loading cycloneii_ver.cycloneii_mux41
 # Loading cycloneii_ver.cycloneii_ena_reg
-# Loading work.Datapath_vlg_sample_tst
-# Loading work.Datapath_vlg_check_tst
-# ** Warning: (vsim-3017) arithmetic_processor.vt(1995): [TFMPC] - Too few port connections. Expected 47, found 43.
+# Loading work.CPU_vlg_sample_tst
+# Loading work.CPU_vlg_check_tst
+# ** Warning: (vsim-3017) arithmetic_processor.vt(1439): [TFMPC] - Too few port connections. Expected 17, found 13.
 # 
-#         Region: /Datapath_vlg_vec_tst/i1
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+#         Region: /CPU_vlg_vec_tst/i1
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1439): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1439): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1439): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(1995): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(1439): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # 
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # Simulation passed !
-# ** Note: $finish    : arithmetic_processor.vt(1895)
-#    Time: 240 ns  Iteration: 0  Instance: /Datapath_vlg_vec_tst/tb_out
+# ** Note: $finish    : arithmetic_processor.vt(1399)
+#    Time: 1 us  Iteration: 0  Instance: /CPU_vlg_vec_tst/tb_out
