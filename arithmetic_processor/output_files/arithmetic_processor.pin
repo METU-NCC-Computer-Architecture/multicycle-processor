@@ -815,7 +815,7 @@ GND+                         : R28       :        :                   :         
 GND+                         : R29       :        :                   :         : 5         :                
 VCCIO5                       : R30       : power  :                   : 3.3V    : 5         :                
 VCCIO1                       : T1        : power  :                   : 3.3V    : 1         :                
-clock                        : T2        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND+                         : T2        :        :                   :         : 1         :                
 GND+                         : T3        :        :                   :         : 1         :                
 GND*                         : T4        :        :                   :         : 1         :                
 GND*                         : T5        :        :                   :         : 1         :                

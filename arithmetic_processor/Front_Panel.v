@@ -1,6 +1,6 @@
 module Front_Panel(RUN, CLR, A_M, MAN_CLK, CLK, clock, RUN_ind, CLR_ind, A_M_ind, PC_RST); 
 
-output CLK;
+output reg CLK;
 output reg RUN_ind, CLR_ind, A_M_ind, PC_RST; 
 
 
@@ -15,12 +15,12 @@ begin
 		RUN_ind <= 1'b1;
 		if(A_M==0)
 			begin
-			assign CLK = clock;
+			CLK <= clock;
 			A_M_ind <= 1'b1;
 			end
 		if(A_M==1)
 			begin
-			 assign CLK = MAN_CLK;
+			 CLK <= MAN_CLK;
 			A_M_ind <= 1'b0;
 			end
 	end
