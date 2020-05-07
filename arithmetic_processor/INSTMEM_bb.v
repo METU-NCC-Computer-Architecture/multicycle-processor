@@ -33,16 +33,16 @@
 
 module INSTMEM (
 	address,
-	inclock,
+	clock,
 	q);
 
 	input	[9:0]  address;
-	input	  inclock;
+	input	  clock;
 	output	[15:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
-	tri1	  inclock;
+	tri1	  clock;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
 `endif
@@ -75,7 +75,7 @@ endmodule
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: SingleClock NUMERIC "0"
+// Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 // Retrieval info: PRIVATE: WidthAddr NUMERIC "10"
 // Retrieval info: PRIVATE: WidthData NUMERIC "16"
@@ -95,10 +95,10 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 // Retrieval info: USED_PORT: address 0 0 10 0 INPUT NODEFVAL "address[9..0]"
-// Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT VCC "inclock"
+// Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
 // Retrieval info: CONNECT: @address_a 0 0 10 0 address 0 0 10 0
-// Retrieval info: CONNECT: @clock0 0 0 0 0 inclock 0 0 0 0
+// Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 16 0 @q_a 0 0 16 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL INSTMEM.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL INSTMEM.inc FALSE

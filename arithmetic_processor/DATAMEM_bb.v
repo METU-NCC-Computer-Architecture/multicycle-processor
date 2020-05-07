@@ -33,20 +33,20 @@
 
 module DATAMEM (
 	address,
+	clock,
 	data,
-	inclock,
 	wren,
 	q);
 
 	input	[9:0]  address;
+	input	  clock;
 	input	[15:0]  data;
-	input	  inclock;
 	input	  wren;
 	output	[15:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
-	tri1	  inclock;
+	tri1	  clock;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
 `endif
@@ -73,7 +73,7 @@ endmodule
 // Retrieval info: PRIVATE: INIT_TO_SIM_X NUMERIC "0"
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "1"
-// Retrieval info: PRIVATE: JTAG_ID STRING "RAM1"
+// Retrieval info: PRIVATE: JTAG_ID STRING "ram1"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 // Retrieval info: PRIVATE: MIFfilename STRING "data.hex"
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "1024"
@@ -83,7 +83,7 @@ endmodule
 // Retrieval info: PRIVATE: RegData NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: SingleClock NUMERIC "0"
+// Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "1"
 // Retrieval info: PRIVATE: WRCONTROL_ACLR_A NUMERIC "0"
 // Retrieval info: PRIVATE: WidthAddr NUMERIC "10"
@@ -94,7 +94,7 @@ endmodule
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: INIT_FILE STRING "data.hex"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone II"
-// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=RAM1"
+// Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=YES,INSTANCE_NAME=ram1"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "1024"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "SINGLE_PORT"
@@ -105,19 +105,19 @@ endmodule
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 // Retrieval info: USED_PORT: address 0 0 10 0 INPUT NODEFVAL "address[9..0]"
+// Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: data 0 0 16 0 INPUT NODEFVAL "data[15..0]"
-// Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT VCC "inclock"
 // Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
 // Retrieval info: USED_PORT: wren 0 0 0 0 INPUT NODEFVAL "wren"
 // Retrieval info: CONNECT: @address_a 0 0 10 0 address 0 0 10 0
-// Retrieval info: CONNECT: @clock0 0 0 0 0 inclock 0 0 0 0
+// Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @data_a 0 0 16 0 data 0 0 16 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 16 0 @q_a 0 0 16 0
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.inc TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.cmp TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM.bsf TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_inst.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL DATAMEM_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

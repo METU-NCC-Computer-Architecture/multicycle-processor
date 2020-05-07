@@ -1,0 +1,19 @@
+module Front_Panel(RUN, CLR, A/M, MAN_CLK, CLK, clock, RUN_ind, CLR_ind, A/M_ind); 
+
+output reg ;
+
+
+input RUN, CLR, A/M, MAN_CLK;
+
+
+initial
+begin
+	RST <= 1'b1;
+	Count <= 4'b0;
+	MUL_SEL <= 1'b0;
+end
+
+begin
+	
+end
+endmodule

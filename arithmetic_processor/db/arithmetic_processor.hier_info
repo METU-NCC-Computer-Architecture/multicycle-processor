@@ -1,4 +1,8 @@
-|Datapath
+|CPU
+clock => Datapath:inst.CLK
+
+
+|CPU|Datapath:inst
 Qm1 <= DFF1:REG_Qm1.Q
 RST => DFF1:REG_Qm1.Reset
 RST => SHIFTREG8:REG_Q.Reset
@@ -15,8 +19,8 @@ CLK => RegisterFile8x8:RF.CLK
 CLK => Multiplier:Multiplier.CLK
 CLK => DFF1:REG_Qm1.CLK
 CLK => DFF2:inst3.CLK
-CLK => INSTMEM:inst4.inclock
-CLK => DATAMEM:inst5.inclock
+CLK => INSTMEM:inst4.clock
+CLK => DATAMEM:inst5.clock
 LDA => SHIFTREG8:REG_A.Enable
 A[0] <= SHIFTREG8:REG_A.Q[0]
 A[1] <= SHIFTREG8:REG_A.Q[1]
@@ -234,9 +238,10 @@ RF_W_DATA[4] <= MUX4TO1:MUX_D.Output[4]
 RF_W_DATA[5] <= MUX4TO1:MUX_D.Output[5]
 RF_W_DATA[6] <= MUX4TO1:MUX_D.Output[6]
 RF_W_DATA[7] <= MUX4TO1:MUX_D.Output[7]
+WR_EN => DATAMEM:inst5.wren
 
 
-|Datapath|DFF1:REG_Qm1
+|CPU|Datapath:inst|DFF1:REG_Qm1
 Reset => Q.OUTPUTSELECT
 Enable => Q.OUTPUTSELECT
 D => Q.DATAB
@@ -244,7 +249,7 @@ CLK => Q~reg0.CLK
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|SHIFTREG8:REG_Q
+|CPU|Datapath:inst|SHIFTREG8:REG_Q
 CLK => Q[0]~reg0.CLK
 CLK => Q[1]~reg0.CLK
 CLK => Q[2]~reg0.CLK
@@ -295,7 +300,7 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|SHIFTREG8:REG_A
+|CPU|Datapath:inst|SHIFTREG8:REG_A
 CLK => Q[0]~reg0.CLK
 CLK => Q[1]~reg0.CLK
 CLK => Q[2]~reg0.CLK
@@ -346,14 +351,14 @@ Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX2TO1:MUX_S
+|CPU|Datapath:inst|MUX2TO1:MUX_S
 IN0 => Output.DATAA
 IN1 => Output.DATAB
 Select => Decoder0.IN0
 Output <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX2TO1_8BIT:MULT_SEL_A
+|CPU|Datapath:inst|MUX2TO1_8BIT:MULT_SEL_A
 IN0[0] => Output.DATAA
 IN0[1] => Output.DATAA
 IN0[2] => Output.DATAA
@@ -381,7 +386,7 @@ Output[6] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|ap_function:ALU
+|CPU|Datapath:inst|ap_function:ALU
 a[0] => temp.IN1
 a[0] => carry.IN1
 a[0] => temp.IN0
@@ -581,7 +586,7 @@ n <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
 z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX4TO1:MUX_A
+|CPU|Datapath:inst|MUX4TO1:MUX_A
 IN0[0] => Mux7.IN0
 IN0[1] => Mux6.IN0
 IN0[2] => Mux5.IN0
@@ -640,7 +645,7 @@ Output[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|PCREG:REG_PC
+|CPU|Datapath:inst|PCREG:REG_PC
 CLK => Address[0]~reg0.CLK
 CLK => Address[1]~reg0.CLK
 CLK => Address[2]~reg0.CLK
@@ -693,7 +698,7 @@ Address[8] <= Address[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Address[9] <= Address[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX4TO1_10BIT:MUX_PC
+|CPU|Datapath:inst|MUX4TO1_10BIT:MUX_PC
 IN0[0] => Mux9.IN0
 IN0[1] => Mux8.IN0
 IN0[2] => Mux7.IN0
@@ -766,7 +771,7 @@ Output[8] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[9] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|CONCANITATING:inst1
+|CPU|Datapath:inst|CONCANITATING:inst1
 IN_2Bit[0] => Output[8].DATAIN
 IN_2Bit[1] => Output[9].DATAIN
 IN_8Bit[0] => Output[0].DATAIN
@@ -789,7 +794,7 @@ Output[8] <= IN_2Bit[0].DB_MAX_OUTPUT_PORT_TYPE
 Output[9] <= IN_2Bit[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|RegisterFile8x8:RF
+|CPU|Datapath:inst|RegisterFile8x8:RF
 CLK => reg7[0].CLK
 CLK => reg7[1].CLK
 CLK => reg7[2].CLK
@@ -1115,7 +1120,7 @@ Read_DataB[6] <= Read_DataB.DB_MAX_OUTPUT_PORT_TYPE
 Read_DataB[7] <= Read_DataB.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX2TO1_3BIT:MUX_TYPE_SEL
+|CPU|Datapath:inst|MUX2TO1_3BIT:MUX_TYPE_SEL
 IN0[0] => Output.DATAA
 IN0[1] => Output.DATAA
 IN0[2] => Output.DATAA
@@ -1128,7 +1133,7 @@ Output[1] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[2] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|PLUS1_ADDER:PLUS1_ADDER
+|CPU|Datapath:inst|PLUS1_ADDER:PLUS1_ADDER
 Plus1[0] => Add0.IN6
 Plus1[1] => Add0.IN5
 Plus1[2] => Add0.IN4
@@ -1141,7 +1146,7 @@ Output[1] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[2] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX4TO1:MUX_D
+|CPU|Datapath:inst|MUX4TO1:MUX_D
 IN0[0] => Mux7.IN0
 IN0[1] => Mux6.IN0
 IN0[2] => Mux5.IN0
@@ -1200,7 +1205,7 @@ Output[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX4TO1:MUX_B
+|CPU|Datapath:inst|MUX4TO1:MUX_B
 IN0[0] => Mux7.IN0
 IN0[1] => Mux6.IN0
 IN0[2] => Mux5.IN0
@@ -1259,7 +1264,7 @@ Output[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|SIGNEXT6T08:SIGN_EXT_I_TYPE
+|CPU|Datapath:inst|SIGNEXT6T08:SIGN_EXT_I_TYPE
 Unextended[0] => Extended[0].DATAIN
 Unextended[1] => Extended[1].DATAIN
 Unextended[2] => Extended[2].DATAIN
@@ -1278,7 +1283,7 @@ Extended[6] <= Unextended[5].DB_MAX_OUTPUT_PORT_TYPE
 Extended[7] <= Unextended[5].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|Multiplier:Multiplier
+|CPU|Datapath:inst|Multiplier:Multiplier
 Product[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
 Product[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
 Product[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -1373,7 +1378,7 @@ Start => Count.OUTPUTSELECT
 Start => Count.OUTPUTSELECT
 
 
-|Datapath|Multiplier:Multiplier|ALU:Adder
+|CPU|Datapath:inst|Multiplier:Multiplier|ALU:Adder
 out[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
@@ -1401,7 +1406,7 @@ b[7] => Add0.IN9
 cin => Add1.IN16
 
 
-|Datapath|Multiplier:Multiplier|ALU:Subtractor
+|CPU|Datapath:inst|Multiplier:Multiplier|ALU:Subtractor
 out[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
@@ -1429,7 +1434,7 @@ b[7] => Add0.IN9
 cin => Add1.IN16
 
 
-|Datapath|MUX2TO1_8BIT:MULT_SEL_Q
+|CPU|Datapath:inst|MUX2TO1_8BIT:MULT_SEL_Q
 IN0[0] => Output.DATAA
 IN0[1] => Output.DATAA
 IN0[2] => Output.DATAA
@@ -1457,7 +1462,7 @@ Output[6] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[7] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|CONCANITATING:inst2
+|CPU|Datapath:inst|CONCANITATING:inst2
 IN_2Bit[0] => Output[8].DATAIN
 IN_2Bit[1] => Output[9].DATAIN
 IN_8Bit[0] => Output[0].DATAIN
@@ -1480,7 +1485,7 @@ Output[8] <= IN_2Bit[0].DB_MAX_OUTPUT_PORT_TYPE
 Output[9] <= IN_2Bit[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|DFF2:inst3
+|CPU|Datapath:inst|DFF2:inst3
 Reset => Q.OUTPUTSELECT
 Reset => Q.OUTPUTSELECT
 Enable => Q.OUTPUTSELECT
@@ -1493,7 +1498,7 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|MUX2TO1_16BIT:inst11
+|CPU|Datapath:inst|MUX2TO1_16BIT:inst11
 IN0[0] => Output.DATAA
 IN0[1] => Output.DATAA
 IN0[2] => Output.DATAA
@@ -1545,7 +1550,7 @@ Output[14] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[15] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|SIGNEXT8T016:inst6
+|CPU|Datapath:inst|SIGNEXT8T016:inst6
 Unextended[0] => Extended[0].DATAIN
 Unextended[1] => Extended[1].DATAIN
 Unextended[2] => Extended[2].DATAIN
@@ -1580,7 +1585,7 @@ Extended[14] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
 Extended[15] <= Unextended[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|ROUTER:ROUTER_LOGIC
+|CPU|Datapath:inst|ROUTER:ROUTER_LOGIC
 IN_16Bit[0] => Output.DATAB
 IN_16Bit[1] => Output.DATAB
 IN_16Bit[2] => Output.DATAB
@@ -1632,7 +1637,7 @@ Output[14] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 Output[15] <= Output.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|INSTMEM:inst4
+|CPU|Datapath:inst|INSTMEM:inst4
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -1643,7 +1648,7 @@ address[6] => address[6].IN1
 address[7] => address[7].IN1
 address[8] => address[8].IN1
 address[9] => address[9].IN1
-inclock => inclock.IN1
+clock => clock.IN1
 q[0] <= altsyncram:altsyncram_component.q_a
 q[1] <= altsyncram:altsyncram_component.q_a
 q[2] <= altsyncram:altsyncram_component.q_a
@@ -1662,7 +1667,7 @@ q[14] <= altsyncram:altsyncram_component.q_a
 q[15] <= altsyncram:altsyncram_component.q_a
 
 
-|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component
+|CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1684,20 +1689,20 @@ data_a[13] => ~NO_FANOUT~
 data_a[14] => ~NO_FANOUT~
 data_a[15] => ~NO_FANOUT~
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_kja1:auto_generated.address_a[0]
-address_a[1] => altsyncram_kja1:auto_generated.address_a[1]
-address_a[2] => altsyncram_kja1:auto_generated.address_a[2]
-address_a[3] => altsyncram_kja1:auto_generated.address_a[3]
-address_a[4] => altsyncram_kja1:auto_generated.address_a[4]
-address_a[5] => altsyncram_kja1:auto_generated.address_a[5]
-address_a[6] => altsyncram_kja1:auto_generated.address_a[6]
-address_a[7] => altsyncram_kja1:auto_generated.address_a[7]
-address_a[8] => altsyncram_kja1:auto_generated.address_a[8]
-address_a[9] => altsyncram_kja1:auto_generated.address_a[9]
+address_a[0] => altsyncram_ima1:auto_generated.address_a[0]
+address_a[1] => altsyncram_ima1:auto_generated.address_a[1]
+address_a[2] => altsyncram_ima1:auto_generated.address_a[2]
+address_a[3] => altsyncram_ima1:auto_generated.address_a[3]
+address_a[4] => altsyncram_ima1:auto_generated.address_a[4]
+address_a[5] => altsyncram_ima1:auto_generated.address_a[5]
+address_a[6] => altsyncram_ima1:auto_generated.address_a[6]
+address_a[7] => altsyncram_ima1:auto_generated.address_a[7]
+address_a[8] => altsyncram_ima1:auto_generated.address_a[8]
+address_a[9] => altsyncram_ima1:auto_generated.address_a[9]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_kja1:auto_generated.clock0
+clock0 => altsyncram_ima1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -1707,59 +1712,59 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_kja1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_kja1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_kja1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_kja1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_kja1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_kja1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_kja1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_kja1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_kja1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_kja1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_kja1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_kja1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_kja1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_kja1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_kja1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_kja1:auto_generated.q_a[15]
+q_a[0] <= altsyncram_ima1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_ima1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_ima1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_ima1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_ima1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_ima1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_ima1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_ima1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_ima1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_ima1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_ima1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_ima1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_ima1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_ima1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_ima1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_ima1:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated
-address_a[0] => altsyncram_7u92:altsyncram1.address_a[0]
-address_a[1] => altsyncram_7u92:altsyncram1.address_a[1]
-address_a[2] => altsyncram_7u92:altsyncram1.address_a[2]
-address_a[3] => altsyncram_7u92:altsyncram1.address_a[3]
-address_a[4] => altsyncram_7u92:altsyncram1.address_a[4]
-address_a[5] => altsyncram_7u92:altsyncram1.address_a[5]
-address_a[6] => altsyncram_7u92:altsyncram1.address_a[6]
-address_a[7] => altsyncram_7u92:altsyncram1.address_a[7]
-address_a[8] => altsyncram_7u92:altsyncram1.address_a[8]
-address_a[9] => altsyncram_7u92:altsyncram1.address_a[9]
-clock0 => altsyncram_7u92:altsyncram1.clock0
-q_a[0] <= altsyncram_7u92:altsyncram1.q_a[0]
-q_a[1] <= altsyncram_7u92:altsyncram1.q_a[1]
-q_a[2] <= altsyncram_7u92:altsyncram1.q_a[2]
-q_a[3] <= altsyncram_7u92:altsyncram1.q_a[3]
-q_a[4] <= altsyncram_7u92:altsyncram1.q_a[4]
-q_a[5] <= altsyncram_7u92:altsyncram1.q_a[5]
-q_a[6] <= altsyncram_7u92:altsyncram1.q_a[6]
-q_a[7] <= altsyncram_7u92:altsyncram1.q_a[7]
-q_a[8] <= altsyncram_7u92:altsyncram1.q_a[8]
-q_a[9] <= altsyncram_7u92:altsyncram1.q_a[9]
-q_a[10] <= altsyncram_7u92:altsyncram1.q_a[10]
-q_a[11] <= altsyncram_7u92:altsyncram1.q_a[11]
-q_a[12] <= altsyncram_7u92:altsyncram1.q_a[12]
-q_a[13] <= altsyncram_7u92:altsyncram1.q_a[13]
-q_a[14] <= altsyncram_7u92:altsyncram1.q_a[14]
-q_a[15] <= altsyncram_7u92:altsyncram1.q_a[15]
+|CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_ima1:auto_generated
+address_a[0] => altsyncram_51a2:altsyncram1.address_a[0]
+address_a[1] => altsyncram_51a2:altsyncram1.address_a[1]
+address_a[2] => altsyncram_51a2:altsyncram1.address_a[2]
+address_a[3] => altsyncram_51a2:altsyncram1.address_a[3]
+address_a[4] => altsyncram_51a2:altsyncram1.address_a[4]
+address_a[5] => altsyncram_51a2:altsyncram1.address_a[5]
+address_a[6] => altsyncram_51a2:altsyncram1.address_a[6]
+address_a[7] => altsyncram_51a2:altsyncram1.address_a[7]
+address_a[8] => altsyncram_51a2:altsyncram1.address_a[8]
+address_a[9] => altsyncram_51a2:altsyncram1.address_a[9]
+clock0 => altsyncram_51a2:altsyncram1.clock0
+q_a[0] <= altsyncram_51a2:altsyncram1.q_a[0]
+q_a[1] <= altsyncram_51a2:altsyncram1.q_a[1]
+q_a[2] <= altsyncram_51a2:altsyncram1.q_a[2]
+q_a[3] <= altsyncram_51a2:altsyncram1.q_a[3]
+q_a[4] <= altsyncram_51a2:altsyncram1.q_a[4]
+q_a[5] <= altsyncram_51a2:altsyncram1.q_a[5]
+q_a[6] <= altsyncram_51a2:altsyncram1.q_a[6]
+q_a[7] <= altsyncram_51a2:altsyncram1.q_a[7]
+q_a[8] <= altsyncram_51a2:altsyncram1.q_a[8]
+q_a[9] <= altsyncram_51a2:altsyncram1.q_a[9]
+q_a[10] <= altsyncram_51a2:altsyncram1.q_a[10]
+q_a[11] <= altsyncram_51a2:altsyncram1.q_a[11]
+q_a[12] <= altsyncram_51a2:altsyncram1.q_a[12]
+q_a[13] <= altsyncram_51a2:altsyncram1.q_a[13]
+q_a[14] <= altsyncram_51a2:altsyncram1.q_a[14]
+q_a[15] <= altsyncram_51a2:altsyncram1.q_a[15]
 
 
-|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|altsyncram_7u92:altsyncram1
+|CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_ima1:auto_generated|altsyncram_51a2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -2178,7 +2183,7 @@ wren_b => ram_block3a14.PORTBRE
 wren_b => ram_block3a15.PORTBRE
 
 
-|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_ima1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -2319,7 +2324,7 @@ ir_out[4] <= ir_loaded_address_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_kja1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_ima1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
@@ -2433,7 +2438,7 @@ TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|DATAMEM:inst5
+|CPU|Datapath:inst|DATAMEM:inst5
 address[0] => address[0].IN1
 address[1] => address[1].IN1
 address[2] => address[2].IN1
@@ -2444,6 +2449,7 @@ address[6] => address[6].IN1
 address[7] => address[7].IN1
 address[8] => address[8].IN1
 address[9] => address[9].IN1
+clock => clock.IN1
 data[0] => data[0].IN1
 data[1] => data[1].IN1
 data[2] => data[2].IN1
@@ -2460,7 +2466,6 @@ data[12] => data[12].IN1
 data[13] => data[13].IN1
 data[14] => data[14].IN1
 data[15] => data[15].IN1
-inclock => inclock.IN1
 wren => wren.IN1
 q[0] <= altsyncram:altsyncram_component.q_a
 q[1] <= altsyncram:altsyncram_component.q_a
@@ -2480,42 +2485,42 @@ q[14] <= altsyncram:altsyncram_component.q_a
 q[15] <= altsyncram:altsyncram_component.q_a
 
 
-|Datapath|DATAMEM:inst5|altsyncram:altsyncram_component
-wren_a => altsyncram_epe1:auto_generated.wren_a
+|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component
+wren_a => altsyncram_cse1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
 rden_b => ~NO_FANOUT~
-data_a[0] => altsyncram_epe1:auto_generated.data_a[0]
-data_a[1] => altsyncram_epe1:auto_generated.data_a[1]
-data_a[2] => altsyncram_epe1:auto_generated.data_a[2]
-data_a[3] => altsyncram_epe1:auto_generated.data_a[3]
-data_a[4] => altsyncram_epe1:auto_generated.data_a[4]
-data_a[5] => altsyncram_epe1:auto_generated.data_a[5]
-data_a[6] => altsyncram_epe1:auto_generated.data_a[6]
-data_a[7] => altsyncram_epe1:auto_generated.data_a[7]
-data_a[8] => altsyncram_epe1:auto_generated.data_a[8]
-data_a[9] => altsyncram_epe1:auto_generated.data_a[9]
-data_a[10] => altsyncram_epe1:auto_generated.data_a[10]
-data_a[11] => altsyncram_epe1:auto_generated.data_a[11]
-data_a[12] => altsyncram_epe1:auto_generated.data_a[12]
-data_a[13] => altsyncram_epe1:auto_generated.data_a[13]
-data_a[14] => altsyncram_epe1:auto_generated.data_a[14]
-data_a[15] => altsyncram_epe1:auto_generated.data_a[15]
+data_a[0] => altsyncram_cse1:auto_generated.data_a[0]
+data_a[1] => altsyncram_cse1:auto_generated.data_a[1]
+data_a[2] => altsyncram_cse1:auto_generated.data_a[2]
+data_a[3] => altsyncram_cse1:auto_generated.data_a[3]
+data_a[4] => altsyncram_cse1:auto_generated.data_a[4]
+data_a[5] => altsyncram_cse1:auto_generated.data_a[5]
+data_a[6] => altsyncram_cse1:auto_generated.data_a[6]
+data_a[7] => altsyncram_cse1:auto_generated.data_a[7]
+data_a[8] => altsyncram_cse1:auto_generated.data_a[8]
+data_a[9] => altsyncram_cse1:auto_generated.data_a[9]
+data_a[10] => altsyncram_cse1:auto_generated.data_a[10]
+data_a[11] => altsyncram_cse1:auto_generated.data_a[11]
+data_a[12] => altsyncram_cse1:auto_generated.data_a[12]
+data_a[13] => altsyncram_cse1:auto_generated.data_a[13]
+data_a[14] => altsyncram_cse1:auto_generated.data_a[14]
+data_a[15] => altsyncram_cse1:auto_generated.data_a[15]
 data_b[0] => ~NO_FANOUT~
-address_a[0] => altsyncram_epe1:auto_generated.address_a[0]
-address_a[1] => altsyncram_epe1:auto_generated.address_a[1]
-address_a[2] => altsyncram_epe1:auto_generated.address_a[2]
-address_a[3] => altsyncram_epe1:auto_generated.address_a[3]
-address_a[4] => altsyncram_epe1:auto_generated.address_a[4]
-address_a[5] => altsyncram_epe1:auto_generated.address_a[5]
-address_a[6] => altsyncram_epe1:auto_generated.address_a[6]
-address_a[7] => altsyncram_epe1:auto_generated.address_a[7]
-address_a[8] => altsyncram_epe1:auto_generated.address_a[8]
-address_a[9] => altsyncram_epe1:auto_generated.address_a[9]
+address_a[0] => altsyncram_cse1:auto_generated.address_a[0]
+address_a[1] => altsyncram_cse1:auto_generated.address_a[1]
+address_a[2] => altsyncram_cse1:auto_generated.address_a[2]
+address_a[3] => altsyncram_cse1:auto_generated.address_a[3]
+address_a[4] => altsyncram_cse1:auto_generated.address_a[4]
+address_a[5] => altsyncram_cse1:auto_generated.address_a[5]
+address_a[6] => altsyncram_cse1:auto_generated.address_a[6]
+address_a[7] => altsyncram_cse1:auto_generated.address_a[7]
+address_a[8] => altsyncram_cse1:auto_generated.address_a[8]
+address_a[9] => altsyncram_cse1:auto_generated.address_a[9]
 address_b[0] => ~NO_FANOUT~
 addressstall_a => ~NO_FANOUT~
 addressstall_b => ~NO_FANOUT~
-clock0 => altsyncram_epe1:auto_generated.clock0
+clock0 => altsyncram_cse1:auto_generated.clock0
 clock1 => ~NO_FANOUT~
 clocken0 => ~NO_FANOUT~
 clocken1 => ~NO_FANOUT~
@@ -2525,76 +2530,76 @@ aclr0 => ~NO_FANOUT~
 aclr1 => ~NO_FANOUT~
 byteena_a[0] => ~NO_FANOUT~
 byteena_b[0] => ~NO_FANOUT~
-q_a[0] <= altsyncram_epe1:auto_generated.q_a[0]
-q_a[1] <= altsyncram_epe1:auto_generated.q_a[1]
-q_a[2] <= altsyncram_epe1:auto_generated.q_a[2]
-q_a[3] <= altsyncram_epe1:auto_generated.q_a[3]
-q_a[4] <= altsyncram_epe1:auto_generated.q_a[4]
-q_a[5] <= altsyncram_epe1:auto_generated.q_a[5]
-q_a[6] <= altsyncram_epe1:auto_generated.q_a[6]
-q_a[7] <= altsyncram_epe1:auto_generated.q_a[7]
-q_a[8] <= altsyncram_epe1:auto_generated.q_a[8]
-q_a[9] <= altsyncram_epe1:auto_generated.q_a[9]
-q_a[10] <= altsyncram_epe1:auto_generated.q_a[10]
-q_a[11] <= altsyncram_epe1:auto_generated.q_a[11]
-q_a[12] <= altsyncram_epe1:auto_generated.q_a[12]
-q_a[13] <= altsyncram_epe1:auto_generated.q_a[13]
-q_a[14] <= altsyncram_epe1:auto_generated.q_a[14]
-q_a[15] <= altsyncram_epe1:auto_generated.q_a[15]
+q_a[0] <= altsyncram_cse1:auto_generated.q_a[0]
+q_a[1] <= altsyncram_cse1:auto_generated.q_a[1]
+q_a[2] <= altsyncram_cse1:auto_generated.q_a[2]
+q_a[3] <= altsyncram_cse1:auto_generated.q_a[3]
+q_a[4] <= altsyncram_cse1:auto_generated.q_a[4]
+q_a[5] <= altsyncram_cse1:auto_generated.q_a[5]
+q_a[6] <= altsyncram_cse1:auto_generated.q_a[6]
+q_a[7] <= altsyncram_cse1:auto_generated.q_a[7]
+q_a[8] <= altsyncram_cse1:auto_generated.q_a[8]
+q_a[9] <= altsyncram_cse1:auto_generated.q_a[9]
+q_a[10] <= altsyncram_cse1:auto_generated.q_a[10]
+q_a[11] <= altsyncram_cse1:auto_generated.q_a[11]
+q_a[12] <= altsyncram_cse1:auto_generated.q_a[12]
+q_a[13] <= altsyncram_cse1:auto_generated.q_a[13]
+q_a[14] <= altsyncram_cse1:auto_generated.q_a[14]
+q_a[15] <= altsyncram_cse1:auto_generated.q_a[15]
 q_b[0] <= <GND>
 eccstatus[0] <= <GND>
 eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Datapath|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated
-address_a[0] => altsyncram_2aa2:altsyncram1.address_a[0]
-address_a[1] => altsyncram_2aa2:altsyncram1.address_a[1]
-address_a[2] => altsyncram_2aa2:altsyncram1.address_a[2]
-address_a[3] => altsyncram_2aa2:altsyncram1.address_a[3]
-address_a[4] => altsyncram_2aa2:altsyncram1.address_a[4]
-address_a[5] => altsyncram_2aa2:altsyncram1.address_a[5]
-address_a[6] => altsyncram_2aa2:altsyncram1.address_a[6]
-address_a[7] => altsyncram_2aa2:altsyncram1.address_a[7]
-address_a[8] => altsyncram_2aa2:altsyncram1.address_a[8]
-address_a[9] => altsyncram_2aa2:altsyncram1.address_a[9]
-clock0 => altsyncram_2aa2:altsyncram1.clock0
-data_a[0] => altsyncram_2aa2:altsyncram1.data_a[0]
-data_a[1] => altsyncram_2aa2:altsyncram1.data_a[1]
-data_a[2] => altsyncram_2aa2:altsyncram1.data_a[2]
-data_a[3] => altsyncram_2aa2:altsyncram1.data_a[3]
-data_a[4] => altsyncram_2aa2:altsyncram1.data_a[4]
-data_a[5] => altsyncram_2aa2:altsyncram1.data_a[5]
-data_a[6] => altsyncram_2aa2:altsyncram1.data_a[6]
-data_a[7] => altsyncram_2aa2:altsyncram1.data_a[7]
-data_a[8] => altsyncram_2aa2:altsyncram1.data_a[8]
-data_a[9] => altsyncram_2aa2:altsyncram1.data_a[9]
-data_a[10] => altsyncram_2aa2:altsyncram1.data_a[10]
-data_a[11] => altsyncram_2aa2:altsyncram1.data_a[11]
-data_a[12] => altsyncram_2aa2:altsyncram1.data_a[12]
-data_a[13] => altsyncram_2aa2:altsyncram1.data_a[13]
-data_a[14] => altsyncram_2aa2:altsyncram1.data_a[14]
-data_a[15] => altsyncram_2aa2:altsyncram1.data_a[15]
-q_a[0] <= altsyncram_2aa2:altsyncram1.q_a[0]
-q_a[1] <= altsyncram_2aa2:altsyncram1.q_a[1]
-q_a[2] <= altsyncram_2aa2:altsyncram1.q_a[2]
-q_a[3] <= altsyncram_2aa2:altsyncram1.q_a[3]
-q_a[4] <= altsyncram_2aa2:altsyncram1.q_a[4]
-q_a[5] <= altsyncram_2aa2:altsyncram1.q_a[5]
-q_a[6] <= altsyncram_2aa2:altsyncram1.q_a[6]
-q_a[7] <= altsyncram_2aa2:altsyncram1.q_a[7]
-q_a[8] <= altsyncram_2aa2:altsyncram1.q_a[8]
-q_a[9] <= altsyncram_2aa2:altsyncram1.q_a[9]
-q_a[10] <= altsyncram_2aa2:altsyncram1.q_a[10]
-q_a[11] <= altsyncram_2aa2:altsyncram1.q_a[11]
-q_a[12] <= altsyncram_2aa2:altsyncram1.q_a[12]
-q_a[13] <= altsyncram_2aa2:altsyncram1.q_a[13]
-q_a[14] <= altsyncram_2aa2:altsyncram1.q_a[14]
-q_a[15] <= altsyncram_2aa2:altsyncram1.q_a[15]
-wren_a => altsyncram_2aa2:altsyncram1.wren_a
+|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_cse1:auto_generated
+address_a[0] => altsyncram_0da2:altsyncram1.address_a[0]
+address_a[1] => altsyncram_0da2:altsyncram1.address_a[1]
+address_a[2] => altsyncram_0da2:altsyncram1.address_a[2]
+address_a[3] => altsyncram_0da2:altsyncram1.address_a[3]
+address_a[4] => altsyncram_0da2:altsyncram1.address_a[4]
+address_a[5] => altsyncram_0da2:altsyncram1.address_a[5]
+address_a[6] => altsyncram_0da2:altsyncram1.address_a[6]
+address_a[7] => altsyncram_0da2:altsyncram1.address_a[7]
+address_a[8] => altsyncram_0da2:altsyncram1.address_a[8]
+address_a[9] => altsyncram_0da2:altsyncram1.address_a[9]
+clock0 => altsyncram_0da2:altsyncram1.clock0
+data_a[0] => altsyncram_0da2:altsyncram1.data_a[0]
+data_a[1] => altsyncram_0da2:altsyncram1.data_a[1]
+data_a[2] => altsyncram_0da2:altsyncram1.data_a[2]
+data_a[3] => altsyncram_0da2:altsyncram1.data_a[3]
+data_a[4] => altsyncram_0da2:altsyncram1.data_a[4]
+data_a[5] => altsyncram_0da2:altsyncram1.data_a[5]
+data_a[6] => altsyncram_0da2:altsyncram1.data_a[6]
+data_a[7] => altsyncram_0da2:altsyncram1.data_a[7]
+data_a[8] => altsyncram_0da2:altsyncram1.data_a[8]
+data_a[9] => altsyncram_0da2:altsyncram1.data_a[9]
+data_a[10] => altsyncram_0da2:altsyncram1.data_a[10]
+data_a[11] => altsyncram_0da2:altsyncram1.data_a[11]
+data_a[12] => altsyncram_0da2:altsyncram1.data_a[12]
+data_a[13] => altsyncram_0da2:altsyncram1.data_a[13]
+data_a[14] => altsyncram_0da2:altsyncram1.data_a[14]
+data_a[15] => altsyncram_0da2:altsyncram1.data_a[15]
+q_a[0] <= altsyncram_0da2:altsyncram1.q_a[0]
+q_a[1] <= altsyncram_0da2:altsyncram1.q_a[1]
+q_a[2] <= altsyncram_0da2:altsyncram1.q_a[2]
+q_a[3] <= altsyncram_0da2:altsyncram1.q_a[3]
+q_a[4] <= altsyncram_0da2:altsyncram1.q_a[4]
+q_a[5] <= altsyncram_0da2:altsyncram1.q_a[5]
+q_a[6] <= altsyncram_0da2:altsyncram1.q_a[6]
+q_a[7] <= altsyncram_0da2:altsyncram1.q_a[7]
+q_a[8] <= altsyncram_0da2:altsyncram1.q_a[8]
+q_a[9] <= altsyncram_0da2:altsyncram1.q_a[9]
+q_a[10] <= altsyncram_0da2:altsyncram1.q_a[10]
+q_a[11] <= altsyncram_0da2:altsyncram1.q_a[11]
+q_a[12] <= altsyncram_0da2:altsyncram1.q_a[12]
+q_a[13] <= altsyncram_0da2:altsyncram1.q_a[13]
+q_a[14] <= altsyncram_0da2:altsyncram1.q_a[14]
+q_a[15] <= altsyncram_0da2:altsyncram1.q_a[15]
+wren_a => altsyncram_0da2:altsyncram1.wren_a
 
 
-|Datapath|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|altsyncram_2aa2:altsyncram1
+|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_cse1:auto_generated|altsyncram_0da2:altsyncram1
 address_a[0] => ram_block3a0.PORTAADDR
 address_a[0] => ram_block3a1.PORTAADDR
 address_a[0] => ram_block3a2.PORTAADDR
@@ -3045,7 +3050,7 @@ wren_b => ram_block3a14.PORTBRE
 wren_b => ram_block3a15.PORTBRE
 
 
-|Datapath|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2
+|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_cse1:auto_generated|sld_mod_ram_rom:mgl_prim2
 tck_usr <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
 address[0] <= ram_rom_addr_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 address[1] <= ram_rom_addr_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -3186,7 +3191,7 @@ ir_out[4] <= ir_loaded_address_reg[3].DB_MAX_OUTPUT_PORT_TYPE
 tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_epe1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
+|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_cse1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr
 ROM_DATA[0] => Mux3.IN131
 ROM_DATA[1] => Mux2.IN131
 ROM_DATA[2] => Mux1.IN131
@@ -3298,5 +3303,38 @@ ENA => WORD_SR.OUTPUTSELECT
 ENA => WORD_SR.OUTPUTSELECT
 TDI => WORD_SR.DATAA
 TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CPU|ControlUnit:inst3
+PC_RST => ~NO_FANOUT~
+CLR => ~NO_FANOUT~
+RUN => ~NO_FANOUT~
+RST <= <VCC>
+CLK => ~NO_FANOUT~
+RF_EN <= <GND>
+MULT_EN <= <GND>
+LDA <= <GND>
+LDQ <= <GND>
+PC_MUX_SEL[0] <= <GND>
+PC_MUX_SEL[1] <= <GND>
+SR_SEL <= <GND>
+PLUS1_SEL <= <GND>
+SR <= <GND>
+SL <= <GND>
+A_SEL[0] <= <GND>
+A_SEL[1] <= <GND>
+B_SEL[0] <= <GND>
+B_SEL[1] <= <GND>
+PC_EN <= <GND>
+MUL_SEL <= <GND>
+INST_TYPE_MUX_SEL <= <GND>
+D_SEL[0] <= <GND>
+D_SEL[1] <= <GND>
+OAP[0] <= <GND>
+OAP[1] <= <GND>
+OAP[2] <= <GND>
+DATA_MEM_SE <= <GND>
+Cin <= <GND>
+WB_SEL <= <GND>
 
 

@@ -1,5 +1,5 @@
 Assembler report for arithmetic_processor
-Wed Apr 15 10:11:00 2020
+Thu May 07 04:54:22 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -11,8 +11,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   3. Assembler Settings
   4. Assembler Encrypted IP Cores Summary
   5. Assembler Generated Files
-  6. Assembler Device Options: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.sof
-  7. Assembler Device Options: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.pof
+  6. Assembler Device Options: C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.sof
+  7. Assembler Device Options: C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.pof
   8. Assembler Messages
 
 
@@ -39,9 +39,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Apr 15 10:11:00 2020 ;
+; Assembler Status      ; Successful - Thu May 07 04:54:22 2020 ;
 ; Revision Name         ; arithmetic_processor                  ;
-; Top-level Entity Name ; Datapath                              ;
+; Top-level Entity Name ; CPU                                   ;
 ; Family                ; Cyclone II                            ;
 ; Device                ; EP2C70F896C6                          ;
 +-----------------------+---------------------------------------+
@@ -52,6 +52,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 ; Option                                                                      ; Setting  ; Default Value ;
 +-----------------------------------------------------------------------------+----------+---------------+
+; Maintain Compatibility with All Cyclone II M4K Versions                     ; Off      ; On            ;
 ; Use smart compilation                                                       ; Off      ; Off           ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation  ; On       ; On            ;
 ; Enable compact report table                                                 ; Off      ; Off           ;
@@ -71,7 +72,6 @@ applicable agreement for further details.
 ; Hexadecimal Output File count direction                                     ; Up       ; Up            ;
 ; Release clears before tri-states                                            ; Off      ; Off           ;
 ; Auto-restart configuration after error                                      ; On       ; On            ;
-; Maintain Compatibility with All Cyclone II M4K Versions                     ; On       ; On            ;
 ; Generate Serial Vector Format File (.svf) for Target Device                 ; Off      ; Off           ;
 ; Generate a JEDEC STAPL Format File (.jam) for Target Device                 ; Off      ; Off           ;
 ; Generate a compressed Jam STAPL Byte Code 2.0 File (.jbc) for Target Device ; Off      ; Off           ;
@@ -89,37 +89,37 @@ applicable agreement for further details.
 +--------+------------------------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                ;
-+--------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                ;
-+--------------------------------------------------------------------------------------------------------------------------+
-; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.sof ;
-; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.pof ;
-+--------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.sof ;
+; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.pof ;
++-----------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.sof ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                           ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP2C70F896C6                                                                                                                      ;
-; JTAG usercode  ; 0x006A42A8                                                                                                                        ;
-; Checksum       ; 0x006A42A8                                                                                                                        ;
-+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.sof ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                                        ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------+
+; Device         ; EP2C70F896C6                                                                                                                   ;
+; JTAG usercode  ; 0x00643E9A                                                                                                                     ;
+; Checksum       ; 0x00643E9A                                                                                                                     ;
++----------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.pof ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                                                                       ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                                                                        ;
-; JTAG usercode      ; 0x00000000                                                                                                                    ;
-; Checksum           ; 0x1866C21D                                                                                                                    ;
-; Compression Ratio  ; 3                                                                                                                             ;
-+--------------------+-------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.pof ;
++--------------------+----------------------------------------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                                                    ;
++--------------------+----------------------------------------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                                                     ;
+; JTAG usercode      ; 0x00000000                                                                                                                 ;
+; Checksum           ; 0x187A983A                                                                                                                 ;
+; Compression Ratio  ; 3                                                                                                                          ;
++--------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -128,14 +128,15 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Apr 15 10:10:57 2020
+    Info: Processing started: Thu May 07 04:54:18 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off arithmetic_processor -c arithmetic_processor
+Info (115034): Programming file is not compatible with all device revisions. See the Cyclone II Errata Sheet for more information.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4574 megabytes
-    Info: Processing ended: Wed Apr 15 10:11:00 2020
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4559 megabytes
+    Info: Processing ended: Thu May 07 04:54:22 2020
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

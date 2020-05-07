@@ -1,7 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="arithmetic_processor">
-		<CBX_INST_ENTRY INSTANCE_NAME="|Datapath|DATAMEM:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_epe1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|Datapath|INSTMEM:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_kja1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
