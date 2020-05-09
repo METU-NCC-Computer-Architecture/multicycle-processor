@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="arithmetic_processor">
-		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_cse1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3se1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9ma1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

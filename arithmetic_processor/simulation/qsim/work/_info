@@ -164,7 +164,7 @@ Z51 !s100 A;<cGNWCb70I0zeERSA]T1
 Z52 IX[1J1<8>Qi?FZnP1bGD6>1
 Z53 VNaP;FfnG9Om<KWP=LWR<W0
 Z54 dC:\Users\Saad Yousaf\Documents\GitHub\multicycle-processor\arithmetic_processor\simulation\qsim
-Z55 w1589000338
+Z55 w1589036415
 R6
 R7
 L0 31
@@ -176,7 +176,7 @@ R10
 Z56 n@c@p@u
 !i10b 1
 !s85 0
-Z57 !s108 1589000339.539000
+Z57 !s108 1589036421.274000
 R12
 !s101 -O0
 vCPU_vlg_check_tst
@@ -185,7 +185,7 @@ Z58 !s100 X44bVSdI^Xagz`bj1`@8?2
 Z59 I51SC2h?mfjNWEzA30<CNV0
 Z60 VhMWgBP^UV;K2VNhFOVBFU3
 R54
-Z61 w1589000337
+Z61 w1589036413
 R16
 R17
 L0 65
@@ -193,7 +193,7 @@ R8
 r1
 !s85 0
 31
-Z62 !s108 1589000339.798000
+Z62 !s108 1589036421.747000
 Z63 !s107 arithmetic_processor.vt|
 R20
 !s101 -O0

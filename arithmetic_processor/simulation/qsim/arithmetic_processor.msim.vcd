@@ -3,7 +3,7 @@ $comment
 		vcd file arithmetic_processor.msim.vcd -direction
 $end
 $date
-	Sat May 09 07:59:00 2020
+	Sat May 09 18:00:23 2020
 $end
 $version
 	ModelSim Version 10.1d
