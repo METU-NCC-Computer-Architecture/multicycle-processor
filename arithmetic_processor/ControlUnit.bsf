@@ -219,6 +219,13 @@ applicable agreement for further details.
 		(text "INST_REG_EN" (rect 182 379 251 391)(font "Arial" ))
 		(line (pt 272 384)(pt 256 384)(line_width 1))
 	)
+	(port
+		(pt 272 400)
+		(output)
+		(text "counterchk[3..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "counterchk[3..0]" (rect 188 395 251 407)(font "Arial" ))
+		(line (pt 272 400)(pt 256 400)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 256 416)(line_width 1))
 	)

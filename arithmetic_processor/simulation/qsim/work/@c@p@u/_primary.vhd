@@ -15,6 +15,8 @@ entity CPU is
         ABC             : out    vl_logic_vector(15 downto 0);
         ALU_OUT         : out    vl_logic_vector(7 downto 0);
         B_REG           : out    vl_logic_vector(7 downto 0);
+        counterchk      : out    vl_logic_vector(3 downto 0);
+        inst_mem_addr   : out    vl_logic_vector(9 downto 0);
         RF_A_READ_PORT  : out    vl_logic_vector(7 downto 0);
         RF_B_READ_PORT  : out    vl_logic_vector(7 downto 0);
         RF_W_ADDR       : out    vl_logic_vector(2 downto 0);
