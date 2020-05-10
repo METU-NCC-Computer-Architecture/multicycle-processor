@@ -35,6 +35,14 @@ begin
 	
 	Count <= Count + 1'b1;
 	
+	if (Count > 7 ) begin
+	Count <= 4'b0;
+	A <= 8'b0;      
+	M <= 8'b0;
+	Q <= 8'b0;
+	Q_1 <= 1'b0;
+	end
+	
 	end
 end
 

@@ -18,6 +18,7 @@ entity CPU is
         DEBUG           : out    vl_logic_vector(3 downto 0);
         IMMEDIATE       : out    vl_logic_vector(7 downto 0);
         INSTR_MEM_ADDRESS: out    vl_logic_vector(9 downto 0);
+        PRODUCT         : out    vl_logic_vector(15 downto 0);
         Q_REG           : out    vl_logic_vector(7 downto 0);
         RF_A_READ_PORT  : out    vl_logic_vector(7 downto 0);
         RF_B_READ_PORT  : out    vl_logic_vector(7 downto 0);

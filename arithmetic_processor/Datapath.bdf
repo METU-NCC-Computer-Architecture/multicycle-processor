@@ -1161,7 +1161,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 448 -616 664 -504)
+	(rect 448 -624 664 -512)
 	(text "Multiplier" (rect 5 0 47 12)(font "Arial" ))
 	(text "Multiplier" (rect 8 96 50 108)(font "Arial" ))
 	(port
@@ -2122,10 +2122,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 448 -552)
-	(pt 424 -552)
-)
-(connector
 	(pt 864 -16)
 	(pt 872 -16)
 	(bus)
@@ -2781,36 +2777,8 @@ applicable agreement for further details.
 	(pt 616 -320)
 )
 (connector
-	(pt 448 -536)
-	(pt 432 -536)
-)
-(connector
-	(pt 432 -536)
-	(pt 432 -320)
-)
-(connector
 	(pt 616 -320)
 	(pt 432 -320)
-)
-(connector
-	(pt 280 -584)
-	(pt 280 168)
-	(bus)
-)
-(connector
-	(pt 280 -584)
-	(pt 448 -584)
-	(bus)
-)
-(connector
-	(pt 296 184)
-	(pt 296 -568)
-	(bus)
-)
-(connector
-	(pt 296 -568)
-	(pt 448 -568)
-	(bus)
 )
 (connector
 	(text "A [7..0]" (rect 1784 15 1796 51)(font "Arial" )(vertical))
@@ -2841,14 +2809,6 @@ applicable agreement for further details.
 (connector
 	(pt -48 -432)
 	(pt -48 168)
-)
-(connector
-	(pt 424 -552)
-	(pt 424 -432)
-)
-(connector
-	(pt 424 -432)
-	(pt 424 -416)
 )
 (connector
 	(pt -48 -432)
@@ -3070,18 +3030,8 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 680 -552)
-	(pt 680 -584)
-	(bus)
-)
-(connector
 	(pt 696 -552)
 	(pt 680 -552)
-	(bus)
-)
-(connector
-	(pt 664 -584)
-	(pt 680 -584)
 	(bus)
 )
 (connector
@@ -3455,16 +3405,6 @@ applicable agreement for further details.
 	(pt -1280 232)
 )
 (connector
-	(pt 296 184)
-	(pt 416 184)
-	(bus)
-)
-(connector
-	(pt 280 168)
-	(pt 432 168)
-	(bus)
-)
-(connector
 	(pt 248 448)
 	(pt 288 448)
 	(bus)
@@ -3480,11 +3420,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 248 184)
-	(pt 296 184)
-	(bus)
-)
-(connector
 	(pt 264 168)
 	(pt 264 480)
 	(bus)
@@ -3492,11 +3427,6 @@ applicable agreement for further details.
 (connector
 	(pt 232 168)
 	(pt 264 168)
-	(bus)
-)
-(connector
-	(pt 264 168)
-	(pt 280 168)
 	(bus)
 )
 (connector
@@ -3748,6 +3678,81 @@ applicable agreement for further details.
 (connector
 	(pt -320 -24)
 	(pt -304 -24)
+)
+(connector
+	(pt 424 -560)
+	(pt 448 -560)
+)
+(connector
+	(pt 432 -544)
+	(pt 448 -544)
+)
+(connector
+	(pt 432 -320)
+	(pt 432 -544)
+)
+(connector
+	(pt 280 168)
+	(pt 280 -592)
+	(bus)
+)
+(connector
+	(pt 280 -592)
+	(pt 448 -592)
+	(bus)
+)
+(connector
+	(pt 296 184)
+	(pt 296 -576)
+	(bus)
+)
+(connector
+	(pt 296 -576)
+	(pt 448 -576)
+	(bus)
+)
+(connector
+	(pt 680 -592)
+	(pt 664 -592)
+	(bus)
+)
+(connector
+	(pt 264 168)
+	(pt 280 168)
+	(bus)
+)
+(connector
+	(pt 280 168)
+	(pt 432 168)
+	(bus)
+)
+(connector
+	(pt 248 184)
+	(pt 296 184)
+	(bus)
+)
+(connector
+	(pt 296 184)
+	(pt 416 184)
+	(bus)
+)
+(connector
+	(pt 424 -560)
+	(pt 424 -432)
+)
+(connector
+	(pt 424 -432)
+	(pt 424 -416)
+)
+(connector
+	(pt 680 -592)
+	(pt 680 -584)
+	(bus)
+)
+(connector
+	(pt 680 -584)
+	(pt 680 -552)
+	(bus)
 )
 (junction (pt 528 152))
 (junction (pt 880 -584))

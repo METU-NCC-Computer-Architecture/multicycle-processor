@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arithmetic_processor
-Sun May 10 11:20:42 2020
+Sun May 10 14:11:09 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,21 +17,20 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Analysis & Synthesis IP Cores Summary
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|altsyncram_s0a2:altsyncram1
- 17. Source assignments for Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|altsyncram_nca2:altsyncram1
- 18. Parameter Settings for User Entity Instance: Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Subtractor"
- 22. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Adder"
- 23. In-System Memory Content Editor Settings
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
- 26. Analysis & Synthesis Suppressed Messages
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|altsyncram_s0a2:altsyncram1
+ 16. Source assignments for Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|altsyncram_nca2:altsyncram1
+ 17. Parameter Settings for User Entity Instance: Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component
+ 19. altsyncram Parameter Settings by Entity Instance
+ 20. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Subtractor"
+ 21. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Adder"
+ 22. In-System Memory Content Editor Settings
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -57,16 +56,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun May 10 11:20:42 2020           ;
+; Analysis & Synthesis Status        ; Successful - Sun May 10 14:11:09 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; arithmetic_processor                            ;
 ; Top-level Entity Name              ; CPU                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,101                                           ;
-;     Total combinational functions  ; 1,072                                           ;
-;     Dedicated logic registers      ; 387                                             ;
-; Total registers                    ; 387                                             ;
-; Total pins                         ; 134                                             ;
+; Total logic elements               ; 1,485                                           ;
+;     Total combinational functions  ; 1,456                                           ;
+;     Dedicated logic registers      ; 457                                             ;
+; Total registers                    ; 457                                             ;
+; Total pins                         ; 150                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 32,768                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -223,35 +222,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,101                    ;
-;                                             ;                          ;
-; Total combinational functions               ; 1072                     ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 501                      ;
-;     -- 3 input functions                    ; 278                      ;
-;     -- <=2 input functions                  ; 293                      ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 914                      ;
-;     -- arithmetic mode                      ; 158                      ;
-;                                             ;                          ;
-; Total registers                             ; 387                      ;
-;     -- Dedicated logic registers            ; 387                      ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 134                      ;
-; Total memory bits                           ; 32768                    ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
-; Maximum fan-out                             ; 249                      ;
-; Total fan-out                               ; 5558                     ;
-; Average fan-out                             ; 3.41                     ;
-+---------------------------------------------+--------------------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimated Total logic elements              ; 1,485                 ;
+;                                             ;                       ;
+; Total combinational functions               ; 1456                  ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 730                   ;
+;     -- 3 input functions                    ; 421                   ;
+;     -- <=2 input functions                  ; 305                   ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 1218                  ;
+;     -- arithmetic mode                      ; 238                   ;
+;                                             ;                       ;
+; Total registers                             ; 457                   ;
+;     -- Dedicated logic registers            ; 457                   ;
+;     -- I/O registers                        ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 150                   ;
+; Total memory bits                           ; 32768                 ;
+; Embedded Multiplier 9-bit elements          ; 0                     ;
+; Maximum fan-out node                        ; Front_Panel:inst2|CLK ;
+; Maximum fan-out                             ; 301                   ;
+; Total fan-out                               ; 7114                  ;
+; Average fan-out                             ; 3.39                  ;
++---------------------------------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -259,9 +258,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                          ; Library Name ;
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |CPU                                                                   ; 1072 (1)          ; 387 (0)      ; 32768       ; 0            ; 0       ; 0         ; 134  ; 0            ; |CPU                                                                                                                                                                         ; work         ;
-;    |ControlUnit:inst3|                                                 ; 366 (366)         ; 91 (91)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:inst3                                                                                                                                                       ; work         ;
-;    |Datapath:inst|                                                     ; 539 (0)           ; 199 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst                                                                                                                                                           ; work         ;
+; |CPU                                                                   ; 1456 (1)          ; 457 (0)      ; 32768       ; 0            ; 0       ; 0         ; 150  ; 0            ; |CPU                                                                                                                                                                         ; work         ;
+;    |ControlUnit:inst3|                                                 ; 648 (648)         ; 132 (132)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:inst3                                                                                                                                                       ; work         ;
+;    |Datapath:inst|                                                     ; 648 (0)           ; 228 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst                                                                                                                                                           ; work         ;
 ;       |DATAMEM:inst5|                                                  ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5                                                                                                                                             ; work         ;
 ;          |altsyncram:altsyncram_component|                             ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component                                                                                                             ; work         ;
 ;             |altsyncram_3se1:auto_generated|                           ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated                                                                              ; work         ;
@@ -277,20 +276,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 26 (26)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
 ;       |MUX2TO1_16BIT:inst11|                                           ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11                                                                                                                                      ; work         ;
 ;       |MUX2TO1_3BIT:MUX_TYPE_SEL|                                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_3BIT:MUX_TYPE_SEL                                                                                                                                 ; work         ;
-;       |MUX2TO1_8BIT:MULT_SEL_A|                                        ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_8BIT:MULT_SEL_A                                                                                                                                   ; work         ;
-;       |MUX4TO1:MUX_B|                                                  ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_B                                                                                                                                             ; work         ;
+;       |MUX2TO1_8BIT:MULT_SEL_A|                                        ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_8BIT:MULT_SEL_A                                                                                                                                   ; work         ;
+;       |MUX4TO1:MUX_A|                                                  ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_A                                                                                                                                             ; work         ;
+;       |MUX4TO1:MUX_B|                                                  ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_B                                                                                                                                             ; work         ;
 ;       |MUX4TO1:MUX_D|                                                  ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_D                                                                                                                                             ; work         ;
-;       |PCREG:REG_PC|                                                   ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|PCREG:REG_PC                                                                                                                                              ; work         ;
+;       |MUX4TO1_10BIT:MUX_PC|                                           ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1_10BIT:MUX_PC                                                                                                                                      ; work         ;
+;       |Multiplier:Multiplier|                                          ; 52 (36)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|Multiplier:Multiplier                                                                                                                                     ; work         ;
+;          |ALU:Adder|                                                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|Multiplier:Multiplier|ALU:Adder                                                                                                                           ; work         ;
+;          |ALU:Subtractor|                                              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|Multiplier:Multiplier|ALU:Subtractor                                                                                                                      ; work         ;
+;       |PCREG:REG_PC|                                                   ; 11 (11)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|PCREG:REG_PC                                                                                                                                              ; work         ;
 ;       |PLUS1_ADDER:PLUS1_ADDER3|                                       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|PLUS1_ADDER:PLUS1_ADDER3                                                                                                                                  ; work         ;
 ;       |PLUS1_ADDER:PLUS1_ADDER|                                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|PLUS1_ADDER:PLUS1_ADDER                                                                                                                                   ; work         ;
 ;       |REG16:inst7|                                                    ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|REG16:inst7                                                                                                                                               ; work         ;
 ;       |RegisterFile8x8:RF|                                             ; 160 (160)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|RegisterFile8x8:RF                                                                                                                                        ; work         ;
 ;       |SHIFTREG8:REG_A|                                                ; 12 (12)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_A                                                                                                                                           ; work         ;
-;       |SHIFTREG8:REG_Q|                                                ; 17 (17)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_Q                                                                                                                                           ; work         ;
-;       |ap_function:ALU|                                                ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|ap_function:ALU                                                                                                                                           ; work         ;
+;       |SHIFTREG8:REG_Q|                                                ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_Q                                                                                                                                           ; work         ;
+;       |ap_function:ALU|                                                ; 111 (111)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|ap_function:ALU                                                                                                                                           ; work         ;
 ;    |Front_Panel:inst2|                                                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Front_Panel:inst2                                                                                                                                                       ; work         ;
-;    |sld_hub:auto_hub|                                                  ; 164 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub                                                                                                                                                        ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                   ; 163 (125)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                           ; work         ;
+;    |sld_hub:auto_hub|                                                  ; 157 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub                                                                                                                                                        ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                   ; 156 (118)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                           ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                     ; 21 (21)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                   ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                   ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                 ; work         ;
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -341,47 +345,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                                  ; Reason for Removal                                   ;
 +------------------------------------------------+------------------------------------------------------+
 ; Datapath:inst|DFF2:inst3|Q[0,1]                ; Stuck at GND due to stuck port data_in               ;
-; ControlUnit:inst3|INST_REG_EN                  ; Merged with ControlUnit:inst3|PC_EN                  ;
 ; Datapath:inst|Multiplier:Multiplier|A[7]       ; Merged with Datapath:inst|Multiplier:Multiplier|A[6] ;
+; ControlUnit:inst3|temp_Z[1..9,11..31]          ; Merged with ControlUnit:inst3|temp_Z[10]             ;
+; ControlUnit:inst3|mult_available[1..9,11..31]  ; Merged with ControlUnit:inst3|mult_available[10]     ;
 ; ControlUnit:inst3|shift_available[1..9,11..31] ; Merged with ControlUnit:inst3|shift_available[10]    ;
-; ControlUnit:inst3|MULT_EN                      ; Merged with ControlUnit:inst3|A_SEL[0]               ;
-; ControlUnit:inst3|MUL_SEL                      ; Merged with ControlUnit:inst3|A_SEL[0]               ;
-; ControlUnit:inst3|PC_MUX_SEL[0,1]              ; Merged with ControlUnit:inst3|A_SEL[0]               ;
 ; ControlUnit:inst3|available[1..9,11..31]       ; Merged with ControlUnit:inst3|available[10]          ;
 ; ControlUnit:inst3|fetch[1..9,11..31]           ; Merged with ControlUnit:inst3|fetch[10]              ;
-; ControlUnit:inst3|A_SEL[1]                     ; Stuck at VCC due to stuck port data_in               ;
-; ControlUnit:inst3|A_SEL[0]                     ; Stuck at GND due to stuck port data_in               ;
-; Datapath:inst|Multiplier:Multiplier|M[0..7]    ; Stuck at GND due to stuck port clock_enable          ;
-; Datapath:inst|Multiplier:Multiplier|Q_1        ; Lost fanout                                          ;
-; Datapath:inst|Multiplier:Multiplier|Q[0..7]    ; Lost fanout                                          ;
-; Datapath:inst|Multiplier:Multiplier|A[0..6]    ; Stuck at GND due to stuck port data_in               ;
+; ControlUnit:inst3|temp_Z[10]                   ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|shift_available[10]          ; Stuck at GND due to stuck port data_in               ;
-; ControlUnit:inst3|fetch[10]                    ; Stuck at GND due to stuck port data_in               ;
+; ControlUnit:inst3|mult_available[10]           ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|available[10]                ; Stuck at GND due to stuck port data_in               ;
-; Total Number of Removed Registers = 127        ;                                                      ;
+; ControlUnit:inst3|fetch[10]                    ; Stuck at GND due to stuck port data_in               ;
+; Total Number of Removed Registers = 158        ;                                                      ;
 +------------------------------------------------+------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                   ;
-+-----------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name               ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+-----------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; ControlUnit:inst3|A_SEL[0]  ; Stuck at GND              ; Datapath:inst|Multiplier:Multiplier|M[7], Datapath:inst|Multiplier:Multiplier|M[6], ;
-;                             ; due to stuck port data_in ; Datapath:inst|Multiplier:Multiplier|M[5], Datapath:inst|Multiplier:Multiplier|M[4], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|M[3], Datapath:inst|Multiplier:Multiplier|M[2], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|M[1], Datapath:inst|Multiplier:Multiplier|M[0], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|Q_1, Datapath:inst|Multiplier:Multiplier|Q[1],  ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|Q[3], Datapath:inst|Multiplier:Multiplier|A[6], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|A[5], Datapath:inst|Multiplier:Multiplier|A[4], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|A[3], Datapath:inst|Multiplier:Multiplier|A[2], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|A[1], Datapath:inst|Multiplier:Multiplier|A[0]  ;
-; ControlUnit:inst3|A_SEL[1]  ; Stuck at VCC              ; Datapath:inst|Multiplier:Multiplier|Q[0], Datapath:inst|Multiplier:Multiplier|Q[2], ;
-;                             ; due to stuck port data_in ; Datapath:inst|Multiplier:Multiplier|Q[4], Datapath:inst|Multiplier:Multiplier|Q[5], ;
-;                             ;                           ; Datapath:inst|Multiplier:Multiplier|Q[6], Datapath:inst|Multiplier:Multiplier|Q[7]  ;
-; ControlUnit:inst3|fetch[10] ; Stuck at GND              ; ControlUnit:inst3|available[10]                                                     ;
-;                             ; due to stuck port data_in ;                                                                                     ;
-+-----------------------------+---------------------------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -389,12 +365,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 387   ;
-; Number of registers using Synchronous Clear  ; 49    ;
-; Number of registers using Synchronous Load   ; 43    ;
+; Total registers                              ; 457   ;
+; Number of registers using Synchronous Clear  ; 61    ;
+; Number of registers using Synchronous Load   ; 47    ;
 ; Number of registers using Asynchronous Clear ; 87    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 260   ;
+; Number of registers using Clock Enable       ; 272   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -404,8 +380,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                            ; Fan out ;
 +------------------------------------------------------------------------------+---------+
-; ControlUnit:inst3|RST                                                        ; 54      ;
-; ControlUnit:inst3|fetch[0]                                                   ; 3       ;
+; ControlUnit:inst3|RST                                                        ; 55      ;
+; ControlUnit:inst3|fetch[0]                                                   ; 41      ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1] ; 3       ;
@@ -418,45 +394,52 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|REG16:inst7|Q[7]                                                                                                                                                          ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[8]                                                ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[3]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[4]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg7[7]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg6[2]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg5[1]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg4[0]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg3[5]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg2[2]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg1[6]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg0[4]                                                                                                                                                ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|PCREG:REG_PC|Address[3]                                                                                                                                                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|REG16:inst7|Q[8]                                                                                                                                                          ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[11]                                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[8]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|ControlUnit:inst3|mult_available[0]                                                                                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|M[0]                                                                                                                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|Count[0]                                                                                                                                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|Q[6]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg7[6]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg6[7]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg5[2]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg4[4]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg3[1]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg2[0]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg1[2]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg0[2]                                                                                                                                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|MultCount[0]                                                                                                                                                          ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
 ; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|A[5]                                                                                                                                                ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_A|Q[1]                                                                                                                                                      ;
-; 15:1               ; 32 bits   ; 320 LEs       ; 32 LEs               ; 288 LEs                ; Yes        ; |CPU|ControlUnit:inst3|ShiftCount[26]                                                                                                                                                        ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_Q|Q[2]                                                                                                                                                      ;
-; 17:1               ; 2 bits    ; 22 LEs        ; 2 LEs                ; 20 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|shift_available[10]                                                                                                                                                   ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|A_SEL[1]                                                                                                                                                              ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_A|Q[2]                                                                                                                                                      ;
+; 15:1               ; 32 bits   ; 320 LEs       ; 32 LEs               ; 288 LEs                ; Yes        ; |CPU|ControlUnit:inst3|ShiftCount[23]                                                                                                                                                        ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|A[5]                                                                                                                                                ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_Q|Q[7]                                                                                                                                                      ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 2 LEs                ; 20 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|shift_available[0]                                                                                                                                                    ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 52 LEs               ; 12 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 2 LEs                ; 14 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|OAP[0]                                                                                                                                                                ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 2 LEs                ; 16 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|available[0]                                                                                                                                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_A|Mux7                                                                                                                                                        ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_B|Mux2                                                                                                                                                        ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_B|Mux7                                                                                                                                                        ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|MULT_EN                                                                                                                                                               ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|available[0]                                                                                                                                                          ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|A_SEL[1]                                                                                                                                                              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_A|Mux4                                                                                                                                                        ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_B|Mux0                                                                                                                                                        ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_B|Mux5                                                                                                                                                        ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[6]                                                                                                                                            ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[11]                                                                                                                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_D|Mux0                                                                                                                                                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[13]                                                                                                                                           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_D|Mux5                                                                                                                                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1_10BIT:MUX_PC|Mux8                                                                                                                                                 ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|ControlUnit:inst3|SR_SEL                                                                                                                                                                ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |CPU|ControlUnit:inst3|fetch                                                                                                                                                                 ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataA[7]                                                                                                                                          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataB[4]                                                                                                                                          ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux5                                                                                                                                                      ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_8BIT:MULT_SEL_A|Output[7]                                                                                                                                         ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataA[3]                                                                                                                                          ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataB[5]                                                                                                                                          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux7                                                                                                                                                      ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux13                                                                                                                                                     ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                                                      ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                                                         ;
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[2][0]                                                                                                             ;
@@ -465,7 +448,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[2][1]                                                                                                      ;
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                                                                                                      ;
 ; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                                               ;
-; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                                        ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                                        ;
 ; 28:1               ; 4 bits    ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -674,7 +657,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:03     ;
+; Top              ; 00:00:06     ;
 ; sld_hub:auto_hub ; 00:00:00     ;
 +------------------+--------------+
 
@@ -685,7 +668,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun May 10 11:20:33 2020
+    Info: Processing started: Sun May 10 14:10:59 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
@@ -859,19 +842,24 @@ Info (12128): Elaborating entity "Multiplier" for hierarchy "Datapath:inst|Multi
 Info (10264): Verilog HDL Case Statement information at Multiplier.v(30): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:inst|Multiplier:Multiplier|ALU:Adder"
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst3"
-Warning (10230): Verilog HDL assignment warning at ControlUnit.v(86): truncated value with size 32 to match size of target (4)
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(97): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(163): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(229): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(295): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(355): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(415): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(477): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(543): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(590): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(637): can't check case statement for completeness because the case expression has too many possible states
+Warning (10230): Verilog HDL assignment warning at ControlUnit.v(95): truncated value with size 32 to match size of target (4)
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(101): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(206): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(279): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(337): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(471): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(605): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(664): can't check case statement for completeness because the case expression has too many possible states
 Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(730): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(801): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(796): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(856): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(916): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(978): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1044): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1091): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1138): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1231): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1302): can't check case statement for completeness because the case expression has too many possible states
 Warning (10034): Output port "DATA_MEM_SEL" at ControlUnit.v(30) has no driver
 Warning (10034): Output port "Cin" at ControlUnit.v(30) has no driver
 Info (12128): Elaborating entity "Front_Panel" for hierarchy "Front_Panel:inst2"
@@ -900,7 +888,6 @@ Warning (13012): Latch Datapath:inst|ap_function:ALU|carry[1] has unsafe behavio
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DATA_MEM_ADDR_IN[9]" is stuck at GND
     Warning (13410): Pin "DATA_MEM_ADDR_IN[8]" is stuck at GND
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
@@ -908,16 +895,16 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (144001): Generated suppressed messages file D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1334 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1741 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 132 output pins
-    Info (21061): Implemented 1163 logic cells
+    Info (21059): Implemented 148 output pins
+    Info (21061): Implemented 1554 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 46 warnings
-    Info: Peak virtual memory: 4672 megabytes
-    Info: Processing ended: Sun May 10 11:20:42 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4677 megabytes
+    Info: Processing ended: Sun May 10 14:11:09 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +------------------------------------------+

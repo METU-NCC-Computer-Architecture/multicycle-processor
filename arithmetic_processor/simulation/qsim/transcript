@@ -21,37 +21,40 @@
 # Loading cycloneii_ver.cycloneii_ram_register
 # Loading cycloneii_ver.cycloneii_ram_pulse_generator
 # Loading cycloneii_ver.cycloneii_lcell_ff
-# Loading cycloneii_ver.cycloneii_clkctrl
-# Loading cycloneii_ver.cycloneii_mux41
-# Loading cycloneii_ver.cycloneii_ena_reg
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
 # Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_clkctrl
+# Loading cycloneii_ver.cycloneii_mux41
+# Loading cycloneii_ver.cycloneii_ena_reg
 # Loading cycloneii_ver.cycloneii_jtag
 # Loading work.CPU_vlg_sample_tst
 # Loading work.CPU_vlg_check_tst
-# ** Warning: (vsim-3017) arithmetic_processor.vt(2643): [TFMPC] - Too few port connections. Expected 21, found 17.
+# ** Warning: (vsim-3017) arithmetic_processor.vt(2758): [TFMPC] - Too few port connections. Expected 22, found 18.
 # 
 #         Region: /CPU_vlg_vec_tst/i1
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2643): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2643): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2643): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2643): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # 
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 # 
 #           File in use by: Saad Yousaf  Hostname: DESKTOP-OFI7FUL  ProcessID: 11556
 # 
-#           Attempting to use alternate WLF file "./wlftfhc2d5".
+#           Attempting to use alternate WLF file "./wlftaf7wrx".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftfhc2d5
+#           Using alternate file: ./wlftaf7wrx
 # 
 # Simulation passed !
-# ** Note: $finish    : arithmetic_processor.vt(2595)
-#    Time: 1200 ns  Iteration: 0  Instance: /CPU_vlg_vec_tst/tb_out
+# ** Note: $finish    : arithmetic_processor.vt(2708)
+#    Time: 350 ns  Iteration: 0  Instance: /CPU_vlg_vec_tst/tb_out
