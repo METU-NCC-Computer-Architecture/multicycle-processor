@@ -275,7 +275,7 @@ begin
 				end
 			endcase
 		end
-		else begin
+		else begin //ADD,SUB,OR,AND,XOR
 			case(Count)
 			4'b0010:
 			begin
