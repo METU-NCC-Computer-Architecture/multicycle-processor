@@ -9,6 +9,7 @@ entity CPU is
         A_REG           : out    vl_logic_vector(7 downto 0);
         RUN             : in     vl_logic;
         AUTO            : in     vl_logic;
+        MAN_CLK         : in     vl_logic;
         CLK             : in     vl_logic;
         ALU_OUT         : out    vl_logic_vector(7 downto 0);
         CURRENT_INSTR   : out    vl_logic_vector(15 downto 0);

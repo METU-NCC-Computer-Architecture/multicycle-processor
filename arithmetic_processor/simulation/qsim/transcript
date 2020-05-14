@@ -31,16 +31,16 @@
 # Loading cycloneii_ver.cycloneii_jtag
 # Loading work.CPU_vlg_sample_tst
 # Loading work.CPU_vlg_check_tst
-# ** Warning: (vsim-3017) arithmetic_processor.vt(2758): [TFMPC] - Too few port connections. Expected 22, found 18.
+# ** Warning: (vsim-3017) arithmetic_processor.vt(2945): [TFMPC] - Too few port connections. Expected 23, found 19.
 # 
 #         Region: /CPU_vlg_vec_tst/i1
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2945): [TFMPC] - Missing connection for port 'altera_reserved_tms'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2945): [TFMPC] - Missing connection for port 'altera_reserved_tck'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2945): [TFMPC] - Missing connection for port 'altera_reserved_tdi'.
 # 
-# ** Warning: (vsim-3722) arithmetic_processor.vt(2758): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
+# ** Warning: (vsim-3722) arithmetic_processor.vt(2945): [TFMPC] - Missing connection for port 'altera_reserved_tdo'.
 # 
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
 # ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
@@ -50,11 +50,11 @@
 # 
 #           File in use by: Saad Yousaf  Hostname: DESKTOP-OFI7FUL  ProcessID: 11556
 # 
-#           Attempting to use alternate WLF file "./wlftysxe57".
+#           Attempting to use alternate WLF file "./wlft57kmst".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftysxe57
+#           Using alternate file: ./wlft57kmst
 # 
 # Simulation passed !
-# ** Note: $finish    : arithmetic_processor.vt(2708)
-#    Time: 350 ns  Iteration: 0  Instance: /CPU_vlg_vec_tst/tb_out
+# ** Note: $finish    : arithmetic_processor.vt(2893)
+#    Time: 340 ns  Iteration: 0  Instance: /CPU_vlg_vec_tst/tb_out

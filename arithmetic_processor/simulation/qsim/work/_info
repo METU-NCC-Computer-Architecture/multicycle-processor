@@ -160,10 +160,11 @@ Z50 n@control@unit_vlg_vec_tst
 !s85 0
 !s101 -O0
 vCPU
-Z51 ITPMFN:`hH;Y9M;`10c[L20
-Z52 VK4EHkA`5J9[;ZNk>Cf0jZ2
-Z53 dC:\Users\Saad Yousaf\Documents\GitHub\multicycle-processor\arithmetic_processor\simulation\qsim
-Z54 w1589159839
+Z51 !s100 E0ZI;;YDgnK;OU67kl4PT2
+Z52 Ijg=zanb6[IDQdY1P`@UeB2
+Z53 VFC1j`=Dzk@06no5hZ1CzK3
+Z54 dC:\Users\Saad Yousaf\Documents\GitHub\multicycle-processor\arithmetic_processor\simulation\qsim
+Z55 w1589409813
 R6
 R7
 L0 31
@@ -172,28 +173,27 @@ r1
 31
 R9
 R10
-Z55 n@c@p@u
+Z56 n@c@p@u
 !i10b 1
-Z56 !s100 k22<`3[:NXb[T1fHV>Jof0
 !s85 0
-Z57 !s108 1589159840.776000
+Z57 !s108 1589409814.554000
 R12
 !s101 -O0
 vCPU_vlg_check_tst
 !i10b 1
-Z58 !s100 N8l`F^C<8`QI<P4FC1_C53
-Z59 IYk1Yk3U4Wn3h]oQk2oN5C0
+Z58 !s100 bSSKS4kEE7A43El[9U3910
+Z59 IB^VN_R`gi8UfCZ;b>d`fm3
 Z60 VV2:o@;DVBW8>=AaBhRhLg0
-R53
-Z61 w1589159838
+R54
+Z61 w1589409811
 R16
 R17
-L0 61
+L0 63
 R8
 r1
 !s85 0
 31
-Z62 !s108 1589159841.154000
+Z62 !s108 1589409815.008000
 Z63 !s107 arithmetic_processor.vt|
 R20
 !s101 -O0
@@ -201,10 +201,10 @@ R10
 Z64 n@c@p@u_vlg_check_tst
 vCPU_vlg_sample_tst
 !i10b 1
-Z65 !s100 O_5V95^YfIcoM]11fhjJ42
-Z66 I1SBJm;9VE;6G3M6fI5Oc81
-Z67 VAkMX^g^o9^o[3kz_e;BQ`2
-R53
+Z65 !s100 _6l?PQ[m;H2fPb4@K6SR30
+Z66 Im5cYcVEVK3X?>_X86MZJT2
+Z67 V9JR2U1BE@JJQ>RX=4cG?G2
+R54
 R61
 R16
 R17
@@ -221,14 +221,14 @@ R10
 Z68 n@c@p@u_vlg_sample_tst
 vCPU_vlg_vec_tst
 !i10b 1
-Z69 !s100 MV5l9C2o=2GD;ad^;=LbP2
-Z70 I>Ud3=_mfzB10;8ID?Eej`0
+Z69 !s100 ^]o3d0>Dbe9V4ZXF:>ia<2
+Z70 IRjbcQF04[2kzeo1oQF]N13
 Z71 VJGhMb3eOK0GJGjGadCX2W1
-R53
+R54
 R61
 R16
 R17
-Z72 L0 2712
+Z72 L0 2897
 R8
 r1
 !s85 0
