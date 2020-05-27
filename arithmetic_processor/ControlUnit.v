@@ -25,10 +25,11 @@ WR_EN,
 INST_REG_EN,
 Z_FLAG,
 N_FLAG,
-counterchk); 
+counterchk,
+DIV_EN); 
 
-output reg RST, RF_EN, MULT_EN, LDA, LDQ, SR_SEL, PLUS1_SEL, SR, SL, PC_EN, MUL_SEL, INST_TYPE_MUX_SEL, DATA_MEM_SEL, Cin, WB_SEL, UL_SEL, WR_EN, INST_REG_EN;
-output reg [1:0] PC_MUX_SEL, A_SEL, B_SEL, D_SEL;
+output reg RST, RF_EN, MULT_EN, LDA, LDQ, SR_SEL, PLUS1_SEL, SR, SL, PC_EN, DIV_EN, INST_TYPE_MUX_SEL, DATA_MEM_SEL, Cin, WB_SEL, UL_SEL, WR_EN, INST_REG_EN;
+output reg [1:0] PC_MUX_SEL, A_SEL, B_SEL, D_SEL, MUL_SEL;
 output reg [2:0] OAP;
 output reg [3:0] counterchk;
 
@@ -36,8 +37,8 @@ input CLK, PC_RST, Z_FLAG, N_FLAG;
 input [15:0] instruction;
 
 
-integer Count, ShiftCount, MultCount;
-integer available, fetch, shift_available, mult_available, temp_Z;
+integer Count, ShiftCount, MultCount ,DivCount;
+integer available, fetch, shift_available, mult_available, div_available, temp_Z;
 
 initial
 begin
@@ -45,7 +46,10 @@ begin
 	Count = 0;
 	ShiftCount = 0;
 	MultCount = 0;
-	MUL_SEL = 1'b0;
+	DivCount = 0;
+	MUL_SEL = 2'b00;
+	MULT_EN = 0; DIV_EN = 0;
+	DIV_EN = 0;
 	available = 0;
 	PC_MUX_SEL = 0;
 	INST_REG_EN = 0;
@@ -54,6 +58,7 @@ begin
 	available = 0;
 	shift_available = 0;
 	mult_available = 0;
+	div_available = 0;
 end
 
 always @(posedge CLK)
@@ -64,6 +69,7 @@ begin
 		Count = 0;
 		ShiftCount = 0;
 		MultCount = 0;
+		DivCount = 0;
 	end
 	
 	if (fetch == 0) begin
@@ -78,6 +84,11 @@ begin
 	
 	if (MultCount !== 0) begin
 		MultCount = MultCount - 1;
+		Count = Count - 1;
+	end
+	
+	if (DivCount !== 0) begin
+		DivCount = DivCount - 1;
 		Count = Count - 1;
 	end
 	
@@ -97,7 +108,7 @@ begin
 	case (instruction[15:12])
 	4'b0000: // R-type
 	begin
-		if(instruction[2:0] == 3'b010) begin // MUL
+		if(instruction[2:0] == 3'b111) begin // DIV
 			case(Count)
 			4'b0010:
 			begin
@@ -108,7 +119,117 @@ begin
 				LDA = 0;
 				LDQ = 0;
 				MULT_EN = 0;
-				MUL_SEL = 0;
+				DIV_EN = 0;
+				MUL_SEL = 2'b00;
+				PC_MUX_SEL = 0;
+				PLUS1_SEL = 0;
+				RF_EN = 0;
+				OAP = 3'b0;
+				fetch = 0;
+			end
+			4'b0011:
+			begin
+				A_SEL = 2'b00;
+				B_SEL = 2'b00;
+				D_SEL = 2'b01;
+				INST_TYPE_MUX_SEL = 0;
+				LDA = 0;
+				LDQ = 0;
+				MULT_EN = 0;
+				DIV_EN = 1;
+				MUL_SEL = 2'b10;
+				PC_MUX_SEL = 0;
+				PLUS1_SEL = 0;
+				RF_EN = 0;
+				MUL_SEL = 2'b10;
+				OAP = 3'b0;
+				fetch = 0;
+			end
+			4'b0100:
+			begin
+				if(DivCount == 0 && div_available == 0) begin
+					DivCount = 6;
+					div_available = 1;
+				end
+				if( div_available == 1 ) begin
+					if(DivCount == 0) begin
+						div_available= 0;
+					end
+					else begin
+					end
+				end
+				DIV_EN = 1;
+				D_SEL = 2'b01;
+			end
+			4'b0101:
+			begin
+				A_SEL = 2'b00;
+				B_SEL = 2'b00;
+				D_SEL = 2'b01;
+				INST_TYPE_MUX_SEL = 0;
+				LDA = 1;
+				LDQ = 1;
+				MULT_EN = 0; DIV_EN = 0;
+				DIV_EN = 0;
+				MUL_SEL = 2'b10;
+				PC_MUX_SEL = 0;
+				PLUS1_SEL = 0;
+				RF_EN = 0;
+				MUL_SEL = 2'b10;
+				OAP = 3'b0;
+				fetch = 0;
+			end
+			4'b0110:
+			begin
+				A_SEL = 2'b00;
+				B_SEL = 2'b00;
+				D_SEL = 2'b01;
+				INST_TYPE_MUX_SEL = 0;
+				LDA = 0;
+				LDQ = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				DIV_EN = 0;
+				MUL_SEL = 2'b10;
+				PC_MUX_SEL = 0;
+				PLUS1_SEL = 0;
+				RF_EN = 1;
+				MUL_SEL = 2'b10;
+				OAP = 3'b0;
+				fetch = 0;
+			end
+			4'b0111:
+			begin
+				A_SEL = 2'b00;
+				B_SEL = 2'b00;
+				D_SEL = 2'b00;
+				INST_TYPE_MUX_SEL = 0;
+				LDA = 0;
+				LDQ = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				DIV_EN = 0;
+				MUL_SEL = 2'b10;
+				PC_MUX_SEL = 0;
+				PLUS1_SEL = 1;
+				RF_EN = 1;
+				MUL_SEL = 2'b10;
+				OAP = 3'b0;
+				available = 0;
+				fetch = 1;
+			end
+			endcase
+		end
+		else if(instruction[2:0] == 3'b010) begin // MUL
+			case(Count)
+			4'b0010:
+			begin
+				A_SEL = 2'b00;
+				B_SEL = 2'b00;
+				D_SEL = 2'b01;
+				INST_TYPE_MUX_SEL = 0;
+				LDA = 0;
+				LDQ = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -124,11 +245,11 @@ begin
 				LDA = 0;
 				LDQ = 0;
 				MULT_EN = 1;
-				MUL_SEL = 1;
+				MUL_SEL = 2'b01;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
-				MUL_SEL = 1;
+				MUL_SEL = 2'b01;
 				OAP = 3'b0;
 				fetch = 0;
 			end
@@ -145,7 +266,7 @@ begin
 					else begin
 					end
 				end
-				MULT_EN = 0;
+				MULT_EN = 0; DIV_EN = 0;
 				D_SEL = 2'b01;
 			end
 			4'b0101:
@@ -156,12 +277,12 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 1;
-				MULT_EN = 0;
-				MUL_SEL = 1;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b01;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
-				MUL_SEL = 1;
+				MUL_SEL = 2'b01;
 				OAP = 3'b0;
 				fetch = 0;
 			end
@@ -173,12 +294,12 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 1;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b01;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 1;
-				MUL_SEL = 1;
+				MUL_SEL = 2'b01;
 				OAP = 3'b0;
 				fetch = 0;
 			end
@@ -190,12 +311,12 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 1;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b01;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 1;
 				RF_EN = 1;
-				MUL_SEL = 1;
+				MUL_SEL = 2'b01;
 				OAP = 3'b0;
 				available = 0;
 				fetch = 1;
@@ -212,8 +333,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -229,8 +350,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -244,8 +365,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -261,8 +382,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 1;
@@ -285,8 +406,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -301,8 +422,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -317,8 +438,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 0;
 				PLUS1_SEL = 0;
 				RF_EN = 1;
@@ -343,8 +464,8 @@ begin
 			D_SEL = 2'b01;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -359,8 +480,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b0;
 			PC_EN = 0;
 			PLUS1_SEL = 0;
@@ -379,8 +500,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b10;
 				PC_EN = 0 ;
 				PLUS1_SEL = 0;
@@ -397,8 +518,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b00;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -416,8 +537,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b10;
 				PC_EN = 1;
 				PLUS1_SEL = 0;
@@ -433,8 +554,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b00;
 				PC_EN = 0;
 				PLUS1_SEL = 0;
@@ -451,8 +572,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b00;
 			PC_EN = 0;
 			PLUS1_SEL = 0;
@@ -477,8 +598,8 @@ begin
 			D_SEL = 2'b01;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -493,8 +614,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b0;
 			PC_EN = 0;
 			PLUS1_SEL = 0;
@@ -513,8 +634,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b10;
 				PC_EN = 0 ;
 				PLUS1_SEL = 0;
@@ -531,8 +652,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 1;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b00;
 				PLUS1_SEL = 0;
 				RF_EN = 0;
@@ -550,8 +671,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b10;
 				PC_EN = 1;
 				PLUS1_SEL = 0;
@@ -567,8 +688,8 @@ begin
 				INST_TYPE_MUX_SEL = 0;
 				LDA = 0;
 				LDQ = 0;
-				MULT_EN = 0;
-				MUL_SEL = 0;
+				MULT_EN = 0; DIV_EN = 0;
+				MUL_SEL = 2'b00;
 				PC_MUX_SEL = 2'b00;
 				PC_EN = 0;
 				PLUS1_SEL = 0;
@@ -585,8 +706,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b00;
 			PC_EN = 0;
 			PLUS1_SEL = 0;
@@ -611,8 +732,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b01;
 			PC_EN = 0;
 			PLUS1_SEL = 0;
@@ -628,8 +749,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b01;
 			PC_EN = 1;
 			PLUS1_SEL = 0;
@@ -645,8 +766,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 2'b00;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -670,8 +791,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -689,8 +810,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -708,8 +829,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 1;
@@ -736,8 +857,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -755,8 +876,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -774,8 +895,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 1;
@@ -802,8 +923,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -838,8 +959,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			SR = 0;
@@ -862,8 +983,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -898,8 +1019,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			SL = 0;
@@ -922,8 +1043,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -961,8 +1082,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			SL = 0;
@@ -984,8 +1105,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1003,8 +1124,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1022,8 +1143,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 1;
@@ -1041,8 +1162,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 1;
 			RF_EN = 1;
@@ -1069,8 +1190,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1088,8 +1209,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 1;
@@ -1116,8 +1237,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1135,8 +1256,8 @@ begin
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 1;
@@ -1163,8 +1284,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1183,8 +1304,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 1;
 			LDQ = 1;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1203,8 +1324,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 1;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 1;
 			RF_EN = 0;
@@ -1225,8 +1346,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 1;
 			RF_EN = 0;
@@ -1256,8 +1377,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1276,8 +1397,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 1;
 			LDQ = 1;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1296,8 +1417,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 1;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 1;
 			RF_EN = 0;
@@ -1327,8 +1448,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 0;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1347,8 +1468,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 1;
 			LDQ = 1;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
 			RF_EN = 0;
@@ -1367,8 +1488,8 @@ begin
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
 			LDQ = 1;
-			MULT_EN = 0;
-			MUL_SEL = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 1;
 			RF_EN = 0;
@@ -1387,6 +1508,70 @@ begin
 		end
 		endcase
 	end
+	
+	4'b0011: // DMADDR
+	begin
+		case(Count)
+		4'b0010:
+		begin
+			A_SEL = 2'b10;
+			B_SEL = 2'b11;
+			D_SEL = 2'b01;
+			INST_TYPE_MUX_SEL = 0;
+			LDA = 0;
+			LDQ = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
+			PC_MUX_SEL = 2'b00;
+			PC_EN = 0;
+			PLUS1_SEL = 0;
+			RF_EN = 0;
+			OAP = 3'b0;
+			fetch = 0;
+			DATA_MEM_SEL = 0;
+		end
+		4'b0011:
+		begin
+			A_SEL = 2'b10;
+			B_SEL = 2'b11;
+			D_SEL = 2'b01;
+			INST_TYPE_MUX_SEL = 0;
+			LDA = 0;
+			LDQ = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
+			PC_MUX_SEL = 2'b00;
+			PC_EN = 0;
+			PLUS1_SEL = 0;
+			RF_EN = 0;
+			OAP = 3'b0;
+			fetch = 0;
+			DATA_MEM_SEL = 1;
+		end
+		4'b0100:
+		begin
+			A_SEL = 2'b10;
+			B_SEL = 2'b11;
+			D_SEL = 2'b01;
+			INST_TYPE_MUX_SEL = 0;
+			LDA = 0;
+			LDQ = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
+			PC_MUX_SEL = 2'b00;
+			PLUS1_SEL = 0;
+			RF_EN = 0;
+			OAP = 3'b0;
+			DATA_MEM_SEL = 0;
+			fetch = 1;
+			available = 0;
+		end
+		default: 
+			begin
+			end
+		endcase
+	end
+	
 	default: 
 	begin
 		//fetch = 0;

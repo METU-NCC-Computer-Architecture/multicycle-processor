@@ -13,6 +13,8 @@ entity CPU_vlg_check_tst is
         INSTR_MEM_ADDRESS: in     vl_logic_vector(9 downto 0);
         PRODUCT         : in     vl_logic_vector(15 downto 0);
         Q_REG           : in     vl_logic_vector(7 downto 0);
+        quotient        : in     vl_logic_vector(7 downto 0);
+        remainder       : in     vl_logic_vector(7 downto 0);
         RF_A_READ_PORT  : in     vl_logic_vector(7 downto 0);
         RF_B_READ_PORT  : in     vl_logic_vector(7 downto 0);
         RF_W_ADDR       : in     vl_logic_vector(2 downto 0);

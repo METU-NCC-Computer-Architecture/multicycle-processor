@@ -1,5 +1,5 @@
 Analysis & Synthesis report for arithmetic_processor
-Thu May 14 16:35:04 2020
+Tue May 26 21:07:13 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,20 +17,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. Analysis & Synthesis IP Cores Summary
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|altsyncram_s0a2:altsyncram1
- 16. Source assignments for Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|altsyncram_nca2:altsyncram1
- 17. Parameter Settings for User Entity Instance: Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Subtractor"
- 21. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Adder"
- 22. In-System Memory Content Editor Settings
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
- 25. Analysis & Synthesis Suppressed Messages
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|altsyncram_s0a2:altsyncram1
+ 17. Source assignments for Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|altsyncram_nca2:altsyncram1
+ 18. Parameter Settings for User Entity Instance: Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component
+ 20. altsyncram Parameter Settings by Entity Instance
+ 21. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Subtractor"
+ 22. Port Connectivity Checks: "Datapath:inst|Multiplier:Multiplier|ALU:Adder"
+ 23. In-System Memory Content Editor Settings
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -56,16 +57,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 14 16:35:03 2020           ;
+; Analysis & Synthesis Status        ; Successful - Tue May 26 21:07:13 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; arithmetic_processor                            ;
 ; Top-level Entity Name              ; CPU                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 1,504                                           ;
-;     Total combinational functions  ; 1,475                                           ;
-;     Dedicated logic registers      ; 457                                             ;
-; Total registers                    ; 457                                             ;
-; Total pins                         ; 151                                             ;
+; Total logic elements               ; 1,704                                           ;
+;     Total combinational functions  ; 1,675                                           ;
+;     Dedicated logic registers      ; 533                                             ;
+; Total registers                    ; 533                                             ;
+; Total pins                         ; 167                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 32,768                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -169,57 +170,57 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
-; data.mif                         ; yes             ; User Memory Initialization File    ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/data.mif               ;         ;
-; instructions.mif                 ; yes             ; User Memory Initialization File    ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/instructions.mif       ;         ;
-; Multiplier.v                     ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Multiplier.v           ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ALU.v                  ;         ;
-; ap_function.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ap_function.v          ;         ;
-; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1.v              ;         ;
-; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Datapath.bdf           ;         ;
-; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SHIFTREG8.v            ;         ;
-; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1.v              ;         ;
-; DFF1.v                           ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DFF1.v                 ;         ;
-; ControlUnit.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ControlUnit.v          ;         ;
-; MUX2TO1_8BIT.v                   ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_8BIT.v         ;         ;
-; RegisterFile8x8.v                ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/RegisterFile8x8.v      ;         ;
-; INSTMEM.v                        ; yes             ; User Wizard-Generated File         ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v              ;         ;
-; DATAMEM.v                        ; yes             ; User Wizard-Generated File         ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v              ;         ;
-; SIGNEXT6T08.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SIGNEXT6T08.v          ;         ;
-; SIGNEXT8T016.v                   ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/SIGNEXT8T016.v         ;         ;
-; PLUS1_ADDER.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/PLUS1_ADDER.v          ;         ;
-; MUX2TO1_3BIT.v                   ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_3BIT.v         ;         ;
-; MUX2TO1_16BIT.v                  ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX2TO1_16BIT.v        ;         ;
-; ROUTER.v                         ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/ROUTER.v               ;         ;
-; PCREG.v                          ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/PCREG.v                ;         ;
-; CONCANITATING.v                  ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/CONCANITATING.v        ;         ;
-; DFF2.v                           ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DFF2.v                 ;         ;
-; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/CPU.bdf                ;         ;
-; Front_Panel.v                    ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/Front_Panel.v          ;         ;
-; REG16.v                          ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/REG16.v                ;         ;
-; MUX4TO1_10BIT_PC.v               ; yes             ; User Verilog HDL File              ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/MUX4TO1_10BIT_PC.v     ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                          ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                              ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                            ;         ;
-; db/altsyncram_9ma1.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_9ma1.tdf ;         ;
-; db/altsyncram_s0a2.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_s0a2.tdf ;         ;
-; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                     ;         ;
-; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                          ;         ;
-; db/altsyncram_3se1.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_3se1.tdf ;         ;
-; db/altsyncram_nca2.tdf           ; yes             ; Auto-Generated Megafunction        ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/db/altsyncram_nca2.tdf ;         ;
-; sld_hub.vhd                      ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_hub.vhd                                             ;         ;
-; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                        ;         ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
+; data.mif                         ; yes             ; User Memory Initialization File    ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/data.mif               ;         ;
+; instructions.mif                 ; yes             ; User Memory Initialization File    ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/instructions.mif       ;         ;
+; Multiplier.v                     ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Multiplier.v           ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ALU.v                  ;         ;
+; ap_function.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ap_function.v          ;         ;
+; MUX4TO1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX4TO1.v              ;         ;
+; Datapath.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Datapath.bdf           ;         ;
+; SHIFTREG8.v                      ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SHIFTREG8.v            ;         ;
+; MUX2TO1.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1.v              ;         ;
+; DFF1.v                           ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DFF1.v                 ;         ;
+; ControlUnit.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ControlUnit.v          ;         ;
+; RegisterFile8x8.v                ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/RegisterFile8x8.v      ;         ;
+; INSTMEM.v                        ; yes             ; User Wizard-Generated File         ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/INSTMEM.v              ;         ;
+; DATAMEM.v                        ; yes             ; User Wizard-Generated File         ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DATAMEM.v              ;         ;
+; SIGNEXT6T08.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SIGNEXT6T08.v          ;         ;
+; SIGNEXT8T016.v                   ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/SIGNEXT8T016.v         ;         ;
+; PLUS1_ADDER.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/PLUS1_ADDER.v          ;         ;
+; MUX2TO1_3BIT.v                   ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_3BIT.v         ;         ;
+; MUX2TO1_16BIT.v                  ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX2TO1_16BIT.v        ;         ;
+; ROUTER.v                         ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/ROUTER.v               ;         ;
+; PCREG.v                          ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/PCREG.v                ;         ;
+; CONCANITATING.v                  ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/CONCANITATING.v        ;         ;
+; DFF2.v                           ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DFF2.v                 ;         ;
+; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/CPU.bdf                ;         ;
+; Front_Panel.v                    ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/Front_Panel.v          ;         ;
+; REG16.v                          ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/REG16.v                ;         ;
+; MUX4TO1_10BIT_PC.v               ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/MUX4TO1_10BIT_PC.v     ;         ;
+; divider.v                        ; yes             ; User Verilog HDL File              ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/divider.v              ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                                       ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                                          ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_decode.inc                                       ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc                                       ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                        ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
+; db/altsyncram_9ma1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_9ma1.tdf ;         ;
+; db/altsyncram_s0a2.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_s0a2.tdf ;         ;
+; sld_mod_ram_rom.vhd              ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_mod_ram_rom.vhd                                  ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                       ;         ;
+; db/altsyncram_3se1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_3se1.tdf ;         ;
+; db/altsyncram_nca2.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/db/altsyncram_nca2.tdf ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_hub.vhd                                          ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction             ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                     ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -227,29 +228,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Estimated Total logic elements              ; 1,504                 ;
+; Estimated Total logic elements              ; 1,704                 ;
 ;                                             ;                       ;
-; Total combinational functions               ; 1475                  ;
+; Total combinational functions               ; 1675                  ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 743                   ;
-;     -- 3 input functions                    ; 413                   ;
-;     -- <=2 input functions                  ; 319                   ;
+;     -- 4 input functions                    ; 843                   ;
+;     -- 3 input functions                    ; 476                   ;
+;     -- <=2 input functions                  ; 356                   ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 1228                  ;
-;     -- arithmetic mode                      ; 247                   ;
+;     -- normal mode                          ; 1351                  ;
+;     -- arithmetic mode                      ; 324                   ;
 ;                                             ;                       ;
-; Total registers                             ; 457                   ;
-;     -- Dedicated logic registers            ; 457                   ;
+; Total registers                             ; 533                   ;
+;     -- Dedicated logic registers            ; 533                   ;
 ;     -- I/O registers                        ; 0                     ;
 ;                                             ;                       ;
-; I/O pins                                    ; 151                   ;
+; I/O pins                                    ; 167                   ;
 ; Total memory bits                           ; 32768                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                     ;
 ; Maximum fan-out node                        ; Front_Panel:inst2|CLK ;
-; Maximum fan-out                             ; 301                   ;
-; Total fan-out                               ; 7167                  ;
-; Average fan-out                             ; 3.38                  ;
+; Maximum fan-out                             ; 377                   ;
+; Total fan-out                               ; 8039                  ;
+; Average fan-out                             ; 3.33                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -258,9 +259,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                          ; Library Name ;
 +------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |CPU                                                                   ; 1475 (1)          ; 457 (0)      ; 32768       ; 0            ; 0       ; 0         ; 151  ; 0            ; |CPU                                                                                                                                                                         ; work         ;
-;    |ControlUnit:inst3|                                                 ; 654 (654)         ; 132 (132)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:inst3                                                                                                                                                       ; work         ;
-;    |Datapath:inst|                                                     ; 659 (0)           ; 228 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst                                                                                                                                                           ; work         ;
+; |CPU                                                                   ; 1675 (1)          ; 533 (0)      ; 32768       ; 0            ; 0       ; 0         ; 167  ; 0            ; |CPU                                                                                                                                                                         ; work         ;
+;    |ControlUnit:inst3|                                                 ; 789 (789)         ; 168 (168)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|ControlUnit:inst3                                                                                                                                                       ; work         ;
+;    |Datapath:inst|                                                     ; 724 (0)           ; 268 (0)      ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst                                                                                                                                                           ; work         ;
 ;       |DATAMEM:inst5|                                                  ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5                                                                                                                                             ; work         ;
 ;          |altsyncram:altsyncram_component|                             ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component                                                                                                             ; work         ;
 ;             |altsyncram_3se1:auto_generated|                           ; 77 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated                                                                              ; work         ;
@@ -268,6 +269,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                |sld_mod_ram_rom:mgl_prim2|                             ; 77 (52)           ; 46 (37)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                    ; work         ;
 ;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 25 (25)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
 ;       |DFF1:REG_Qm1|                                                   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DFF1:REG_Qm1                                                                                                                                              ; work         ;
+;       |DFF2:inst3|                                                     ; 3 (3)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|DFF2:inst3                                                                                                                                                ; work         ;
 ;       |INSTMEM:inst4|                                                  ; 79 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|INSTMEM:inst4                                                                                                                                             ; work         ;
 ;          |altsyncram:altsyncram_component|                             ; 79 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component                                                                                                             ; work         ;
 ;             |altsyncram_9ma1:auto_generated|                           ; 79 (0)            ; 46 (0)       ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated                                                                              ; work         ;
@@ -276,10 +278,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                   |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr| ; 26 (26)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr ; work         ;
 ;       |MUX2TO1_16BIT:inst11|                                           ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11                                                                                                                                      ; work         ;
 ;       |MUX2TO1_3BIT:MUX_TYPE_SEL|                                      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_3BIT:MUX_TYPE_SEL                                                                                                                                 ; work         ;
-;       |MUX2TO1_8BIT:MULT_SEL_A|                                        ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX2TO1_8BIT:MULT_SEL_A                                                                                                                                   ; work         ;
 ;       |MUX4TO1:MUX_A|                                                  ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_A                                                                                                                                             ; work         ;
-;       |MUX4TO1:MUX_B|                                                  ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_B                                                                                                                                             ; work         ;
+;       |MUX4TO1:MUX_B|                                                  ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_B                                                                                                                                             ; work         ;
 ;       |MUX4TO1:MUX_D|                                                  ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:MUX_D                                                                                                                                             ; work         ;
+;       |MUX4TO1:inst16|                                                 ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:inst16                                                                                                                                            ; work         ;
+;       |MUX4TO1:inst17|                                                 ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1:inst17                                                                                                                                            ; work         ;
 ;       |MUX4TO1_10BIT_PC:inst13|                                        ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|MUX4TO1_10BIT_PC:inst13                                                                                                                                   ; work         ;
 ;       |Multiplier:Multiplier|                                          ; 52 (36)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|Multiplier:Multiplier                                                                                                                                     ; work         ;
 ;          |ALU:Adder|                                                   ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|Multiplier:Multiplier|ALU:Adder                                                                                                                           ; work         ;
@@ -288,10 +291,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;       |PLUS1_ADDER:PLUS1_ADDER3|                                       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|PLUS1_ADDER:PLUS1_ADDER3                                                                                                                                  ; work         ;
 ;       |PLUS1_ADDER:PLUS1_ADDER|                                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|PLUS1_ADDER:PLUS1_ADDER                                                                                                                                   ; work         ;
 ;       |REG16:inst7|                                                    ; 17 (17)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|REG16:inst7                                                                                                                                               ; work         ;
-;       |RegisterFile8x8:RF|                                             ; 160 (160)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|RegisterFile8x8:RF                                                                                                                                        ; work         ;
-;       |SHIFTREG8:REG_A|                                                ; 12 (12)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_A                                                                                                                                           ; work         ;
-;       |SHIFTREG8:REG_Q|                                                ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_Q                                                                                                                                           ; work         ;
-;       |ap_function:ALU|                                                ; 111 (111)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|ap_function:ALU                                                                                                                                           ; work         ;
+;       |RegisterFile8x8:RF|                                             ; 145 (145)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|RegisterFile8x8:RF                                                                                                                                        ; work         ;
+;       |SHIFTREG8:REG_A|                                                ; 18 (18)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_A                                                                                                                                           ; work         ;
+;       |SHIFTREG8:REG_Q|                                                ; 30 (30)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|SHIFTREG8:REG_Q                                                                                                                                           ; work         ;
+;       |ap_function:ALU|                                                ; 110 (110)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|ap_function:ALU                                                                                                                                           ; work         ;
+;       |divider:inst15|                                                 ; 55 (55)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Datapath:inst|divider:inst15                                                                                                                                            ; work         ;
 ;    |Front_Panel:inst2|                                                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|Front_Panel:inst2                                                                                                                                                       ; work         ;
 ;    |sld_hub:auto_hub|                                                  ; 159 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub                                                                                                                                                        ; work         ;
 ;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                   ; 158 (120)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                           ; work         ;
@@ -311,14 +315,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                           ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+----------------------------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                  ; IP Include File                                                                              ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+----------------------------------------------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|Datapath:inst|INSTMEM:inst4 ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/INSTMEM.v ;
-; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|Datapath:inst|DATAMEM:inst5 ; D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/DATAMEM.v ;
-+--------+--------------+---------+--------------+--------------+----------------------------------+----------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                        ;
++--------+--------------+---------+--------------+--------------+----------------------------------+-------------------------------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                  ; IP Include File                                                                           ;
++--------+--------------+---------+--------------+--------------+----------------------------------+-------------------------------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|Datapath:inst|INSTMEM:inst4 ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/INSTMEM.v ;
+; Altera ; RAM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |CPU|Datapath:inst|DATAMEM:inst5 ; C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/DATAMEM.v ;
++--------+--------------+---------+--------------+--------------+----------------------------------+-------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -344,20 +348,35 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------+------------------------------------------------------+
 ; Register name                                  ; Reason for Removal                                   ;
 +------------------------------------------------+------------------------------------------------------+
-; Datapath:inst|DFF2:inst3|Q[0,1]                ; Stuck at GND due to stuck port data_in               ;
+; Datapath:inst|divider:inst15|divider_copy[15]  ; Stuck at GND due to stuck port data_in               ;
 ; Datapath:inst|Multiplier:Multiplier|A[7]       ; Merged with Datapath:inst|Multiplier:Multiplier|A[6] ;
 ; ControlUnit:inst3|temp_Z[1..9,11..31]          ; Merged with ControlUnit:inst3|temp_Z[10]             ;
-; ControlUnit:inst3|mult_available[1..9,11..31]  ; Merged with ControlUnit:inst3|mult_available[10]     ;
 ; ControlUnit:inst3|shift_available[1..9,11..31] ; Merged with ControlUnit:inst3|shift_available[10]    ;
+; ControlUnit:inst3|mult_available[1..9,11..31]  ; Merged with ControlUnit:inst3|mult_available[10]     ;
+; ControlUnit:inst3|div_available[1..9,11..31]   ; Merged with ControlUnit:inst3|div_available[10]      ;
 ; ControlUnit:inst3|available[1..9,11..31]       ; Merged with ControlUnit:inst3|available[10]          ;
 ; ControlUnit:inst3|fetch[1..9,11..31]           ; Merged with ControlUnit:inst3|fetch[10]              ;
+; Datapath:inst|divider:inst15|dividend_copy[15] ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|temp_Z[10]                   ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|shift_available[10]          ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|mult_available[10]           ; Stuck at GND due to stuck port data_in               ;
+; ControlUnit:inst3|div_available[10]            ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|available[10]                ; Stuck at GND due to stuck port data_in               ;
 ; ControlUnit:inst3|fetch[10]                    ; Stuck at GND due to stuck port data_in               ;
-; Total Number of Removed Registers = 158        ;                                                      ;
+; Total Number of Removed Registers = 189        ;                                                      ;
 +------------------------------------------------+------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++-----------------------------------------------+---------------------------+------------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register         ;
++-----------------------------------------------+---------------------------+------------------------------------------------+
+; Datapath:inst|divider:inst15|divider_copy[15] ; Stuck at GND              ; Datapath:inst|divider:inst15|dividend_copy[15] ;
+;                                               ; due to stuck port data_in ;                                                ;
+; ControlUnit:inst3|shift_available[10]         ; Stuck at GND              ; ControlUnit:inst3|available[10]                ;
+;                                               ; due to stuck port data_in ;                                                ;
++-----------------------------------------------+---------------------------+------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -365,12 +384,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 457   ;
-; Number of registers using Synchronous Clear  ; 61    ;
-; Number of registers using Synchronous Load   ; 47    ;
+; Total registers                              ; 533   ;
+; Number of registers using Synchronous Clear  ; 55    ;
+; Number of registers using Synchronous Load   ; 54    ;
 ; Number of registers using Asynchronous Clear ; 87    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 270   ;
+; Number of registers using Clock Enable       ; 287   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -380,8 +399,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                            ; Fan out ;
 +------------------------------------------------------------------------------+---------+
-; ControlUnit:inst3|RST                                                        ; 55      ;
-; ControlUnit:inst3|fetch[0]                                                   ; 39      ;
+; ControlUnit:inst3|RST                                                        ; 53      ;
+; ControlUnit:inst3|fetch[0]                                                   ; 9       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|tdo            ; 1       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg[1] ; 3       ;
@@ -394,52 +413,59 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|PCREG:REG_PC|Address[3]                                                                                                                                                   ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|REG16:inst7|Q[8]                                                                                                                                                          ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|PCREG:REG_PC|Address[1]                                                                                                                                                   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|REG16:inst7|Q[4]                                                                                                                                                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|Datapath:inst|DFF2:inst3|Q[0]                                                                                                                                                           ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[13]                                               ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[4]                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[11]                                               ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[8]                                                ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[1]                                                ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[13]                                               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[9]                                                ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|ControlUnit:inst3|mult_available[0]                                                                                                                                                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |CPU|ControlUnit:inst3|div_available[0]                                                                                                                                                      ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|M[0]                                                                                                                                                ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|Count[0]                                                                                                                                            ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|Q[6]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg7[6]                                                                                                                                                ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|Count[3]                                                                                                                                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|Q[0]                                                                                                                                                ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |CPU|Datapath:inst|divider:inst15|dividend_copy[10]                                                                                                                                          ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|divider:inst15|dividend_copy[2]                                                                                                                                           ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg7[1]                                                                                                                                                ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg6[7]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg5[2]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg4[4]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg3[1]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg5[7]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg4[5]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg3[3]                                                                                                                                                ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg2[0]                                                                                                                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg1[2]                                                                                                                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg1[6]                                                                                                                                                ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|RegisterFile8x8:RF|reg0[2]                                                                                                                                                ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|MultCount[0]                                                                                                                                                          ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3] ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_A|Q[2]                                                                                                                                                      ;
-; 15:1               ; 32 bits   ; 320 LEs       ; 32 LEs               ; 288 LEs                ; Yes        ; |CPU|ControlUnit:inst3|ShiftCount[23]                                                                                                                                                        ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|A[5]                                                                                                                                                ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_Q|Q[7]                                                                                                                                                      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|DivCount[12]                                                                                                                                                          ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|MultCount[25]                                                                                                                                                         ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[2] ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_A|Q[5]                                                                                                                                                      ;
+; 15:1               ; 32 bits   ; 320 LEs       ; 32 LEs               ; 288 LEs                ; Yes        ; |CPU|ControlUnit:inst3|ShiftCount[19]                                                                                                                                                        ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|Multiplier:Multiplier|A[0]                                                                                                                                                ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_Q|Q[6]                                                                                                                                                      ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; Yes        ; |CPU|Datapath:inst|SHIFTREG8:REG_Q|Q[5]                                                                                                                                                      ;
 ; 17:1               ; 2 bits    ; 22 LEs        ; 2 LEs                ; 20 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|shift_available[0]                                                                                                                                                    ;
 ; 24:1               ; 4 bits    ; 64 LEs        ; 52 LEs               ; 12 LEs                 ; Yes        ; |CPU|Datapath:inst|INSTMEM:inst4|altsyncram:altsyncram_component|altsyncram_9ma1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 24:1               ; 4 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|MULT_EN                                                                                                                                                               ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 2 LEs                ; 18 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|available[0]                                                                                                                                                          ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 8 LEs                ; 10 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|A_SEL[1]                                                                                                                                                              ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_A|Mux4                                                                                                                                                        ;
+; 24:1               ; 4 bits    ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |CPU|Datapath:inst|DATAMEM:inst5|altsyncram:altsyncram_component|altsyncram_3se1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|MUL_SEL[0]                                                                                                                                                            ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 2 LEs                ; 16 LEs                 ; Yes        ; |CPU|ControlUnit:inst3|available[0]                                                                                                                                                          ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |CPU|ControlUnit:inst3|A_SEL[1]                                                                                                                                                              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_A|Mux1                                                                                                                                                        ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_B|Mux0                                                                                                                                                        ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_B|Mux5                                                                                                                                                        ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[6]                                                                                                                                            ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[13]                                                                                                                                           ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_D|Mux5                                                                                                                                                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1_10BIT_PC:inst13|Mux8                                                                                                                                              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:inst17|Mux4                                                                                                                                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[7]                                                                                                                                            ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX2TO1_16BIT:inst11|Output[8]                                                                                                                                            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1:MUX_D|Mux3                                                                                                                                                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|MUX4TO1_10BIT_PC:inst13|Mux9                                                                                                                                              ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |CPU|ControlUnit:inst3|SR_SEL                                                                                                                                                                ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |CPU|ControlUnit:inst3|fetch                                                                                                                                                                 ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataA[3]                                                                                                                                          ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataB[5]                                                                                                                                          ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux7                                                                                                                                                      ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux13                                                                                                                                                     ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataA[4]                                                                                                                                          ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|RegisterFile8x8:RF|Read_DataB[7]                                                                                                                                          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux6                                                                                                                                                      ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |CPU|Datapath:inst|ap_function:ALU|Mux8                                                                                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                                                      ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                                                         ;
 ; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |CPU|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[2][0]                                                                                                             ;
@@ -657,7 +683,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:07     ;
+; Top              ; 00:00:06     ;
 ; sld_hub:auto_hub ; 00:00:00     ;
 +------------------+--------------+
 
@@ -668,7 +694,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu May 14 16:34:51 2020
+    Info: Processing started: Tue May 26 21:07:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off arithmetic_processor -c arithmetic_processor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
@@ -736,12 +762,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file reg16.v
     Info (12023): Found entity 1: REG16
 Info (12021): Found 1 design units, including 1 entities, in source file mux4to1_10bit_pc.v
     Info (12023): Found entity 1: MUX4TO1_10BIT_PC
+Warning (10463): Verilog HDL Declaration warning at divider.v(12): "bit" is SystemVerilog-2005 keyword
+Info (12021): Found 1 design units, including 1 entities, in source file divider.v
+    Info (12023): Found entity 1: divider
+Warning (10227): Verilog HDL Port Declaration warning at divider.v(8): data type declaration for "quotient" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at divider.v(5): see declaration for object "quotient"
+Warning (10227): Verilog HDL Port Declaration warning at divider.v(10): data type declaration for "remainder" declares packed dimensions but the port declaration declaration does not
+Info (10499): HDL info at divider.v(5): see declaration for object "remainder"
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Info (12128): Elaborating entity "Datapath" for hierarchy "Datapath:inst"
 Info (12128): Elaborating entity "DFF1" for hierarchy "Datapath:inst|DFF1:REG_Qm1"
 Info (12128): Elaborating entity "SHIFTREG8" for hierarchy "Datapath:inst|SHIFTREG8:REG_Q"
 Info (12128): Elaborating entity "MUX2TO1" for hierarchy "Datapath:inst|MUX2TO1:MUX_S"
-Info (12128): Elaborating entity "MUX2TO1_8BIT" for hierarchy "Datapath:inst|MUX2TO1_8BIT:MULT_SEL_A"
+Info (12128): Elaborating entity "MUX4TO1" for hierarchy "Datapath:inst|MUX4TO1:inst17"
 Info (12128): Elaborating entity "ap_function" for hierarchy "Datapath:inst|ap_function:ALU"
 Warning (10230): Verilog HDL assignment warning at ap_function.v(11): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at ap_function.v(12): truncated value with size 32 to match size of target (8)
@@ -753,7 +786,6 @@ Info (10041): Inferred latch for "carry[3]" at ap_function.v(11)
 Info (10041): Inferred latch for "carry[4]" at ap_function.v(11)
 Info (10041): Inferred latch for "carry[5]" at ap_function.v(11)
 Info (10041): Inferred latch for "carry[6]" at ap_function.v(11)
-Info (12128): Elaborating entity "MUX4TO1" for hierarchy "Datapath:inst|MUX4TO1:MUX_A"
 Info (12128): Elaborating entity "PCREG" for hierarchy "Datapath:inst|PCREG:REG_PC"
 Warning (10230): Verilog HDL assignment warning at PCREG.v(14): truncated value with size 32 to match size of target (10)
 Info (12128): Elaborating entity "MUX4TO1_10BIT_PC" for hierarchy "Datapath:inst|MUX4TO1_10BIT_PC:inst13"
@@ -844,27 +876,31 @@ Info (12128): Elaborating entity "SIGNEXT6T08" for hierarchy "Datapath:inst|SIGN
 Info (12128): Elaborating entity "Multiplier" for hierarchy "Datapath:inst|Multiplier:Multiplier"
 Info (10264): Verilog HDL Case Statement information at Multiplier.v(30): all case item expressions in this case statement are onehot
 Info (12128): Elaborating entity "ALU" for hierarchy "Datapath:inst|Multiplier:Multiplier|ALU:Adder"
+Info (12128): Elaborating entity "divider" for hierarchy "Datapath:inst|divider:inst15"
+Warning (10230): Verilog HDL assignment warning at divider.v(10): truncated value with size 16 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at divider.v(40): truncated value with size 32 to match size of target (5)
 Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:inst3"
-Warning (10230): Verilog HDL assignment warning at ControlUnit.v(95): truncated value with size 32 to match size of target (4)
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(101): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(206): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(279): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(337): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(471): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(605): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(664): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(730): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(796): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(856): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(916): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(978): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1063): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1110): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1157): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1250): can't check case statement for completeness because the case expression has too many possible states
-Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1321): can't check case statement for completeness because the case expression has too many possible states
-Warning (10034): Output port "DATA_MEM_SEL" at ControlUnit.v(30) has no driver
-Warning (10034): Output port "Cin" at ControlUnit.v(30) has no driver
+Warning (10230): Verilog HDL assignment warning at ControlUnit.v(106): truncated value with size 32 to match size of target (4)
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(112): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(222): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(327): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(400): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(458): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(592): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(726): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(785): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(851): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(917): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(977): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1037): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1099): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1184): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1231): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1278): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1371): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1442): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at ControlUnit.v(1514): can't check case statement for completeness because the case expression has too many possible states
+Warning (10034): Output port "Cin" at ControlUnit.v(31) has no driver
 Info (12128): Elaborating entity "Front_Panel" for hierarchy "Front_Panel:inst2"
 Warning (10240): Verilog HDL Always Construct warning at Front_Panel.v(13): inferring latch(es) for variable "RUN_ind", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at Front_Panel.v(13): inferring latch(es) for variable "CLK", which holds its previous value in one or more paths through the always construct
@@ -888,31 +924,28 @@ Warning (13012): Latch Datapath:inst|ap_function:ALU|carry[2] has unsafe behavio
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlUnit:inst3|OAP[1]
 Warning (13012): Latch Datapath:inst|ap_function:ALU|carry[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal ControlUnit:inst3|OAP[1]
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "DATA_MEM_ADDR_IN[9]" is stuck at GND
-    Warning (13410): Pin "DATA_MEM_ADDR_IN[8]" is stuck at GND
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (144001): Generated suppressed messages file D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1760 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2037 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 148 output pins
-    Info (21061): Implemented 1572 logic cells
+    Info (21059): Implemented 164 output pins
+    Info (21061): Implemented 1833 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4669 megabytes
-    Info: Processing ended: Thu May 14 16:35:04 2020
-    Info: Elapsed time: 00:00:13
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
+    Info: Peak virtual memory: 4679 megabytes
+    Info: Processing ended: Tue May 26 21:07:13 2020
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:12
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Github/METU-NCC-Computer-Architecture/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
+The suppressed messages can be found in C:/Users/Saad Yousaf/Documents/GitHub/multicycle-processor/arithmetic_processor/output_files/arithmetic_processor.map.smsg.
 
 

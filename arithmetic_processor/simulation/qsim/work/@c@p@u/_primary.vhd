@@ -21,6 +21,8 @@ entity CPU is
         INSTR_MEM_ADDRESS: out    vl_logic_vector(9 downto 0);
         PRODUCT         : out    vl_logic_vector(15 downto 0);
         Q_REG           : out    vl_logic_vector(7 downto 0);
+        quotient        : out    vl_logic_vector(7 downto 0);
+        remainder       : out    vl_logic_vector(7 downto 0);
         RF_A_READ_PORT  : out    vl_logic_vector(7 downto 0);
         RF_B_READ_PORT  : out    vl_logic_vector(7 downto 0);
         RF_W_ADDR       : out    vl_logic_vector(2 downto 0);

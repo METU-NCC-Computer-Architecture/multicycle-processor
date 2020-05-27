@@ -20,9 +20,9 @@ applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 288 448)
+	(rect 16 16 288 480)
 	(text "ControlUnit" (rect 5 0 48 12)(font "Arial" ))
-	(text "inst" (rect 8 416 20 428)(font "Arial" ))
+	(text "inst" (rect 8 448 20 460)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -152,9 +152,9 @@ applicable agreement for further details.
 	(port
 		(pt 272 240)
 		(output)
-		(text "MUL_SEL" (rect 0 0 46 12)(font "Arial" ))
-		(text "MUL_SEL" (rect 205 235 251 247)(font "Arial" ))
-		(line (pt 272 240)(pt 256 240)(line_width 1))
+		(text "MUL_SEL[1..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "MUL_SEL[1..0]" (rect 187 235 251 247)(font "Arial" ))
+		(line (pt 272 240)(pt 256 240)(line_width 3))
 	)
 	(port
 		(pt 272 256)
@@ -226,7 +226,14 @@ applicable agreement for further details.
 		(text "counterchk[3..0]" (rect 188 395 251 407)(font "Arial" ))
 		(line (pt 272 400)(pt 256 400)(line_width 3))
 	)
+	(port
+		(pt 272 416)
+		(output)
+		(text "DIV_EN" (rect 0 0 37 12)(font "Arial" ))
+		(text "DIV_EN" (rect 214 411 251 423)(font "Arial" ))
+		(line (pt 272 416)(pt 256 416)(line_width 1))
+	)
 	(drawing
-		(rectangle (rect 16 16 256 416)(line_width 1))
+		(rectangle (rect 16 16 256 448)(line_width 1))
 	)
 )
