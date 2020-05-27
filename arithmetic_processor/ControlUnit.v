@@ -1186,7 +1186,7 @@ begin
 		begin
 			A_SEL = 2'b10;
 			B_SEL = 2'b11;
-			D_SEL = 2'b10;
+			D_SEL = 2'b11;
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 1;
 			LDQ = 0;
@@ -1213,6 +1213,25 @@ begin
 			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
 			PLUS1_SEL = 0;
+			RF_EN = 0;
+			SR = 0;
+			SL = 0;
+			SR_SEL = 0;
+			OAP = 3'b0;
+			fetch = 0;
+		end
+		4'b0100:
+		begin
+			A_SEL = 2'b10;
+			B_SEL = 2'b11;
+			D_SEL = 2'b10;
+			INST_TYPE_MUX_SEL = 0;
+			LDA = 0;
+			LDQ = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
+			PC_MUX_SEL = 0;
+			PLUS1_SEL = 1;
 			RF_EN = 1;
 			SR = 0;
 			SL = 0;
@@ -1252,7 +1271,26 @@ begin
 		begin
 			A_SEL = 2'b10;
 			B_SEL = 2'b11;
-			D_SEL = 2'b10;
+			D_SEL = 2'b11;
+			INST_TYPE_MUX_SEL = 0;
+			LDA = 0;
+			LDQ = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
+			PC_MUX_SEL = 0;
+			PLUS1_SEL = 0;
+			RF_EN = 0;
+			SR = 0;
+			SL = 0;
+			SR_SEL = 0;
+			OAP = 3'b0;
+			fetch = 0;
+		end
+		4'b0100:
+		begin
+			A_SEL = 2'b10;
+			B_SEL = 2'b11;
+			D_SEL = 2'b11;
 			INST_TYPE_MUX_SEL = 0;
 			LDA = 0;
 			LDQ = 0;
@@ -1312,7 +1350,7 @@ begin
 			SR = 0;
 			SL = 0;
 			SR_SEL = 0;
-			WR_EN = 1;
+			WR_EN = 0;
 			OAP = 3'b0;
 			fetch = 0;
 		end
@@ -1405,7 +1443,7 @@ begin
 			SR = 0;
 			SL = 0;
 			SR_SEL = 0;
-			WR_EN = 1;
+			WR_EN = 0;
 			OAP = 3'b0;
 			fetch = 0;
 		end
@@ -1416,7 +1454,7 @@ begin
 			D_SEL = 2'b10;
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
-			LDQ = 1;
+			LDQ = 0;
 			MULT_EN = 0; DIV_EN = 0;
 			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
@@ -1476,7 +1514,7 @@ begin
 			SR = 0;
 			SL = 0;
 			SR_SEL = 0;
-			WR_EN = 1;
+			WR_EN = 0;
 			OAP = 3'b0;
 			fetch = 0;
 		end
@@ -1487,7 +1525,7 @@ begin
 			D_SEL = 2'b10;
 			INST_TYPE_MUX_SEL = 1;
 			LDA = 0;
-			LDQ = 1;
+			LDQ = 0;
 			MULT_EN = 0; DIV_EN = 0;
 			MUL_SEL = 2'b00;
 			PC_MUX_SEL = 0;
@@ -1508,7 +1546,6 @@ begin
 		end
 		endcase
 	end
-	
 	4'b0011: // DMADDR
 	begin
 		case(Count)

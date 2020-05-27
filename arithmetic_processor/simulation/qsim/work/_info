@@ -160,10 +160,10 @@ Z50 n@control@unit_vlg_vec_tst
 !s85 0
 !s101 -O0
 vCPU
-Z51 I=[T^?0NEE_iTXB_gQdfZB2
+Z51 I19B9`lgff`Uii=JDS@A]`2
 Z52 V9B68PTCGTkkQbn]?K0c[>2
-Z53 dC:\Users\Saad Yousaf\Documents\GitHub\multicycle-processor\arithmetic_processor\simulation\qsim
-Z54 w1590516467
+R33
+Z53 w1590565376
 R6
 R7
 L0 31
@@ -172,20 +172,20 @@ r1
 31
 R9
 R10
-Z55 n@c@p@u
+Z54 n@c@p@u
 !i10b 1
-Z56 !s100 GiA`;MAgZDI6Q=FJ]33Sb2
+Z55 !s100 co5bO;<badKY0Di>BNngF0
 !s85 0
-Z57 !s108 1590516468.831000
+Z56 !s108 1590565377.036000
 R12
 !s101 -O0
 vCPU_vlg_check_tst
 !i10b 1
-Z58 !s100 f_^1N_>OC[ZTZjez8[Jz42
-Z59 IB:`@:N^aO=SQ>F8lmDBKa0
-Z60 VRTPLLY4ecaNP0ooRB^U^<0
-R53
-Z61 w1590516466
+Z57 !s100 f_^1N_>OC[ZTZjez8[Jz42
+Z58 IB:`@:N^aO=SQ>F8lmDBKa0
+Z59 VRTPLLY4ecaNP0ooRB^U^<0
+R33
+Z60 w1590565374
 R16
 R17
 L0 63
@@ -193,19 +193,19 @@ R8
 r1
 !s85 0
 31
-Z62 !s108 1590516469.213000
-Z63 !s107 arithmetic_processor.vt|
+Z61 !s108 1590565377.365000
+Z62 !s107 arithmetic_processor.vt|
 R20
 !s101 -O0
 R10
-Z64 n@c@p@u_vlg_check_tst
+Z63 n@c@p@u_vlg_check_tst
 vCPU_vlg_sample_tst
 !i10b 1
-Z65 !s100 _6l?PQ[m;H2fPb4@K6SR30
-Z66 Im5cYcVEVK3X?>_X86MZJT2
-Z67 V9JR2U1BE@JJQ>RX=4cG?G2
-R53
-R61
+Z64 !s100 _6l?PQ[m;H2fPb4@K6SR30
+Z65 Im5cYcVEVK3X?>_X86MZJT2
+Z66 V9JR2U1BE@JJQ>RX=4cG?G2
+R33
+R60
 R16
 R17
 L0 29
@@ -213,37 +213,37 @@ R8
 r1
 !s85 0
 31
+R61
 R62
-R63
 R20
 !s101 -O0
 R10
-Z68 n@c@p@u_vlg_sample_tst
+Z67 n@c@p@u_vlg_sample_tst
 vCPU_vlg_vec_tst
 !i10b 1
-Z69 !s100 HL7l447j;k^dBVFf>[<3?2
-Z70 I:ECVDSP@bR[U]93m_k5OR0
-Z71 VJGhMb3eOK0GJGjGadCX2W1
-R53
-R61
+Z68 !s100 HL7l447j;k^dBVFf>[<3?2
+Z69 I:ECVDSP@bR[U]93m_k5OR0
+Z70 VJGhMb3eOK0GJGjGadCX2W1
+R33
+R60
 R16
 R17
-Z72 L0 3201
+Z71 L0 3201
 R8
 r1
 !s85 0
 31
+R61
 R62
-R63
 R20
 !s101 -O0
 R10
-Z73 n@c@p@u_vlg_vec_tst
+Z72 n@c@p@u_vlg_vec_tst
 vDatapath
-Z74 IF;S]DD<<XmFCHb5^YzQ9f3
-Z75 VonX5d3I:bhQPne0dEHH>b1
+Z73 IF;S]DD<<XmFCHb5^YzQ9f3
+Z74 VonX5d3I:bhQPne0dEHH>b1
 R33
-Z76 w1587361446
+Z75 w1587361446
 R6
 R7
 L0 31
@@ -252,78 +252,78 @@ r1
 31
 R9
 R10
-Z77 n@datapath
-Z78 !s100 S]@^bd?=g@T`nF3[d^R8h2
-Z79 !s108 1587361448.486000
+Z76 n@datapath
+Z77 !s100 S]@^bd?=g@T`nF3[d^R8h2
+Z78 !s108 1587361448.486000
 R12
 !i10b 1
 !s85 0
 !s101 -O0
 vDatapath_vlg_check_tst
-Z80 !s100 b8_PZCC2kM^]_6KQ7VcE23
-Z81 IE7@i_WL=BFMGD;8nW75I32
-Z82 VOMU_5RiV39TolWSZZQKT50
+Z79 !s100 b8_PZCC2kM^]_6KQ7VcE23
+Z80 IE7@i_WL=BFMGD;8nW75I32
+Z81 VOMU_5RiV39TolWSZZQKT50
 R33
-Z83 w1587361445
+Z82 w1587361445
 R16
 R17
-Z84 L0 103
+Z83 L0 103
 R8
 r1
 31
-Z85 !s108 1587361448.744000
+Z84 !s108 1587361448.744000
 R19
 R20
 R10
-Z86 n@datapath_vlg_check_tst
+Z85 n@datapath_vlg_check_tst
 !i10b 1
 !s85 0
 !s101 -O0
 vDatapath_vlg_sample_tst
-Z87 !s100 8JG80Qal@PgK^R_9dQi3X2
-Z88 IQ<hzcm4ak5J@In?cmOgND2
-Z89 VF?VEffDB3n>ZWN?E@daKD3
+Z86 !s100 8JG80Qal@PgK^R_9dQi3X2
+Z87 IQ<hzcm4ak5J@In?cmOgND2
+Z88 VF?VEffDB3n>ZWN?E@daKD3
 R33
-R83
+R82
 R16
 R17
 L0 29
 R8
 r1
 31
-R85
+R84
 R19
 R20
 R10
-Z90 n@datapath_vlg_sample_tst
+Z89 n@datapath_vlg_sample_tst
 !i10b 1
 !s85 0
 !s101 -O0
 vDatapath_vlg_vec_tst
-Z91 IQN@PZQD:f1M1zNB<L6GoF3
-Z92 V4LSCebLYh<Lb7?m[@][QW1
+Z90 IQN@PZQD:f1M1zNB<L6GoF3
+Z91 V4LSCebLYh<Lb7?m[@][QW1
 R33
-R83
+R82
 R16
 R17
-Z93 L0 1899
+Z92 L0 1899
 R8
 r1
 31
-R85
+R84
 R19
 R20
 R10
-Z94 n@datapath_vlg_vec_tst
-Z95 !s100 ?lYMZ;YUiZ;ERcOPOHiUF3
+Z93 n@datapath_vlg_vec_tst
+Z94 !s100 ?lYMZ;YUiZ;ERcOPOHiUF3
 !i10b 1
 !s85 0
 !s101 -O0
 vDFF8
-Z96 I=a=mdoQAjaO^0_:gbl;D<0
-Z97 Va85D1?nOkPX4eKA9I>V2S0
-Z98 dD:\Dropbox\Academic Courses\EEE446\Labaratories\arithmetic_processor\simulation\qsim
-Z99 w1583342444
+Z95 I=a=mdoQAjaO^0_:gbl;D<0
+Z96 Va85D1?nOkPX4eKA9I>V2S0
+Z97 dD:\Dropbox\Academic Courses\EEE446\Labaratories\arithmetic_processor\simulation\qsim
+Z98 w1583342444
 R6
 R7
 L0 31
@@ -332,77 +332,77 @@ r1
 31
 R9
 R10
-Z100 n@d@f@f8
-Z101 !s100 ]BgcUdWa04ddPgLkJX@3K0
-Z102 !s108 1583342445.551000
+Z99 n@d@f@f8
+Z100 !s100 ]BgcUdWa04ddPgLkJX@3K0
+Z101 !s108 1583342445.551000
 R12
 !i10b 1
 !s85 0
 !s101 -O0
 vDFF8_vlg_check_tst
-Z103 IEZEl7L5EP:YmCR3G0A<N:3
-Z104 VBe_<fk2bPHe?NA<lIL4mT3
+Z102 IEZEl7L5EP:YmCR3G0A<N:3
+Z103 VBe_<fk2bPHe?NA<lIL4mT3
+R97
 R98
-R99
 R16
 R17
 L0 63
 R8
 r1
 31
-Z105 !s108 1583342445.651000
+Z104 !s108 1583342445.651000
 R19
 R20
 R10
-Z106 n@d@f@f8_vlg_check_tst
-Z107 !s100 nE?3Lbkc5BBz<UHPTodIB1
+Z105 n@d@f@f8_vlg_check_tst
+Z106 !s100 nE?3Lbkc5BBz<UHPTodIB1
 !i10b 1
 !s85 0
 !s101 -O0
 vDFF8_vlg_sample_tst
-Z108 I3FK4^haCN70KREOcQG6HU0
-Z109 V<8ioL[lX@7Mn^:@ICE;^Q3
+Z107 I3FK4^haCN70KREOcQG6HU0
+Z108 V<8ioL[lX@7Mn^:@ICE;^Q3
+R97
 R98
-R99
 R16
 R17
 L0 29
 R8
 r1
 31
-R105
+R104
 R19
 R20
 R10
-Z110 n@d@f@f8_vlg_sample_tst
-Z111 !s100 >eU8IJC@_60iIKjRX8J`20
+Z109 n@d@f@f8_vlg_sample_tst
+Z110 !s100 >eU8IJC@_60iIKjRX8J`20
 !i10b 1
 !s85 0
 !s101 -O0
 vDFF8_vlg_vec_tst
-Z112 ITcAkkj[1m_U@4?ER1:3Nz1
-Z113 VIGnV>>[V5Sk[0:1]ofjQ>1
+Z111 ITcAkkj[1m_U@4?ER1:3Nz1
+Z112 VIGnV>>[V5Sk[0:1]ofjQ>1
+R97
 R98
-R99
 R16
 R17
-Z114 L0 283
+Z113 L0 283
 R8
 r1
 31
-R105
+R104
 R19
 R20
 R10
-Z115 n@d@f@f8_vlg_vec_tst
-Z116 !s100 ne]FW0Pe7?FCPPZd`Amed2
+Z114 n@d@f@f8_vlg_vec_tst
+Z115 !s100 ne]FW0Pe7?FCPPZd`Amed2
 !i10b 1
 !s85 0
 !s101 -O0
 vdivider
-Z117 IfKBDEKK4a^1;gBB;zlLl51
-Z118 V>GjE<AX_91_0ZlD5U]DL?2
-R53
+Z116 IfKBDEKK4a^1;gBB;zlLl51
+Z117 V>GjE<AX_91_0ZlD5U]DL?2
+Z118 dC:\Users\Saad Yousaf\Documents\GitHub\multicycle-processor\arithmetic_processor\simulation\qsim
 Z119 w1590505937
 R6
 R7
@@ -421,7 +421,7 @@ R12
 vdivider_vlg_check_tst
 Z122 I?>8e>REeSofS:XC_o_fdB0
 Z123 Voo7YBc>EGUO58XIa9Y7RX1
-R53
+R118
 Z124 w1590505936
 R16
 R17
@@ -440,7 +440,7 @@ Z126 !s100 mPIF;Td]ni5@1^BGd7Vdk2
 vdivider_vlg_sample_tst
 Z127 IkceR:koRglBZ1mS[BSnSY2
 Z128 VZKo<Yj[4iHOBj^T2VYgL=0
-R53
+R118
 R124
 R16
 R17
@@ -459,7 +459,7 @@ Z129 !s100 OkQA:bGdHY2fk_b1H>5UK0
 vdivider_vlg_vec_tst
 Z130 IcmOf5VL7[ii>Z;5SJXci51
 Z131 VY`VoiPkF^h6O1W?9ZUkcP2
-R53
+R118
 R124
 R16
 R17
@@ -479,7 +479,7 @@ vMUX2TO1
 Z134 !s100 NGg0AfAIi3I^3M=17ikR`2
 Z135 I87<H=D>UlJ3BSTU1gOaOc0
 Z136 Veeb]^A;UJogYFe`]kFM?J0
-R98
+R97
 Z137 w1583351968
 R6
 R7
@@ -499,7 +499,7 @@ vMUX2TO1_vlg_vec_tst
 Z140 !s100 ^gQ_7DZbYW^OnzjH52CW[0
 Z141 IYbQo5j2eYgokV:FHfjUk73
 Z142 V>L[ccAEdKWLBmT]fX33f[0
-R98
+R97
 Z143 w1583351966
 R16
 R17
@@ -537,7 +537,7 @@ R12
 vMUX4TO1
 Z152 InCg61@k0YgEB]LNTzN>B<2
 Z153 V4bNRM>:XT_kz6@_n48J2;1
-R98
+R97
 Z154 w1583343285
 R6
 R7
@@ -557,7 +557,7 @@ R12
 vMUX4TO1_vlg_check_tst
 Z158 I9>7?hjMG4M@g^0WYWOkAS0
 Z159 VZ_eZEz5MJ8n>@F@DB:Kf]1
-R98
+R97
 Z160 w1583343284
 R16
 R17
@@ -596,7 +596,7 @@ R10
 vMUX4TO1_vlg_sample_tst
 Z169 ImHV=zDWRj^^WgB<_3D04W2
 Z170 Va0VVmlnj3Ga66b[INMOMQ3
-R98
+R97
 R160
 R16
 R17
@@ -635,7 +635,7 @@ R10
 vMUX4TO1_vlg_vec_tst
 Z176 IchaSDMjWQU085jBMNRLG@0
 Z177 VBC2::5]IQJ1l=QRZ:9d7A2
-R98
+R97
 R160
 R16
 R17
@@ -834,7 +834,7 @@ Z225 !s100 [U=m6eF=G;_1aUdjHU96^0
 vSHIFTREG8
 Z226 Ig7nX6;Y_kFcWkOG1iOjXP3
 Z227 VBj5_WjjMeJA:n;n3>FE5O3
-R98
+R97
 Z228 w1583346304
 R6
 R7
@@ -854,7 +854,7 @@ R12
 vSHIFTREG8_vlg_check_tst
 Z232 I]7b6C^PjFLRG7MUNzm?9W1
 Z233 V9JVnK69FB6TXP:[6;7eJ01
-R98
+R97
 Z234 w1583346303
 R16
 R17
@@ -874,7 +874,7 @@ Z237 !s100 S<S5i?mzN<@N<Nj8Q?nS_3
 vSHIFTREG8_vlg_sample_tst
 Z238 I[T4^Z5iRV:SO=9RLQc]0b3
 Z239 VOz``Da13Z?a5X^9I]ZzP[2
-R98
+R97
 R234
 R16
 R17
@@ -894,7 +894,7 @@ Z241 !s100 P4V97oh@W?3a>XEQQRTk80
 vSHIFTREG8_vlg_vec_tst
 Z242 IYNT]ah?ZA`f[TnLe:JRQR0
 Z243 VT[dnzX8@dj57QkUhCK9Hz3
-R98
+R97
 R234
 R16
 R17
@@ -914,7 +914,7 @@ Z246 !s100 Oj=1N0l32Xh6Y35Kg]fb22
 vSHIFTREGS
 Z247 I1KL]179o:`2ef=QlY9X?A3
 Z248 VODk`?9oiE;mDL85T4l1^Z2
-R98
+R97
 Z249 w1583349109
 R6
 R7
@@ -935,7 +935,7 @@ vSHIFTREGS_vlg_check_tst
 Z253 !s100 LFMXBKKfz]AN2?ERHjbkg0
 Z254 Iaebi;l0[fYPV_MBANCzzW0
 Z255 VMiSFPNf;<fHIDG?kn>5O;0
-R98
+R97
 Z256 w1583349108
 R16
 R17
@@ -955,7 +955,7 @@ vSHIFTREGS_vlg_sample_tst
 Z259 !s100 ndB0PEm7O^2`njQ`z7C0^3
 Z260 I5zA;JdVkB2UPgBgF2Y0<m3
 Z261 V42LKUEMP7@;iIkRV3bK293
-R98
+R97
 R256
 R16
 R17
@@ -975,7 +975,7 @@ vSHIFTREGS_vlg_vec_tst
 Z263 !s100 S0`JJQ980[@7URo5z0@^d2
 Z264 I@9?H?>iB=ZVQLY;STRA<I2
 Z265 V@:]BUk5CYV2`eVUgRj[MP2
-R98
+R97
 R256
 R16
 R17
@@ -1074,7 +1074,7 @@ Z287 n@s@i@g@n@e@x@t6@t08_vlg_vec_tst
 vsimple_divider
 Z288 IP9:LgVKb=BLn2IR5?:_2b0
 Z289 V@[DEL1[0?SA3?G>15XzeR3
-R53
+R118
 Z290 w1590505556
 R6
 R7
@@ -1093,7 +1093,7 @@ R12
 vsimple_divider_vlg_check_tst
 Z293 IW:f<=j_C6GWkEQd:YV4A83
 Z294 V@;Idn_a[2a9UbU:3JeD>z3
-R53
+R118
 Z295 w1590505554
 R16
 R17
@@ -1112,7 +1112,7 @@ Z297 !s100 3nOZUz3Vzh1R9[[IeDG@P0
 vsimple_divider_vlg_sample_tst
 Z298 I7mRK9b5NL_nEcB];19Uib0
 Z299 VNhbAX[=4PX;2AOlG75YQl2
-R53
+R118
 R295
 R16
 R17
@@ -1131,7 +1131,7 @@ Z300 !s100 :_T4C5P>LV2=B9G<7HI?12
 vsimple_divider_vlg_vec_tst
 Z301 I?V:]W>ejK]NY>@3_0JDHj3
 Z302 VcLO4YdU:45TdbDjHh@SVB0
-R53
+R118
 R295
 R16
 R17
