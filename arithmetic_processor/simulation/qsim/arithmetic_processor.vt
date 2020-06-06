@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/27/2020 10:42:54"
+// Generated on "06/05/2020 18:41:24"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    CPU
 // 
@@ -238,816 +238,979 @@ end
 initial
 begin
 	CURRENT_INSTR_expected[15] = 1'bX;
+	CURRENT_INSTR_expected[15] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 14 ]
 initial
 begin
 	CURRENT_INSTR_expected[14] = 1'bX;
+	CURRENT_INSTR_expected[14] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 13 ]
 initial
 begin
 	CURRENT_INSTR_expected[13] = 1'bX;
+	CURRENT_INSTR_expected[13] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 12 ]
 initial
 begin
 	CURRENT_INSTR_expected[12] = 1'bX;
+	CURRENT_INSTR_expected[12] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 11 ]
 initial
 begin
 	CURRENT_INSTR_expected[11] = 1'bX;
+	CURRENT_INSTR_expected[11] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 10 ]
 initial
 begin
 	CURRENT_INSTR_expected[10] = 1'bX;
+	CURRENT_INSTR_expected[10] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 9 ]
 initial
 begin
 	CURRENT_INSTR_expected[9] = 1'bX;
+	CURRENT_INSTR_expected[9] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 8 ]
 initial
 begin
 	CURRENT_INSTR_expected[8] = 1'bX;
+	CURRENT_INSTR_expected[8] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 7 ]
 initial
 begin
 	CURRENT_INSTR_expected[7] = 1'bX;
+	CURRENT_INSTR_expected[7] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 6 ]
 initial
 begin
 	CURRENT_INSTR_expected[6] = 1'bX;
+	CURRENT_INSTR_expected[6] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 5 ]
 initial
 begin
 	CURRENT_INSTR_expected[5] = 1'bX;
+	CURRENT_INSTR_expected[5] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 4 ]
 initial
 begin
 	CURRENT_INSTR_expected[4] = 1'bX;
+	CURRENT_INSTR_expected[4] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 3 ]
 initial
 begin
 	CURRENT_INSTR_expected[3] = 1'bX;
+	CURRENT_INSTR_expected[3] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 2 ]
 initial
 begin
 	CURRENT_INSTR_expected[2] = 1'bX;
+	CURRENT_INSTR_expected[2] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 1 ]
 initial
 begin
 	CURRENT_INSTR_expected[1] = 1'bX;
+	CURRENT_INSTR_expected[1] = #339000 1'b0;
 end 
 // expected CURRENT_INSTR[ 0 ]
 initial
 begin
 	CURRENT_INSTR_expected[0] = 1'bX;
+	CURRENT_INSTR_expected[0] = #339000 1'b0;
 end 
 // expected DEBUG[ 3 ]
 initial
 begin
 	DEBUG_expected[3] = 1'bX;
+	DEBUG_expected[3] = #339000 1'b0;
 end 
 // expected DEBUG[ 2 ]
 initial
 begin
 	DEBUG_expected[2] = 1'bX;
+	DEBUG_expected[2] = #339000 1'b0;
 end 
 // expected DEBUG[ 1 ]
 initial
 begin
 	DEBUG_expected[1] = 1'bX;
+	DEBUG_expected[1] = #339000 1'b0;
 end 
 // expected DEBUG[ 0 ]
 initial
 begin
 	DEBUG_expected[0] = 1'bX;
+	DEBUG_expected[0] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 7 ]
 initial
 begin
 	IMMEDIATE_expected[7] = 1'bX;
+	IMMEDIATE_expected[7] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 6 ]
 initial
 begin
 	IMMEDIATE_expected[6] = 1'bX;
+	IMMEDIATE_expected[6] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 5 ]
 initial
 begin
 	IMMEDIATE_expected[5] = 1'bX;
+	IMMEDIATE_expected[5] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 4 ]
 initial
 begin
 	IMMEDIATE_expected[4] = 1'bX;
+	IMMEDIATE_expected[4] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 3 ]
 initial
 begin
 	IMMEDIATE_expected[3] = 1'bX;
+	IMMEDIATE_expected[3] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 2 ]
 initial
 begin
 	IMMEDIATE_expected[2] = 1'bX;
+	IMMEDIATE_expected[2] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 1 ]
 initial
 begin
 	IMMEDIATE_expected[1] = 1'bX;
+	IMMEDIATE_expected[1] = #339000 1'b0;
 end 
 // expected IMMEDIATE[ 0 ]
 initial
 begin
 	IMMEDIATE_expected[0] = 1'bX;
+	IMMEDIATE_expected[0] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 7 ]
 initial
 begin
 	RF_A_READ_PORT_expected[7] = 1'bX;
+	RF_A_READ_PORT_expected[7] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 6 ]
 initial
 begin
 	RF_A_READ_PORT_expected[6] = 1'bX;
+	RF_A_READ_PORT_expected[6] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 5 ]
 initial
 begin
 	RF_A_READ_PORT_expected[5] = 1'bX;
+	RF_A_READ_PORT_expected[5] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 4 ]
 initial
 begin
 	RF_A_READ_PORT_expected[4] = 1'bX;
+	RF_A_READ_PORT_expected[4] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 3 ]
 initial
 begin
 	RF_A_READ_PORT_expected[3] = 1'bX;
+	RF_A_READ_PORT_expected[3] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 2 ]
 initial
 begin
 	RF_A_READ_PORT_expected[2] = 1'bX;
+	RF_A_READ_PORT_expected[2] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 1 ]
 initial
 begin
 	RF_A_READ_PORT_expected[1] = 1'bX;
+	RF_A_READ_PORT_expected[1] = #339000 1'b0;
 end 
 // expected RF_A_READ_PORT[ 0 ]
 initial
 begin
 	RF_A_READ_PORT_expected[0] = 1'bX;
+	RF_A_READ_PORT_expected[0] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 7 ]
 initial
 begin
 	RF_B_READ_PORT_expected[7] = 1'bX;
+	RF_B_READ_PORT_expected[7] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 6 ]
 initial
 begin
 	RF_B_READ_PORT_expected[6] = 1'bX;
+	RF_B_READ_PORT_expected[6] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 5 ]
 initial
 begin
 	RF_B_READ_PORT_expected[5] = 1'bX;
+	RF_B_READ_PORT_expected[5] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 4 ]
 initial
 begin
 	RF_B_READ_PORT_expected[4] = 1'bX;
+	RF_B_READ_PORT_expected[4] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 3 ]
 initial
 begin
 	RF_B_READ_PORT_expected[3] = 1'bX;
+	RF_B_READ_PORT_expected[3] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 2 ]
 initial
 begin
 	RF_B_READ_PORT_expected[2] = 1'bX;
+	RF_B_READ_PORT_expected[2] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 1 ]
 initial
 begin
 	RF_B_READ_PORT_expected[1] = 1'bX;
+	RF_B_READ_PORT_expected[1] = #339000 1'b0;
 end 
 // expected RF_B_READ_PORT[ 0 ]
 initial
 begin
 	RF_B_READ_PORT_expected[0] = 1'bX;
+	RF_B_READ_PORT_expected[0] = #339000 1'b0;
 end 
 // expected RF_W_ADDR[ 2 ]
 initial
 begin
 	RF_W_ADDR_expected[2] = 1'bX;
+	RF_W_ADDR_expected[2] = #339000 1'b0;
 end 
 // expected RF_W_ADDR[ 1 ]
 initial
 begin
 	RF_W_ADDR_expected[1] = 1'bX;
+	RF_W_ADDR_expected[1] = #339000 1'b0;
 end 
 // expected RF_W_ADDR[ 0 ]
 initial
 begin
 	RF_W_ADDR_expected[0] = 1'bX;
+	RF_W_ADDR_expected[0] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 7 ]
 initial
 begin
 	RF_W_DATA_expected[7] = 1'bX;
+	RF_W_DATA_expected[7] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 6 ]
 initial
 begin
 	RF_W_DATA_expected[6] = 1'bX;
+	RF_W_DATA_expected[6] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 5 ]
 initial
 begin
 	RF_W_DATA_expected[5] = 1'bX;
+	RF_W_DATA_expected[5] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 4 ]
 initial
 begin
 	RF_W_DATA_expected[4] = 1'bX;
+	RF_W_DATA_expected[4] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 3 ]
 initial
 begin
 	RF_W_DATA_expected[3] = 1'bX;
+	RF_W_DATA_expected[3] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 2 ]
 initial
 begin
 	RF_W_DATA_expected[2] = 1'bX;
+	RF_W_DATA_expected[2] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 1 ]
 initial
 begin
 	RF_W_DATA_expected[1] = 1'bX;
+	RF_W_DATA_expected[1] = #339000 1'b0;
 end 
 // expected RF_W_DATA[ 0 ]
 initial
 begin
 	RF_W_DATA_expected[0] = 1'bX;
+	RF_W_DATA_expected[0] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 7 ]
 initial
 begin
 	ALU_OUT_expected[7] = 1'bX;
+	ALU_OUT_expected[7] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 6 ]
 initial
 begin
 	ALU_OUT_expected[6] = 1'bX;
+	ALU_OUT_expected[6] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 5 ]
 initial
 begin
 	ALU_OUT_expected[5] = 1'bX;
+	ALU_OUT_expected[5] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 4 ]
 initial
 begin
 	ALU_OUT_expected[4] = 1'bX;
+	ALU_OUT_expected[4] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 3 ]
 initial
 begin
 	ALU_OUT_expected[3] = 1'bX;
+	ALU_OUT_expected[3] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 2 ]
 initial
 begin
 	ALU_OUT_expected[2] = 1'bX;
+	ALU_OUT_expected[2] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 1 ]
 initial
 begin
 	ALU_OUT_expected[1] = 1'bX;
+	ALU_OUT_expected[1] = #339000 1'b0;
 end 
 // expected ALU_OUT[ 0 ]
 initial
 begin
 	ALU_OUT_expected[0] = 1'bX;
+	ALU_OUT_expected[0] = #339000 1'b0;
 end 
 // expected PRODUCT[ 15 ]
 initial
 begin
 	PRODUCT_expected[15] = 1'bX;
+	PRODUCT_expected[15] = #339000 1'b0;
 end 
 // expected PRODUCT[ 14 ]
 initial
 begin
 	PRODUCT_expected[14] = 1'bX;
+	PRODUCT_expected[14] = #339000 1'b0;
 end 
 // expected PRODUCT[ 13 ]
 initial
 begin
 	PRODUCT_expected[13] = 1'bX;
+	PRODUCT_expected[13] = #339000 1'b0;
 end 
 // expected PRODUCT[ 12 ]
 initial
 begin
 	PRODUCT_expected[12] = 1'bX;
+	PRODUCT_expected[12] = #339000 1'b0;
 end 
 // expected PRODUCT[ 11 ]
 initial
 begin
 	PRODUCT_expected[11] = 1'bX;
+	PRODUCT_expected[11] = #339000 1'b0;
 end 
 // expected PRODUCT[ 10 ]
 initial
 begin
 	PRODUCT_expected[10] = 1'bX;
+	PRODUCT_expected[10] = #339000 1'b0;
 end 
 // expected PRODUCT[ 9 ]
 initial
 begin
 	PRODUCT_expected[9] = 1'bX;
+	PRODUCT_expected[9] = #339000 1'b0;
 end 
 // expected PRODUCT[ 8 ]
 initial
 begin
 	PRODUCT_expected[8] = 1'bX;
+	PRODUCT_expected[8] = #339000 1'b0;
 end 
 // expected PRODUCT[ 7 ]
 initial
 begin
 	PRODUCT_expected[7] = 1'bX;
+	PRODUCT_expected[7] = #339000 1'b0;
 end 
 // expected PRODUCT[ 6 ]
 initial
 begin
 	PRODUCT_expected[6] = 1'bX;
+	PRODUCT_expected[6] = #339000 1'b0;
 end 
 // expected PRODUCT[ 5 ]
 initial
 begin
 	PRODUCT_expected[5] = 1'bX;
+	PRODUCT_expected[5] = #339000 1'b0;
 end 
 // expected PRODUCT[ 4 ]
 initial
 begin
 	PRODUCT_expected[4] = 1'bX;
+	PRODUCT_expected[4] = #339000 1'b0;
 end 
 // expected PRODUCT[ 3 ]
 initial
 begin
 	PRODUCT_expected[3] = 1'bX;
+	PRODUCT_expected[3] = #339000 1'b0;
 end 
 // expected PRODUCT[ 2 ]
 initial
 begin
 	PRODUCT_expected[2] = 1'bX;
+	PRODUCT_expected[2] = #339000 1'b0;
 end 
 // expected PRODUCT[ 1 ]
 initial
 begin
 	PRODUCT_expected[1] = 1'bX;
+	PRODUCT_expected[1] = #339000 1'b0;
 end 
 // expected PRODUCT[ 0 ]
 initial
 begin
 	PRODUCT_expected[0] = 1'bX;
+	PRODUCT_expected[0] = #339000 1'b0;
 end 
 // expected quotient[ 7 ]
 initial
 begin
 	quotient_expected[7] = 1'bX;
+	quotient_expected[7] = #339000 1'b0;
 end 
 // expected quotient[ 6 ]
 initial
 begin
 	quotient_expected[6] = 1'bX;
+	quotient_expected[6] = #339000 1'b0;
 end 
 // expected quotient[ 5 ]
 initial
 begin
 	quotient_expected[5] = 1'bX;
+	quotient_expected[5] = #339000 1'b0;
 end 
 // expected quotient[ 4 ]
 initial
 begin
 	quotient_expected[4] = 1'bX;
+	quotient_expected[4] = #339000 1'b0;
 end 
 // expected quotient[ 3 ]
 initial
 begin
 	quotient_expected[3] = 1'bX;
+	quotient_expected[3] = #339000 1'b0;
 end 
 // expected quotient[ 2 ]
 initial
 begin
 	quotient_expected[2] = 1'bX;
+	quotient_expected[2] = #339000 1'b0;
 end 
 // expected quotient[ 1 ]
 initial
 begin
 	quotient_expected[1] = 1'bX;
+	quotient_expected[1] = #339000 1'b0;
 end 
 // expected quotient[ 0 ]
 initial
 begin
 	quotient_expected[0] = 1'bX;
+	quotient_expected[0] = #339000 1'b0;
 end 
 // expected remainder[ 7 ]
 initial
 begin
 	remainder_expected[7] = 1'bX;
+	remainder_expected[7] = #339000 1'b0;
 end 
 // expected remainder[ 6 ]
 initial
 begin
 	remainder_expected[6] = 1'bX;
+	remainder_expected[6] = #339000 1'b0;
 end 
 // expected remainder[ 5 ]
 initial
 begin
 	remainder_expected[5] = 1'bX;
+	remainder_expected[5] = #339000 1'b0;
 end 
 // expected remainder[ 4 ]
 initial
 begin
 	remainder_expected[4] = 1'bX;
+	remainder_expected[4] = #339000 1'b0;
 end 
 // expected remainder[ 3 ]
 initial
 begin
 	remainder_expected[3] = 1'bX;
+	remainder_expected[3] = #339000 1'b0;
 end 
 // expected remainder[ 2 ]
 initial
 begin
 	remainder_expected[2] = 1'bX;
+	remainder_expected[2] = #339000 1'b0;
 end 
 // expected remainder[ 1 ]
 initial
 begin
 	remainder_expected[1] = 1'bX;
+	remainder_expected[1] = #339000 1'b0;
 end 
 // expected remainder[ 0 ]
 initial
 begin
 	remainder_expected[0] = 1'bX;
+	remainder_expected[0] = #339000 1'b0;
 end 
 // expected A_REG[ 7 ]
 initial
 begin
 	A_REG_expected[7] = 1'bX;
+	A_REG_expected[7] = #339000 1'b0;
 end 
 // expected A_REG[ 6 ]
 initial
 begin
 	A_REG_expected[6] = 1'bX;
+	A_REG_expected[6] = #339000 1'b0;
 end 
 // expected A_REG[ 5 ]
 initial
 begin
 	A_REG_expected[5] = 1'bX;
+	A_REG_expected[5] = #339000 1'b0;
 end 
 // expected A_REG[ 4 ]
 initial
 begin
 	A_REG_expected[4] = 1'bX;
+	A_REG_expected[4] = #339000 1'b0;
 end 
 // expected A_REG[ 3 ]
 initial
 begin
 	A_REG_expected[3] = 1'bX;
+	A_REG_expected[3] = #339000 1'b0;
 end 
 // expected A_REG[ 2 ]
 initial
 begin
 	A_REG_expected[2] = 1'bX;
+	A_REG_expected[2] = #339000 1'b0;
 end 
 // expected A_REG[ 1 ]
 initial
 begin
 	A_REG_expected[1] = 1'bX;
+	A_REG_expected[1] = #339000 1'b0;
 end 
 // expected A_REG[ 0 ]
 initial
 begin
 	A_REG_expected[0] = 1'bX;
+	A_REG_expected[0] = #339000 1'b0;
 end 
 // expected Q_REG[ 7 ]
 initial
 begin
 	Q_REG_expected[7] = 1'bX;
+	Q_REG_expected[7] = #339000 1'b0;
 end 
 // expected Q_REG[ 6 ]
 initial
 begin
 	Q_REG_expected[6] = 1'bX;
+	Q_REG_expected[6] = #339000 1'b0;
 end 
 // expected Q_REG[ 5 ]
 initial
 begin
 	Q_REG_expected[5] = 1'bX;
+	Q_REG_expected[5] = #339000 1'b0;
 end 
 // expected Q_REG[ 4 ]
 initial
 begin
 	Q_REG_expected[4] = 1'bX;
+	Q_REG_expected[4] = #339000 1'b0;
 end 
 // expected Q_REG[ 3 ]
 initial
 begin
 	Q_REG_expected[3] = 1'bX;
+	Q_REG_expected[3] = #339000 1'b0;
 end 
 // expected Q_REG[ 2 ]
 initial
 begin
 	Q_REG_expected[2] = 1'bX;
+	Q_REG_expected[2] = #339000 1'b0;
 end 
 // expected Q_REG[ 1 ]
 initial
 begin
 	Q_REG_expected[1] = 1'bX;
+	Q_REG_expected[1] = #339000 1'b0;
 end 
 // expected Q_REG[ 0 ]
 initial
 begin
 	Q_REG_expected[0] = 1'bX;
+	Q_REG_expected[0] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 9 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[9] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[9] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 8 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[8] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[8] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 7 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[7] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[7] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 6 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[6] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[6] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 5 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[5] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[5] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 4 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[4] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[4] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 3 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[3] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[3] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 2 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[2] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[2] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 1 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[1] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[1] = #339000 1'b0;
 end 
 // expected DATA_MEM_ADDR_IN[ 0 ]
 initial
 begin
 	DATA_MEM_ADDR_IN_expected[0] = 1'bX;
+	DATA_MEM_ADDR_IN_expected[0] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 15 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[15] = 1'bX;
+	DATA_MEM_DATA_IN_expected[15] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 14 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[14] = 1'bX;
+	DATA_MEM_DATA_IN_expected[14] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 13 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[13] = 1'bX;
+	DATA_MEM_DATA_IN_expected[13] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 12 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[12] = 1'bX;
+	DATA_MEM_DATA_IN_expected[12] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 11 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[11] = 1'bX;
+	DATA_MEM_DATA_IN_expected[11] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 10 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[10] = 1'bX;
+	DATA_MEM_DATA_IN_expected[10] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 9 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[9] = 1'bX;
+	DATA_MEM_DATA_IN_expected[9] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 8 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[8] = 1'bX;
+	DATA_MEM_DATA_IN_expected[8] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 7 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[7] = 1'bX;
+	DATA_MEM_DATA_IN_expected[7] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 6 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[6] = 1'bX;
+	DATA_MEM_DATA_IN_expected[6] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 5 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[5] = 1'bX;
+	DATA_MEM_DATA_IN_expected[5] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 4 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[4] = 1'bX;
+	DATA_MEM_DATA_IN_expected[4] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 3 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[3] = 1'bX;
+	DATA_MEM_DATA_IN_expected[3] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 2 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[2] = 1'bX;
+	DATA_MEM_DATA_IN_expected[2] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 1 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[1] = 1'bX;
+	DATA_MEM_DATA_IN_expected[1] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_IN[ 0 ]
 initial
 begin
 	DATA_MEM_DATA_IN_expected[0] = 1'bX;
+	DATA_MEM_DATA_IN_expected[0] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 15 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[15] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[15] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 14 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[14] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[14] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 13 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[13] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[13] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 12 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[12] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[12] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 11 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[11] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[11] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 10 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[10] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[10] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 9 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[9] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[9] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 8 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[8] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[8] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 7 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[7] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[7] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 6 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[6] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[6] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 5 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[5] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[5] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 4 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[4] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[4] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 3 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[3] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[3] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 2 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[2] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[2] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 1 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[1] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[1] = #339000 1'b0;
 end 
 // expected DATA_MEM_DATA_OUT[ 0 ]
 initial
 begin
 	DATA_MEM_DATA_OUT_expected[0] = 1'bX;
+	DATA_MEM_DATA_OUT_expected[0] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 9 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[9] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[9] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 8 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[8] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[8] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 7 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[7] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[7] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 6 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[6] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[6] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 5 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[5] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[5] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 4 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[4] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[4] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 3 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[3] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[3] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 2 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[2] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[2] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 1 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[1] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[1] = #339000 1'b0;
 end 
 // expected INSTR_MEM_ADDRESS[ 0 ]
 initial
 begin
 	INSTR_MEM_ADDRESS_expected[0] = 1'bX;
+	INSTR_MEM_ADDRESS_expected[0] = #339000 1'b0;
 end 
 // generate trigger
 always @(A_REG_expected or A_REG or ALU_OUT_expected or ALU_OUT or CURRENT_INSTR_expected or CURRENT_INSTR or DATA_MEM_ADDR_IN_expected or DATA_MEM_ADDR_IN or DATA_MEM_DATA_IN_expected or DATA_MEM_DATA_IN or DATA_MEM_DATA_OUT_expected or DATA_MEM_DATA_OUT or DEBUG_expected or DEBUG or IMMEDIATE_expected or IMMEDIATE or INSTR_MEM_ADDRESS_expected or INSTR_MEM_ADDRESS or PRODUCT_expected or PRODUCT or Q_REG_expected or Q_REG or quotient_expected or quotient or remainder_expected or remainder or RF_A_READ_PORT_expected or RF_A_READ_PORT or RF_B_READ_PORT_expected or RF_B_READ_PORT or RF_W_ADDR_expected or RF_W_ADDR or RF_W_DATA_expected or RF_W_DATA)
@@ -3189,7 +3352,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#340000;
+#25000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -3261,15 +3424,11 @@ begin
 end 
 
 // MAN_CLK
-initial
+always
 begin
-	repeat(8)
-	begin
-		MAN_CLK = 1'b0;
-		MAN_CLK = #20000 1'b1;
-		# 20000;
-	end
 	MAN_CLK = 1'b0;
+	MAN_CLK = #5000 1'b1;
+	#5000;
 end 
 
 // RUN

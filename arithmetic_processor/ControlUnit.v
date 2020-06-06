@@ -1254,7 +1254,7 @@ begin
 			B_SEL = 2'b11;
 			D_SEL = 2'b11;
 			INST_TYPE_MUX_SEL = 0;
-			LDA = 1;
+			LDA = 0;
 			LDQ = 0;
 			MULT_EN = 0; DIV_EN = 0;
 			MUL_SEL = 2'b00;
@@ -1273,7 +1273,7 @@ begin
 			B_SEL = 2'b11;
 			D_SEL = 2'b11;
 			INST_TYPE_MUX_SEL = 0;
-			LDA = 0;
+			LDA = 1;
 			LDQ = 0;
 			MULT_EN = 0; DIV_EN = 0;
 			MUL_SEL = 2'b00;
@@ -1287,6 +1287,25 @@ begin
 			fetch = 0;
 		end
 		4'b0100:
+		begin
+			A_SEL = 2'b10;
+			B_SEL = 2'b11;
+			D_SEL = 2'b11;
+			INST_TYPE_MUX_SEL = 0;
+			LDA = 0;
+			LDQ = 0;
+			MULT_EN = 0; DIV_EN = 0;
+			MUL_SEL = 2'b00;
+			PC_MUX_SEL = 0;
+			PLUS1_SEL = 0;
+			RF_EN = 0;
+			SR = 0;
+			SL = 0;
+			SR_SEL = 0;
+			OAP = 3'b0;
+			fetch = 0;
+		end
+		4'b0101:
 		begin
 			A_SEL = 2'b10;
 			B_SEL = 2'b11;
