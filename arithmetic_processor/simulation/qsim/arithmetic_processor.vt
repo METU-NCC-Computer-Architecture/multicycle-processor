@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/05/2020 18:41:24"
+// Generated on "06/07/2020 15:54:44"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    CPU
 // 
@@ -3352,7 +3352,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#25000000;
+#100000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -3419,16 +3419,16 @@ CPU i1 (
 always
 begin
 	CLK = 1'b0;
-	CLK = #5000 1'b1;
-	#5000;
+	CLK = #10000 1'b1;
+	#10000;
 end 
 
 // MAN_CLK
 always
 begin
 	MAN_CLK = 1'b0;
-	MAN_CLK = #5000 1'b1;
-	#5000;
+	MAN_CLK = #20000 1'b1;
+	#20000;
 end 
 
 // RUN
