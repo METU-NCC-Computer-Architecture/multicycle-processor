@@ -1,68 +1,68 @@
-module divider (quotient,remainder,ready,dividend,divider,start,clk);
-   
-   input [7:0]  dividend,divider;
-   input         start, clk;
-   output        quotient,remainder;
-   output        ready;
+module divider (quotient, remainder, ready, dividend, divider, start, clk);
 
-   reg [7:0]    quotient;
-   reg [15:0]    dividend_copy, divider_copy, diff;
-   wire [7:0]   remainder = dividend_copy[15:0];
+input [7:0] dividend, divider;
+input start, clk;
+output [7:0] quotient,remainder;
+output ready;
 
-   reg [4:0]     bit; 
-   wire          ready = !bit;
-   
-   initial bit = 0;
-	integer signflag = 0;
-	reg [7:0] dividend_cpy, divider_cpy;
+reg [7:0] quotient;
+reg [15:0] dividend_copy, divider_copy, diff;
+wire [7:0] remainder = dividend_copy[7:0];
+
+reg [5:0] bit;
+reg sign_flag;
+wire ready = !bit;
+
+reg [7:0] dividend_comp, divider_comp ;
+
+initial bit = 0;
+
+always @( posedge clk )
+
+if ( ready && start )
+begin
+
+	bit = 8;
+	quotient = 0;
+	sign_flag = 0;
 	
-
-   always @( posedge clk ) 
+	if(dividend[7])
 	begin
-		if(dividend[7:6] == 1'b1)
-		begin
-			dividend_cpy=~dividend+1;
-			signflag=signflag+1;
-		end
-		if(divider[7:6] == 1'b1)
-		begin
-			divider_cpy=~divider+1;
-			signflag=signflag+1;
-		end
-		else
-		dividend_cpy=dividend;
-		divider_cpy=divider;
-		begin
-		
-		end
-
-     if(start==0) begin
-
-        bit = 8;
-        quotient = 0;
-        dividend_copy = {8'd0,dividend_cpy};
-        divider_copy = {1'b0,divider_cpy,7'd0};
-
-     end else begin
-
-        diff = dividend_copy - divider_copy;
-
-        quotient = quotient << 1;
-
-        if( !diff[15] ) begin
-
-           dividend_copy = diff;
-           quotient[0] = 1'd1;
-
-        end
-
-        divider_copy = divider_copy >> 1;
-        bit = bit - 1;
-
-     end
-	  if(ready==1 && signflag==1)
-	  begin
-	  quotient=~quotient+1;
-	  end
+		dividend_comp = ~dividend + 1;
+		dividend_copy = {8'b0, dividend_comp};
+		sign_flag = sign_flag ^ 1;
+	end
+	else
+	begin
+		dividend_copy = {8'd0, dividend};
+	end
+	
+	if(divider[7])
+	begin
+		divider_comp = ~divider_comp + 1;
+		divider_copy = {1'b0, divider_comp, 7'b0};
+		sign_flag = sign_flag ^ 1;
+	end
+	else
+	begin
+		divider_copy = {1'b0, divider, 7'b0};
+	end
+	
 end
+else
+begin
+
+	diff = dividend_copy - divider_copy;
+	quotient = { quotient[6:0], ~diff[15] };
+	divider_copy = { 1'b0, divider_copy[15:1] };
+	if ( !diff[15] ) dividend_copy = diff;
+	bit = bit - 1;
+	
+	if(bit == 0 && sign_flag == 1)
+	begin
+	quotient= ~quotient + 1;
+	end
+	
+end
+
 endmodule
