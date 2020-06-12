@@ -32,11 +32,11 @@
 # 
 #           File in use by: Saad Yousaf  Hostname: DESKTOP-OFI7FUL  ProcessID: 11556
 # 
-#           Attempting to use alternate WLF file "./wlft1s52mz".
+#           Attempting to use alternate WLF file "./wlftf9erf9".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft1s52mz
+#           Using alternate file: ./wlftf9erf9
 # 
 # Simulation passed !
-# ** Note: $finish    : arithmetic_processor.vt(1373)
+# ** Note: $finish    : arithmetic_processor.vt(458)
 #    Time: 1 us  Iteration: 0  Instance: /divider_vlg_vec_tst/tb_out

@@ -19,12 +19,23 @@ initial bit = 0;
 
 always @( posedge clk )
 
-if ( ready && start )
+if ( start==0 )
 begin
 
 	bit = 8;
 	quotient = 0;
 	sign_flag = 0;
+	
+	if(divider[7])
+	begin
+		divider_comp = ~divider + 1;
+		divider_copy = {1'b0, divider_comp, 7'b0};
+		sign_flag = sign_flag ^ 1;
+	end
+	else
+	begin
+		divider_copy = {1'b0, divider, 7'b0};
+	end
 	
 	if(dividend[7])
 	begin
@@ -37,16 +48,6 @@ begin
 		dividend_copy = {8'd0, dividend};
 	end
 	
-	if(divider[7])
-	begin
-		divider_comp = ~divider_comp + 1;
-		divider_copy = {1'b0, divider_comp, 7'b0};
-		sign_flag = sign_flag ^ 1;
-	end
-	else
-	begin
-		divider_copy = {1'b0, divider, 7'b0};
-	end
 	
 end
 else
